@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Föreläsning 01 - 1DV449</title>
+    
+    <meta name="description" content="Föreläsning 1 i kursen webbteknik 2, Webbprogrammerareprogrammet, Kalmar, Linnéuniversitetet" />
+    <meta name="author" content="John Häggerud" />
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
+
+    <link href="css/impress.css" media="screen" rel="stylesheet" />
+	<link href="css/print.css" media="print" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body class="impress-not-supported">
+	
+
+			
+	<div class="fallback-message">
+	    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of 			this presentation.</p>
+	    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+	</div>
+
+	<div id="impress">
+		
+		
+		<!-- Första sidan -->
+		<div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+					<div class="lefty">
+						<p class="medium_small">Webbteknik II</p>
+						<p class="big">1DV449</p>
+						<p class="small">Om webben....</p>
+					</div>
+					<div class="righty">
+						<img src="images/lnu.png" />
+					</div>
+					<div>
+						<p class="medium_small lefty">Linnéuniversitetet, HT2012</p>
+					</div>
+					<p class="very_small" style="clear: both; text-align: right;">
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv"><img alt="Creative Commons-licens" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br />Detta verk är licensierat under en 
+						<br />
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">Creative Commons Erkännande-IckeKommersiell-DelaLika 3.0 Unported Licens</a>.
+					</p>
+		</div>
+		
+		<!-- Agenda -->
+		<div class="step" data-x="5000" data-y="0" data-scale="4">
+			<div style="text-align: center;">
+				<p class="big">WEBBEN</p>
+				<p class="small">Igår, idag, imorgon</p>
+				<p class="big">HTTP</p>
+				<p class="small">Kommunikationsprotokollet på webben</p>
+				<p class="big">TCP/IP</p>
+				<p class="small">Internet</p>
+				
+			</div>
+		</div>
+		
+		<!-- Hur börjar vi? 
+		<div class="step" data-x="5000" data-y="0" data-scale="4">
+			<div style="text-align: center;">
+				<p class="medium_small">HUR BÖRJAR VI?</p>
+				<img src="images/where.png" />
+			</div>
+		</div>
+		-->
+		
+		<!-- The Web? -->
+		<div class="step" data-x="5000" data-y="-800" data-scale="0.1">
+			<h1 class="big">The Web</h1>
+			<div>
+		
+				<img src="images/Tim.jpg" style="max-width: 30%">
+				<q class="righty small" style="display: inline">
+					<p>
+					The Web as I envisaged it,<br />
+					we have not seen it yet. <br /><br />
+					The future is still so much <br />bigger than the past. 
+					</p>
+				
+					<p style="font-size: 0.5em; text-align:right">Tim Bernes-Lee, 2009</p>
+				</q>
+				
+			</div>
+		</div>
+		
+		<!-- The history -->
+		<div class="step" data-x="5200" data-y="-800" data-scale="0.1">
+			<p class="small">History</p>
+			<img src="images/web_history01.png" style="max-width: 1000px;" />
+		</div>
+		<div class="step" data-x="5300" data-y="-800" data-scale="0.1">
+			<p class="small">History</p>
+			<img src="images/web_history02.png" />
+		</div>
+		<div class="step" data-x="5410" data-y="-800" data-scale="0.1">
+			<p class="small">History</p>
+			<img src="images/web_history03.png" />
+		</div>
+		
+		<!-- De tre delarna -->
+		<div class="step" data-x="5600" data-y="-800" data-scale="0.1">
+			<img src="images/fund_of_web.png" />
+			<div class="note">
+					Tim Bernes-Lee utvecklade i samband med WWW dessa tre grundbultar i webbtekniken.
+			</div>
+		</div>
+		
+		
+		<!-- Agenda -->
+		<div class="step" data-x="5000" data-y="0" data-scale="4">
+			<div style="text-align: center;">
+				<p class="big">WEBBEN</p>
+				<p class="small">Igår, idag, imorgon</p>
+				<p class="big">HTTP</p>
+				<p class="small">Kommunikationsprotokollet på webben</p>
+				<p class="big">TCP/IP</p>
+				<p class="small">Väldigt översiktligt</p>
+			</div>
+		</div>
+		
+		<div class="step" data-x="5000" data-y="100" data-scale="0.1" data-rotate="90">
+			<p>Men varför ska man som webbprogrammerare lära sig detta?...HTTP, TCP, IP...?</p>
+			<br />
+			<img src="images/why.jpg" />
+		</div>
+		
+		
+		<!-- HTTP - Vad? -->
+		<div class="step" data-x="5000" data-y="0" data-scale="0.1">
+			<p class="big">HTTP</p>
+			<q>
+				HTTP är ett applikationsprotokoll
+				utvecklat för TCP/IP-stacken med en uppsättning regler
+				för hur kommunikation via webben ska ske
+			</q>
+		
+		</div>
+		
+		<!-- Nerd bild -->
+		<div class="step" data-x="5000" data-y="-50" data-scale="0.1" data-rotate="90">
+			<p>WHAT???</p>
+			<img src="images/nerd_web.jpg" /><br />
+			
+			<a href="http://upload.wikimedia.org/wikipedia/commons/9/9a/Nerd_web.jpg" class="very_small">http://upload.wikimedia.org/wikipedia/commons/9/9a/Nerd_web.jpg</a>
+		</div>
+		
+		
+		
+		
+		
+		
+		<div class="step" data-x="900" data-y="2300" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<img src="images/url_lnu.png" />
+			<p class="small">Vad händer egentligen när vi skriver in en URL och får en HTML-sida tillbaka???</p>
+		</div>
+			
+		
+		<!-- Vad är TCP/IP -->			
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			
+			<img src="images/TCP_IP.png" />
+			
+			<p class="note">
+				Protokollstack, många protokoll (samling regler)<br />
+				Grunden för all kommunikation på nätet<br />
+				Byta ut olika nivåer<br />
+				Paketbaserad<br />
+				Ta olika vägar för att komma fram<br />
+			</p>
+		
+		</div>
+		
+			
+		
+		
+		
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<img src="images/internetz.png" />
+
+			<p class="note">
+				Miljontals servrar, routrar osv<br />
+				Trafiken kan ta olika vägar - Beroende på tillgänglighet, prestanda m.m.<br />
+				Applikationer på internet - FTP, E-post, BitTorrent, Webben
+			</p>
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p>Hämta en webbsida - Vad händer???</p>
+
+			<ol class="small">
+				<li>1. Hitta adressen till webbservern i fråga!</li>
+				<li>2. Hitta vägen till webbservern över Internet</li>
+				<li>3. Ansluta till webbservern och få en garanterad "säker" transport</li>
+				<li>4. Få HTML skickad till webbläsaren</li>-
+			</ol>
+			<p class="note">
+				
+			</p>
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p>1. Hitta adressen till webbläsaren</p>
+			
+			<p class="medium_small">Vi gillar DNS-Namn</p>
+			<p class="small">www.lnu.se</p>
+			
+			<p class="medium_small">Datorer gillar IP-adresser</p>
+			<p>194.173.221.1</p>
+			<p>2001:0db8:85a3:0000:0000:8a2e:0370:7334</p>
+			
+			<p class="note">
+				
+			</p>
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1>DNS-systemet FTW!</h1>
+			
+			<img src="images/dns_system.png" />
+			
+			<p class="note">
+				
+			</p>
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1>2. Vi vet IP, hur hittar vi webbservern?</h1>
+			
+			<img src="images/route.png" />
+			
+			<p class="note">
+				Routerm, Routingtabell<br />
+				Många vägar till samma mål<br />
+				IP (TTL)
+			</p>
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1>3. Vi har hittat servern. Hur ansluter vi?</h1>
+			
+			<img src="images/tcp.png" />
+			
+			<p class="note">
+				TCP<br />
+				Portar (80, 443)<br />
+				3-way handshake<br />
+				Kommer allt fram?<br />
+				UDP
+				
+			</p>
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1>4. Skicka informationen - HTTP/HTML</h1>
+			
+			<img src="images/4_HTTP.png" />
+			
+			<p class="note">
+				Hur kan detta fungera så bra?
+				
+			</p>
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1>4. Skicka informationen - HTTP/HTML</h1>
+			
+			<img src="images/4_HTTP.png" />
+			
+			<p class="note">
+				Hur kan detta fungera så bra?
+				
+			</p>
+		</div>
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<div style="text-align:center">
+				<img src="images/internet_overview.png" />
+				<br />
+				<p class="very_small">CC-licenced from <a href="http://www.opte.org/maps/">The opte project</a></p>
+			</div>
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="big">HTTP</h1>
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="big">W3C</h1>
+			<p>
+				History, Utveckling, Versioner
+			</p>
+			<div class="note">
+				Hur ser utvecklingen ut?
+			</div>
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small">Vad ett HTTP-paket innehåller!</h1>
+			<ol>
+				<li><strong>Request, Response</strong></li>
+				<li>Cookie</li>
+				<li>Form data</li>
+				<li><strong>Accept, Accept-encoding, Accept-charset</strong></li>
+				<li><strong>Connection</strong></li>
+				<li><strong>Cache</strong></li>
+			</ol>
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small">HTTP Request</h1>
+			<p>Client to server</p>
+			screenshot here
+			GET, POST, DEL, PUT, OPTION (cross-domain), HEAD...
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small">HTTP Response</h1>
+			<p>Server to client</p>
+			screenshot here
+			200, 404, 500...
+			Varje grupp för sig
+			
+			<p class="note">
+				Spela in en film där man testar?
+				Chrome-network, DEMO? Visa med location, Avoid redirects
+				Seminariefråga?
+			</p>
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small">Accept</h1>
+			<p>Client to server</p>
+			gzip, deflate...
+			
+			Prestandatänkande??
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small">Cachning</h1>
+			-- Ta från förra året 
+			-- Blanda med prestandatänk 
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small">Connection</h1>
+			<p>
+				Vad händer vid bilder...?
+				Diskutera connection, long-polling, Comet, Web Sockets
+			</p>
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small">TIPS!</h1>
+			Get to know HTTP, reguest, response, session, state.<br />
+			Web Scrape, REST, 
+		</div>
+		
+	</div>
+	
+	<script src="js/impress.js"></script>
+	<script>
+	if ( !window.location.search.match(/print/) ) {
+	    impress().init();
+	}
+	</script>
+
+</body>
+</html>
