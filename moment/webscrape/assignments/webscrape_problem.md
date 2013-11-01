@@ -1,4 +1,4 @@
-#Problem
+##Problem
 I denna uppgift ska du skriva ett automatiserat script som skrapar data på en webbplats.
 Du kan i denna uppgift vara kreativ och välja en egen webbplats att skrapa på information (var dock noga med att vara en god skrapare och att uppfylla de generella kraven)
 För er utan fantasi finns en färdig webbplats som har samlat ett antal matproducenter. 
@@ -11,7 +11,7 @@ URL:en som inloggningsformuläret finns på är:
 
 Du är helt fri att välja tekniker, programmeringsspråk och servermiljö.
 
-#Krav
+##Krav
 1. Scriptet ska vara helt automatiserat och utgå den nämnda URL:en
 2. Informationen som ska skrapas är: 
 	* Producentens namn
@@ -28,7 +28,7 @@ Du är helt fri att välja tekniker, programmeringsspråk och servermiljö.
 	8|Bredervall|Kalmar|http://www.dn.se|http://www.dn.se/secure/images/bild.jpg
 6. Skapa en fil med din reflektion
 
-#Reflektion
+##Reflektion
 Du ska i ditt repositorie skapa en fil i [markdown-format](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) där du reflekterar över följande saker:
 
 1. Ni är fria att välja sätt att läsa in och extrahera data ur webbsidorna. Motivera ditt val!
@@ -38,18 +38,18 @@ Du ska i ditt repositorie skapa en fil i [markdown-format](https://github.com/ad
 5. Vad har du lärt dig av denna uppgift? 
 
 
-#Extrauppgifter
+##Extrauppgifter
 För er som satsar på högre betyg i kursen finns här ett par extra funktioner för din applikation.
 
 1. De bilder man kan skrapa ska sparas ner lokalt i en egen mapp
 2. Utöka datalagringen med information om hur många gånger ditt skript har skrapat en producent och en timestamp om senaste gången informationen skrapades.
 
 
-#Redovisning
+##Redovisning
 Laborationen redovisas genom att göra en realease med din kod på ditt github-repositorie samt genom en muntlig redovisning på schemalagt redovisningstillfälle.
 
 
-#Tips
+##Tips
 Studera de demonstrationsfilmer som finns på kurshemsidan.
 Tänk på att det är ett skript du skriver och inte en hel webbapplikationsarkitektur.
 
