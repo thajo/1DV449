@@ -25,6 +25,7 @@ Du är helt fri att välja tekniker, programmeringsspråk och servermiljö.
 	* Information som eventuellt saknas på producentsidorna t.ex. bilder, ort e.c.t.
 5. Gör en presentation (från datalagringen) i HTML ex)
 	ID|Namn|Ort|Hemsida|BildURL|
+	--- | --- | --- | --- | ---
 	8|Bredervall|Kalmar|http://www.dn.se|http://www.dn.se/secure/images/bild.jpg
 6. Skapa en fil med din reflektion
 
