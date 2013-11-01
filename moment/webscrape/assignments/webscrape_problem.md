@@ -23,11 +23,8 @@ Du är helt fri att välja tekniker, programmeringsspråk och servermiljö.
 4. Din data ska sparas undan permanent i en datalagring, på vilket sätt väljer du själv. Du ska spara all skrapad information om producenterna samt även eventuella resurser som inte finns att få tag på. 
 	* Döda länkar (404) 
 	* Information som eventuellt saknas på producentsidorna t.ex. bilder, ort e.c.t.
-5. Gör en presentation (från datalagringen) i HTML ex)
-	ID|Namn|Ort|Hemsida|BildURL|
-	--- | --- | --- | --- | ---
-	8|Bredervall|Kalmar|http://www.dn.se|http://www.dn.se/secure/images/bild.jpg
-6. Skapa en fil med din reflektion
+5. Gör en snygg och tydlig presentation (från datalagringen) i HTML (ska kommas åt via en URL)
+6. Skapa en fil med din reflektioner (se nedan)
 
 ##Reflektion
 Du ska i ditt repositorie skapa en fil i [markdown-format](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) där du reflekterar över följande saker:
