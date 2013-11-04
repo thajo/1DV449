@@ -19,7 +19,7 @@ Du är helt fri att välja tekniker, programmeringsspråk och servermiljö.
 	* url:en till producentens hemsida
 	* producentens ort
 	
-3. Din kod ska kontinuerligt commitas upp på github
+3. Din kod ska kontinuerligt commitas upp på github och den slutliga koden ska ligga där tills kursen avslutas.
 4. Din data ska sparas undan permanent i en datalagring, på vilket sätt väljer du själv. Du ska spara all skrapad information om producenterna samt även eventuella resurser som inte finns att få tag på. 
 	* Döda länkar (404) 
 	* Information som eventuellt saknas på producentsidorna t.ex. bilder, ort e.c.t.
