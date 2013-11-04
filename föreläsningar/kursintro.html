@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+
+  <head>
+   
+     <meta charset="utf-8" />
+     <title>Webbteknik II, 1dv449</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    
+    <meta name="description" content="Webben idag och i framtiden, Kalmar, Linnéuniversitetet" />
+    
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script src='slides.js' media="screen"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<style media="print">
+	         @page {
+	            size: A4 landscape;
+	             @top-right {
+	                content: "Page " counter(page);
+	             }
+	         }
+	          article {
+	            page-break-after: always;
+	            margin: auto;
+	          }
+	          article.next, article.past {
+	            display: block;    
+	          }
+	
+				iframe {
+					display: none;
+				}
+				article img {
+					display: none;
+				}
+	          body {
+	              display: block !important;
+	              font-family: 'Open Sans', Arial, sans-serif;
+	              font-size: 1.5em;
+	          }
+	</style>
+  </head>
+  
+
+
+  <body style='display: none'>
+
+    <section class='slides layout-widescreen template-default'>
+      <!-- http://lights.elliegoulding.com/ -->
+	<!-- Första sidan -->
+    <article>
+       	<h3>
+          Webbteknik II, 1dv449
+          <br />
+          <span class="small">Linnéuniversitetet, Ht 2013</span>
+        </h3>
+       
+		
+		<br /><br />
+		<h1 class="big c">Kursintroduktion</h1>
+		<p class="very_small" style="margin-top: 60px;">
+				
+		</p>
+		
+		<p class="small_footer">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">
+					<img alt="Creative Commons-licens" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>&nbsp;&nbsp;Denna presentation är licensierat under en 
+					
+						<a rel="license" href="hhttp://creativecommons.org/licenses/by/3.0/deed.sv">Creative Commons Erkännande 3.0 Unported Licens</a>.<br/>
+		</p>
+ 	</article>
+  		
+	<article>
+		<div>
+			<p class="lefty">
+				<img src="images/jl.jpg" width="40%" /><br />
+				<strong>Föreläsare, handledare</strong><br />Johan Leitet, <br />
+				johan.leitet@lnu.se, <br />Skype: hiktstjo 
+			</p>
+			
+			
+			
+			<p class="righty l">
+				<img src="images/john2.jpg" width="30%" height="20%" /><br />
+				<strong>Kursansvarig, föreläsare, handledare: </strong><br />
+				John Häggerud, <br />john.haggerud@lnu.se, <br />Skype: john-hik
+			</p>
+			
+			
+		</div>
+		</article>
+
+		<!-- Vad? -->
+      	<article>
+      		<h3>Vad är målet med denna kurs?</h3>
+			
+			<p>Ur kursplanen:</p>
+			<p>Efter kursen ska studenten kunna:</p>
+			<ul class="small_italic">
+				<li>redogöra för webbens framväxt och utveckling samt betydelse/påverkan för dagens samhälle</li>
+				<li>arbeta med webbtekniker samt använda dessa för utveckling mot olika enheter</li>
+				<li>redogöra för olika säkerhetsrisker som kan förekomma i en webbapplikation</li>
+				<li>använda befintliga webbtjänster (webb­api:er) samt
+				sammanfoga dessa till en enhetlig applikation (Mashup­applikation)</li>
+				<li>redogöra och diskutera aktuell forskning inom ämnesområdet Web Science</li>
+				<li>identifiera och diskutera faktorer i en webbtjänst:s/webbapplikation:s prestanda.</li>
+				
+			</ul>
+
+	  	</article>
+		
+		
+		<!-- Vad? -->
+      	<article>
+			<h3>Vad är målet med denna kurs?</h3>
+      		<img src="images/plan.png" width="100%" style="margin-top: 150px;"/>
+	  	</article>
+	
+		<!-- Vad? -->
+      	<article>
+      		<h3>Vad förväntas av er</h3>
+			
+			<ul class="small_italic">
+				<li>20 timmar i veckan</li>
+				<li>Självstudier</li>
+				<li>Individuellt arbete</li>
+				<li>Kommer förberedda till laborationer och seminarier</li>
+				<li>Aktivitet på seminarier, laborationer och handledningspass</li>
+				<li>Uppfyller förkunskapskraven</li>
+			</ul>
+
+	  	</article>
+	
+		<!-- Vad? -->
+      	<article class="fill">
+      		<iframe src="https://coursepress.lnu.se/kurs/webbteknik-ii/kursplanering/"></iframe>
+	  	</article>
+	
+		<!-- Vad? -->
+      	<article class="fill">
+	  		<h3 class="c">Några praktiska detaljer</h3>
+			<p class="cc">Foto cc by Emilian Robert Vicol: <a href="http://www.flickr.com/photos/free-stock/"> http://www.flickr.com/photos/free-stock/</a> </p>
+			<img src="http://farm9.staticflickr.com/8144/7304232902_aa4cc352c5_h.jpg" width="100%"/>
+	  	</article>
+	
+		<!-- Utvecklingsmiljö, utvecklingsspråk -->
+      	<article class="fill">
+	  		<h3 class="c">Utvecklingsmiljö</h3>
+			<p class="cc">Foto cc by Chris P Jobling: <a href="http://www.flickr.com/photos/cpjobling/"> http://www.flickr.com/photos/cpjobling/</a> </p>
+			<img src="http://farm8.staticflickr.com/7175/6647512915_2fc8094dd4_o.png" width="100%"/>
+	  	</article>
+		
+		<!-- Github -->
+      	<article class="fill">
+	  		<h3 class="c">Github</h3>
+			
+			<img src="https://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png"/>
+	  	</article>
+		
+		<!-- Att göra denna vecka -->
+      	<article class="fill">
+	  		<h3 class="c">Att börja med</h3>
+			
+				<ul>
+					<li>Anmäl dig till en seminariegrupp</li>
+					<li>Skapa ett github repositorie för kursen dela med kursens konto</li>
+					<li>Börja läs på och förbered dig på seminarium 01</li>
+					<li>Ladda upp dina föreberedelser i ditt github repo senast torsdag 09:00</li>
+				</ul>
+				<p class="cc">Foto cc by Paul Bence: <a href="http://www.flickr.com/photos/paulbence/"> http://www.flickr.com/photos/paulbence/</a> </p>
+			<img src="http://farm2.staticflickr.com/1135/548646841_e4e449165a_b.jpg"/>
+	  	</article>
+		
+		
+		<!-- Frågor? -->
+		<article class="fill">
+      		<img src="http://farm8.staticflickr.com/7133/7623744452_7222654f38_b.jpg" width="100%" />
+      		<p class="cc">Foto cc (Tsahi Levent-Levi): <a href=" http://www.flickr.com/photos/86979666@N00/">http://www.flickr.com/photos/86979666@N00/</a></p>
+			
+	  	</article>
+
+		<!-- Start -->
+      	<article class="fill">
+      		<a href="#">
+      		<img src="http://farm3.staticflickr.com/2125/5749192025_bc140dab9e_o.jpg" width="100%" />
+			</a>
+				
+			
+      		<p class="cc">Foto cc (Steven Depolo): <a href="http://www.flickr.com/photos/stevendepolo/">http://www.flickr.com/photos/stevendepolo/</a></p>
+			
+	  	</article>
+	
+	
+    </section>
+  </body>
+</html>

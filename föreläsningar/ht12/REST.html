@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Föreläsning 01 - 1DV449</title>
+    
+    <meta name="description" content="Föreläsning 1 i kursen webbteknik 2, Webbprogrammerareprogrammet, Kalmar, Linnéuniversitetet" />
+    <meta name="author" content="John Häggerud" />
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
+
+    <link href="css/impress.css" media="screen" rel="stylesheet" />
+	<link href="css/print.css" media="print" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body class="impress-not-supported">
+	
+
+			
+	<div class="fallback-message">
+	    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of 			this presentation.</p>
+	    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+	</div>
+
+	<div id="impress">
+		
+		
+		<!-- Första sidan -->
+		<div id="title" class="step" data-x="-5000" data-y="0" data-scale="4">
+					<div class="lefty">
+						<p class="medium_small">Webbteknik II</p>
+						<p class="big">1DV449</p>
+						<p class="medium_small">Webb-API:er<br />och REST</p>
+					</div>
+					<div class="righty">
+						<img src="images/lnu.png" />
+					</div>
+					<div>
+						<p class="small lefty">Linnéuniversitetet, HT2012</p>
+					</div>
+					<p class="very_small" style="clear: both; text-align: right;">
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv"><img alt="Creative Commons-licens" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br />Detta verk är licensierat under en 
+						<br />
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">Creative Commons Erkännande-IckeKommersiell-DelaLika 3.0 Unported Licens</a>.
+					</p>
+		</div>
+		
+		<!-- agenda -->
+		<div class="step" data-x="0" data-y="0" data-scale="4" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="medium c">Webb-API:er</h1>
+			<h1 class="medium c">REST</h1>
+			<p class="pretty small c spaced">
+				Historiken - Web Service, XML-RPC<br />
+				REST - Vad? Hur?<br />
+				Tankar vid skapande av API?<br />
+			</p>
+			
+			<p class="note">
+				Vi kommer i denna förläsning titta på arkitekturer för 
+				hur vi kan dela vår data med hjälp av API:er. Vi kommer dels
+				titta lite historiskt och introducera begreppen WS-*, RPC men
+				fokus kommer ligga på rena webb-API:er enligt REST.
+			</p>
+		</div>
+		
+		<!-- Varför vill man ha ett API? -->
+		<div class="step" data-x="900" data-y="600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="c spaced big">VARFÖR?</p>
+			<img src="images/dilbert_boss.jpg" class="righty" />
+			<ul class="small spaced">
+				<li>Stödja våra idéer</li>
+				<li>Enkel tillgång till back-end</li>
+				<li>Dela sin data med andra</li>
+				<li>Konkurrensfördelar</li>
+				<li>Myndighetskrav</li>
+			</ul>
+			
+			<p class="note">
+				Mobila appar, tv., börja med API.
+				Köpa en tjänst. Ett har API ett har inte?
+			</p>	
+		</div>
+		
+		<!-- Utvecklingen antal API -->
+		<div class="step" data-x="1000" data-y="800" data-scale="0.2" data-rotate-x="0" data-rotate-y="-20">
+			<p class="c">
+				<img class="bi" src="images/total_APIs.png" /><br/>
+				<p class="very_small c">Photo taken from www.programmableweb.com (nov 2012)</p>
+			</p>
+		</div>
+		
+		<!-- Behovet av API historik -->
+		<div class="step" data-x="900" data-y="1000" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="c bg">Historisk återblick</h1>
+			<p class="bgy small spaced">Tekniker för distribuerade applikationer</p>
+			<p class="bgy small spaced"><strong>CORBA or DCOM or Java RMI</strong>....FTW!!!</p>
+			<p class="bgy small spaced"><strong>XML</strong>...Yeah!!!</p>
+			<p class="bgy small spaced"><strong>Web Services</strong> is the future</p>
+			<p class="bgy small spaced"><strong>RESTful Web-API</strong>...All aboard!</p>
+			
+			<p class="note">
+				Det har alltid varit viktigt att applikationer sk akunna utbyta information mellan 
+				varandra i ett nätverkt, lokalt så som externt.
+				Naturligtvis har det förekommit mängder av forskning och tekniker som försökt lösa
+				detta. De stora lägren hade sina egna tekniker.
+				
+				I och med Internets genomslagskraft utvecklades XML som databärare och Web Service.
+				
+				Idagsläget pratar man mycket RESTfullnes och enklare webb-API:er. Det är dock viktigt 
+				att komma ihåg att de andra teknikerna används fortfarande i många enterpriselösningar.
+			</p>
+		</div>
+		
+		<!-- XML-RPC -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="medium_small bg c">XML-RPC</p>
+			<p class="bgy small spaced c">
+				<strong>Remote Procedure Call</strong><br />
+				Exekvera kod på en annan dator i nätverket (endpoint)
+			</p>	
+			<p class="bgy small spaced c">
+				Använda XML över HTTP till att definiera 
+				datatyper, metodnamn, parametrar och 
+				returvärden, 1998
+			</p>
+			<p class="bgy c small spaced">
+				JSON-RPC, 2005
+			</p>
+			<p class="note">
+				Denna teknik används fortfarande idag om än ganska sparsmakat. 
+				Wordpress, bloggar ect.
+			</p>
+		</div>
+		
+		<!-- XML-RPC II -->
+		<div class="step" data-x="-900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="c">
+				<img class="bii" src="images/rpc_1.png" />
+				<img class="bii" src="images/rpc_2.png" />
+			</p>
+			<p class="c">
+				<a class="small" href="http://en.wikipedia.org/wiki/XML-RPC">http://en.wikipedia.org/wiki/XML-RPC</a><br />
+				<a class="small" href="http://en.wikipedia.org/wiki/JSON-RPC">http://en.wikipedia.org/wiki/JSON-RPC</a>
+			</p>
+			<p class="note">
+				JSON-RPC, samma teknik men i jsonformat
+			</p>
+			
+		</div>
+		
+		<!-- Web Service -->
+		<div class="step" data-x="-900" data-y="100" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="c bg s">
+				Web Service, WS-*
+			</p>	
+			<p class="small c bgy spaced">
+				Standardisering av W3C<br />
+				Olika XML-applikationer<br />
+				Möjlighet till automatgenererad kod<br />
+				
+			</p>
+			<p class="c">
+				<img src="images/code_gen.gif" />
+			</p>
+			
+			<p class="bgy c small spaced">
+				Enterprise, "Big Web services"<br />
+				Transaction, Security, Hantering av state....osv</p>
+			
+			<p class="pretty_small c">
+				<a href="http://www.w3.org/2002/ws/">http://www.w3.org/2002/ws/</a>
+			</p>
+			
+			<p class="note">
+				Web Service dumt namn
+				mycket automatiskt, mycket overhead
+			</p>
+		</div>
+	
+		<!-- WS-* -->
+		<div class="step" data-x="-900" data-y="100" data-scale="0.2" data-rotate-x="0" data-rotate-y="-20">
+			<p>
+				<img src="images/ws_overview.png" class="bi" />
+			</p>
+			<p class="note">
+				Krångligt experthjälp
+				Mycket som enterpriseapplikationer behöver detta stöd	
+			</p>
+		</div>
+		
+		<!-- Web Service - stack -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="c bg s">Web Service stack</h1>
+			<p class="c spaced">
+				<img class="bi" src="images/ws_stack.png" />
+			</p>
+		
+			<p class="note">
+				
+			</p>
+		</div>
+		
+		<!-- Web Service - pattern -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="c spaced">
+				<img class="bi" src="images/ws_pattern.png" />
+			</p>
+			<p class="note">
+				
+			</p>
+		</div>
+					
+		<!-- WSDL -->
+		<div class="step" data-x="900" data-y="2000" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="c s bg">
+				WSDL
+			</h1>
+			<p class="bg c">
+				<span class="pretty_small">Web Service Description Language</span>
+			</p>
+			<p class="small c bgy spaced">
+				"Kontrakt" som beskriver hur anrop, parametrar, retursvar, datatyper m.m.
+				ska se ut.
+			</p>
+			
+			<p class="small c bgy spaced">
+				Läsbara för applikationer som kan skapa "wrappers" på ett enkel sätt.
+			</p>
+			<p class="c pretty_small">
+				<a href="http://www.webservicex.net/WeatherForecast.asmx?WSDL">
+					http://www.webservicex.net/WeatherForecast.asmx?WSDL
+				</a>
+			</p>
+			<p class="note">
+				Förstora bilden?
+			</p>
+		</div>
+		
+		<!-- SOAP -->
+		<div class="step" data-x="1900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="c s bg">SOAP</h1>
+			<p class="small c spaced bgy">
+				Format för att skicka meddelande mellan klient och server
+			</p>
+			<p class="c">
+				<img src="images/soap_simple.png" class="bi" />
+			</p>
+			
+		</div>
+		
+		<!-- SOAP Request -->
+		<div class="step" data-x="1900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="c s bg">SOAP Request</h1>
+			<p class="c spaced">
+				<img src="images/soap_request.png" class="bi" />
+			</p>
+		</div>
+		
+		<!-- SOAP Response -->
+		<div class="step" data-x="1900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="c s bg">SOAP Response</h1>
+			<p class="c spaced">
+				<img src="images/soap_response.png" class="bi" />
+			</p>
+		</div>
+		
+		<!-- Web Service idag -->
+		<div class="step" data-x="1900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="c bg s">WS-* idag</h1>
+			<p class="bgy small spaced">
+				Mycket tid och resurser har lagts på Web Service<br />
+				Många befintliga system och mycket kompetens
+			</p>
+			<p class="bgy spaced small">
+				Vissa företag kräver fortfarande Web Services
+			</p>
+			<p class="bgy small spaced">
+				Enterprise, säkerhetskritiska tjänster
+			</p>
+		
+			
+		</div>
+		
+		<!-- Web Service vs. REST -->
+		<div class="step" data-x="1900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="c">
+				<img src="images/soap_request.png" class="bi" />
+			</p>
+			<p class="c s">VS.</p>
+			
+			<p class="c pretty_small bg">
+				http://www.example.org/stockprice/IBM.json
+			</p>
+		</div>
+		
+		<!-- Användning -->
+		<div class="step" data-x="2400" data-y="2400" data-scale="0.2" data-rotate-x="0" data-rotate-y="-20">
+			<p class="c">
+				<img src="images/protocol_used_by_APIs.png" class="bi" />
+			</p>
+		</div>
+			
+			
+		<!-- REST -->
+		<div class="step" data-x="2900" data-y="2200" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="c bg">
+				<strong>REST</strong>
+				<p class="c pretty_small">Representational State Transfer</p>
+			</h1>
+						
+			<p class="bgy small spaced">
+				Arkitektur för distribuerade hypermediasystem<br />
+				
+			</p>
+		
+			<p class="small">
+				Roy Fielding, 2000 <br />
+				<span class="pretty_small">
+				”Architectural styles and the design of networked-based architecture”
+				</span>
+				<a class="pretty_small" href="http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm">
+					http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
+				</a><br />
+				<a class="pretty_small" href="http://roy.gbiv.com/">
+					http://roy.gbiv.com
+				</a>
+				
+				<img src="images/roy.png" style="width: 200px;" class="righty" />
+				
+				<q class="pretty_small">Varför fungerar webben så bra och hur kan vi 
+				använda dess arkitektur i distribuerade applikationer?
+				</q>
+			</p>
+			<p class="note">
+				
+			</p>
+		</div>
+		
+		<!-- Resource -->
+		<div class="step" data-x="1200" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="bg c s">
+				1. Every “thing” is a resource 
+			</p>
+			
+		</div>
+		
+		<!-- Resource -->
+		<div class="step" data-x="1200" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="bg c s">
+				1. Every “thing” is a resource 
+			</p>
+			<q class="small">
+				A resource can be any meningsful concept that may be adressed
+			</q>
+			<p class="bgy small">
+				En produkt, ett resultat, en telefonbok,
+				en person, en lista med personer....
+			</p>
+			<p class="c spaced pretty_small bg">
+				http://www.example.org/users/3287
+			</p>
+		</div>
+		
+		<!-- Resource practice -->
+		<div class="step" data-x="1200" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="bg c s">
+				2. Every resource must <br />have a unique ID
+			</h1>
+			
+		</div>
+		
+		<!-- Resource practice -->
+		<div class="step" data-x="1200" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="bg small">
+				En lista över alla användare i vår tjänst
+			</p>
+			<p class="bgy small">
+				http://www.mysite.com/users
+			</p>
+			<br />
+			<p class="bg small">
+				En specifik användare i vår tjänst
+			</p>
+			<p class="bgy small">
+				http://www.mysite.com/users/142
+			</p>
+			
+			<br />
+			<p class="bg small">
+				En specifik användares ordrar
+			</p>
+			<p class="bgy small">
+				http://www.mysite.com/users/142/orders
+			</p>
+			<br />
+			<p class="pretty_small bgr c">
+				En resurs identifieras med en URI/URL<br />
+				Försök hålla enkla, självbeskrivande.
+				
+			</p>
+			
+		</div>
+		
+		<!-- use standard methods -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="bg c s">3. Use the HTTP standard</p>
+		</div>
+		
+		<!-- use standard methods Request-->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="bg c s">Use the HTTP standard - Request</p>
+			
+			<p class="small bgy spaced c">
+				En resurs, flera HTTP metoder/verbs/actions				
+			</p>
+			<p>
+				
+			
+			<p class="c small">
+				<img src="images/rest_http_verbs.png" class="bi"/>
+				
+			</p>
+			<p class="note">
+				
+				<!--
+				The fundamental difference between the POST and PUT requests is 
+				reflected in the different meaning of the Request-URI. 
+				The URI in a POST request identifies the resource that will handle the enclosed entity. 
+				That resource might be a data-accepting process, a gateway to some other protocol, 
+				or a separate entity that accepts annotations. In contrast, the URI in a PUT 
+				request identifies the entity enclosed with the request 
+				 
+				the user agent knows what URI is intended and the server MUST NOT 
+				attempt to apply the request to some other resource. If the server desires that the 
+				request be applied to a different URI,
+				-->
+				
+				PUT - Skapar om resursen inte finns, annars uppdaterar, Anropa samma URL flera gånger utan ändra state.
+				/orders/123
+				POST - skapar resursen om den tilldelas primär id av servern (servern får egentligen göra vad den vill med data, utföra kommandon osv); location: new reourse
+				Ändrar status varje gång?
+				/orders
+			</p>
+			
+		</div>
+		
+		<!-- use standard methods Response-->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="bg c s">Use the HTTP standard - Response</p>
+			
+			<p class="c bgy small spaced">
+				
+				Använd de statuskoder som HTTP definierat!<br />
+				
+				
+			</p>
+			<p class="bg small bg spaced">
+				200 OK<br />
+				404 Not Found<br />
+				500 Internal Server Error<br />
+			</p>
+			<p class="pretty_small bg">
+				POST /users<br />
+				{"name": "John"}
+				<br /><br />
+				201 Created<br />
+				Location: /users/12<br />
+				{"ref": "http://www.example.com/users/12"}
+				
+			</p>
+			
+		</div>
+		
+			<!-- On resource multiple representation -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="bg c s">4. Multiple representations</p>
+			<p class="small spaced c bgy">
+				En resurs kan ha flera represenationer
+			</p>
+			<p class="c spaced">
+			<img src="images/multiple_representation.png" class="bi" />
+			
+			</p> 
+			<p class="pretty_small c bg">
+				http://www.mysite.com/users/123/xml<br />
+				http://www.mysite.com/users/123/json<br />
+				<br />
+				http://www.mysite.com/users/123.xml<br />
+				http://www.mysite.com/users/123.json<br />
+				
+			</p>	
+			
+		</div>
+		
+		<!-- REST and Stateless -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			
+			<p class="bg c s">5. REST is stateless</p>
+			<p class="small spaced bg">
+				Servern ska ej hålla reda på klientapplikationens "tillstånd"<br />
+				<br />
+				Representational <strong>State Transfer</strong><br />
+				<br />
+				Varje anrop måste upplyssa servern om klientens tillstånd<br />
+				
+			</p>
+			<p class="small spaced bgr">
+				Cookies?, Sessioner?, Inloggning?
+			</p>
+			<p class="note">
+				<!--
+			such that each request from client to server must contain all of the information 
+			necessary to understand the request, and cannot take advantage of any stored context 
+			on the server. Session state is therefore kept entirely on the client.
+			-->
+			<!--
+			Cookies are a sure sign that something is not RESTful. 
+			Right? No; not necessarily. One of the key ideas of REST is statelessness – 
+			not in the sense that a server can not store any data: it’s fine if there is 
+			resource state, or client state. It’s session state that is disallowed due to scalability, 
+			reliability and coupling reasons. The most typical use of cookies is to store a key that 
+			links to some server-side data structure that is kept in memory. This means that the cookie, 
+			which the browser passes along with each request, is used to establish conversational, 
+			or session, state.
+
+			If a cookie is used to store some information, 
+			such as an authentication token, that the server can validate 
+			without reliance on session state, cookies are perfectly RESTful – with one caveat: 
+			They shouldn’t be used to encode information that can be transferred by other, 
+			more standardized means (e.g. in the URI, some standard header or – in rare cases – 
+			in the message body). For example, it’s preferable to use HTTP authentication 
+			from a RESTful HTTP point of view.
+			-->
+			</p>
+		</div>
+		
+		<!-- Hypermedia as the engine of application state (HATEOAS) -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			 
+			<p class="bg c s">6. Hypermedia as the engine of application state (HATEOAS)</p>
+			<q class="bgr small">
+				Your clients shouldn’t be building their own URIs, they should be given the URIs from the API
+			</q>
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<div class="pretty_small c">
+					<span class="s">GET /users</span>
+					<br />
+					200 OK<br />
+					<img src="images/json_hyperlink.png" /><br />
+					<span class="s">POST /orders</span><br />
+					201 Created<br />
+					<img src="images/xml_hyperlink.png" />
+				</p>
+			</div>
+		</div>
+		
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<div class="small">
+			<p class="spaced">1. Every “thing” is a resource </p>
+			<p class="spaced">2. Every resource must have a unique ID</p>
+			<p class="spaced">3. Use the HTTP standard</p>
+			<p class="spaced">4. Multiple representations</p>
+			<p class="spaced">5. REST is stateless</p>
+			<p class="spaced">6. Hypermedia as the engine of application state (HATEOAS)</p>
+			</div>
+		</div>
+			
+		<!-- How to?? -->
+		<div class="step c" data-x="-900" data-y="600" data-scale="0.2" data-rotate-x="0" data-rotate-y="-20">
+			<p>How to GET a Cup of Coffee</p>
+			<a class="pretty_small" href="http://www.infoq.com/articles/webber-rest-workflow">
+				http://www.infoq.com/articles/webber-rest-workflow
+			</a>
+		</div>	
+		
+		<!-- Jodå vi är rest eller??? -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="small s c bg">Jodå, vi är RESTful!...eller?</p>
+			<p class="small bgy spaced">
+				1. Kör alla anrop via GET<br />
+				2. Kör alla anrop via POST<br />
+				3. Bortser från möjligheterna med HTTP<br />
+				4. Ignorerar caching<br />
+				5. Låter servern hålla klienters sessionsdata<br />
+				6. Tänker inte på HATEOAS<br />
+				7. Struntar i att vara självbeskrivande
+			</p>
+		</div>	
+		
+		<!-- RESTafarian pragmatiskt -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="bg c">Ska man vara en RESTafarian?</h1>
+			
+			
+			
+			<p class="pretty_small bgy spaced">
+				Accept: application/xml <strong>OR</strong> users.xml<br />
+				Accept: application/json <strong>OR</strong> users.json
+		
+				<br /><br />
+				PUT, DELETE <br /><strong>OR</strong><br /> 
+				&lt;input type="hidden" name="method" value="delete" /&gt;
+				
+				<br /><br />
+				
+				
+				/users?orderby=name&amp;gender=female&amp;city=kalmar<br />
+				
+				/users/female/city/kalmar/orderby/name<br /><br />
+				
+				/users<br />
+				{ 'gender':'female', 'city':'kalmar', 'orderby':'name' }
+				
+				<br /><br />	
+				Paging? Delmängd av en resurs?<br />
+				/users/page2<br />
+				Använda HTTP-headern: Range?<br />
+				?offset=10&amp;size=20
+			</p>
+			
+		</div>
+		
+		<!-- Tips - Hur börjar man -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small c s bg">Hur börjar man? Att tänka på!</h1>
+			<p class=" small spaced bgy">
+				Hur ska anropen se ut? <br />
+				Hur ser svaren ut? <br />
+				Vilka parametrar?<br />
+				Vilka headers använder vi?<br />
+				Vilken data ska kommas åt? <br />
+				Behöver vi inloggning?<br />
+			</p>
+			<p class="bgr small spaced">
+				Börja med dokumentationen?!
+			</p>
+		</div>
+		
+		<!-- Tips - Hur börjar man 2 -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small c s bg">Att tänka på!</h1>
+			<p class=" small spaced bgy">
+				<strong>Gör det enkelt</strong> och inbjudande för utvecklarna att använda ditt API<br /><br />
+				TTFR - <strong>Time to first request</strong><br /><br />
+				<strong>Lyssna på användarna</strong> av ditt API<br /><br />
+				<strong>Använd API-nyckel</strong><br /><br />
+				<strong>Versionshantera ditt API</strong><br /> api.myservice.com/v1 <br />api.myservice.com/v2
+				
+			</p>
+		</div>
+		
+		<!-- Dokumentation -->
+		<div class="step" data-x="0" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small s c bg">Dokumentation av ett API!</h1>
+			<p class=" small spaced bgy">
+				Var tydlig<br /><br />
+				Beskriv funktionen<br /><br />
+				Visa exempel på Requests och Responses<br /><br />
+				Förklara ev. autentisering och felhantering<br /><br />
+				Ge en exempelapplikation/exempelkod<br /><br />
+				Beskriv problemdomänen, terminologi o.s.v.
+			</p>
+			<p class="small c">
+				<a href="http://www.twilio.com/docs/api/rest/making-calls">
+					http://www.twilio.com/docs/api/rest/making-calls
+				</a>
+			</p>
+		</div>
+		
+		<!-- utveckling -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="bg c">Tips vid utveckling</h1>
+			
+			<p class="small s bgy spaced">URL rewriting?</p>
+			<p class="pretty_small spaced">
+				www.mysite.com/users/123
+			</p>
+			<p class="small bg c">
+				Enligt REST är detta en resurs, ingen katalog!
+			</p>
+			<p class="pretty_small spaced">
+				.htaccess (Apache)<br />
+				web.config (IIS)
+			</p>
+			<p class="c pretty_small bgr">
+				Se demofilmer på kurshemsidan
+			</p>
+		</div>
+				
+		<!-- Avslutningsvis -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="c">
+				Ny applikation? Skriv API:et först!<br /><br />
+				REST over HTTP != REST<br /><br />
+				En “high-level” arkitektur<br /><br />
+				Be RESTful (med sans)
+			</p>
+		</div>
+		
+		
+		
+	</div>
+	
+	<script src="js/impress.js"></script>
+	<script>
+	if ( !window.location.search.match(/print/) ) {
+	    impress().init();
+	}
+	</script>
+
+</body>
+</html>
