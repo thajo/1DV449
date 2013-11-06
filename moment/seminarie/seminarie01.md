@@ -31,7 +31,7 @@ Dock så finns det många delar som ofta diskuteras ur en lite mer kritisk synvi
 
 * Ser du någon fara för den personliga integriteten med ett mer och mer webbaserat samhälle? 
 * Är det överhuvudtaget ett problem?
-* Hur skulle man i så fall kunna förbättra den personliga integriteten?
+* Stora företag som google och facebook samlar massor av information om våra aktiviteter på webben. Vad ser du för problem med detta? Vad finns det för fördelar?
 
 ####1.2 Fallstudie
 Inom utbildningsvärlden går man allt mer och mer mot öppna resurser. De flesta av er har säkert hört talas om [MOOC-kurser](http://en.wikipedia.org/wiki/MOOC) som går på större utbildningsföretag så som [Coursea](https://www.coursera.org/), [Udacity](https://www.udacity.com/) o.s.v. Man ser också mer och mer användning av så kallade lärplattformer där studenter loggar in och kan komma åt materialet. Detta ger universiteten och lärföretagen massor av data om studenterna att använda. I och med detta har forskning som t.ex. [Learning Analytics](http://en.wikipedia.org/wiki/Learning_analytics) dykt upp där man analyserar denna data och försöker förbättra studiegången för den enskilde studenten genom att studera hur hen använder lärresurser, hur hen presterar och vad som studenten kanske behöver öva mer på.
