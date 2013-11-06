@@ -7,9 +7,11 @@ Sidan består av en ett inloggningsformulär som leder till en sida med en lista
 Ditt script ska alltså automatiskt utgå från en URL, automatiskt göra en inloggning och automatiskt följa länkar.
 
 URL:en som inloggningsformuläret finns på är:
+[http://vhost3.lnu.se:20080/~1dv449/scrape/](http://vhost3.lnu.se:20080/~1dv449/scrape/)
+Användarnamnet är: admin
+Lösenordet är: admin
 
-
-Du är helt fri att välja tekniker, programmeringsspråk och servermiljö.
+Du är helt fri att välja tekniker, programmeringsspråk och servermiljö för att lösa problemet. Koden ska dock redovisas via github.
 
 ##Krav
 1. Scriptet ska vara helt automatiserat och utgå den nämnda URL:en
@@ -49,7 +51,7 @@ Laborationen redovisas genom att göra en realease med din kod på ditt github-r
 
 ##Tips
 Studera de demonstrationsfilmer som finns på kurshemsidan.
-Tänk på att det är ett skript du skriver och inte en hel webbapplikationsarkitektur.
+
 
 
 
