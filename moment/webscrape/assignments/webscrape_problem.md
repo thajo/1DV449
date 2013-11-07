@@ -1,10 +1,12 @@
 ##Problem
 I denna uppgift ska du skriva ett automatiserat script som skrapar data på en webbplats.
-Du kan i denna uppgift vara kreativ och välja en egen webbplats att skrapa på information (var dock noga med att vara en god skrapare och att uppfylla de generella kraven)
-För er utan fantasi finns en färdig webbplats som har samlat ett antal matproducenter. 
-Sidan består av en ett inloggningsformulär som leder till en sida med en lista med producenter. Genom att följa dessa länkar via ditt automatiserade skript ska du skrapa alla de undersidor som finns på information och spara i valfri datalagring.
 
-Ditt script ska alltså automatiskt utgå från en URL, automatiskt göra en inloggning och automatiskt följa länkar.
+Du får i denna uppgift mycket gärna vara kreativ och välja en egen webbplats att skrapa på information. Dock ska omfattningen på uppgiften vara den samma som nedan beskrivna. Kontakta kursansvarige ifall Du är osäker.
+
+För er utan fantasi finns en färdig webbplats som har samlat ett antal matproducenter. 
+Sidan består av en ett inloggningsformulär som leder till en sida med en lista med producenter. Genom att följa dessa länkar via ditt automatiserade skript ska du skrapa alla (möjliga) undersidor på information och spara i valfri datalagring.
+
+Ditt script ska alltså automatiskt utgå från en URL, automatiskt göra en inloggning och automatiskt följa länkar och automatiskt skrapa ner informationen i en datalagring.
 
 URL:en som inloggningsformuläret finns på är:
 [http://vhost3.lnu.se:20080/~1dv449/scrape/](http://vhost3.lnu.se:20080/~1dv449/scrape/)
@@ -27,8 +29,7 @@ Du är helt fri att välja tekniker, programmeringsspråk och servermiljö för 
 	* Information som eventuellt saknas på producentsidorna t.ex. bilder, ort e.c.t.
 5. Gör en snygg och tydlig presentation (från datalagringen) i HTML (ska kommas åt via en URL)
 6. Skapa en fil med din reflektioner (se nedan)
-7. Din kod ska kontinuerligt pushas upp till github så man kan följa din kodutveckling.
-8. När uppgiften redovisas ska man ha gjort en release (tag) på sitt repositorie
+7. När uppgiften redovisas ska man ha gjort en release (tag) på sitt repositorie
 
 ##Reflektion
 Du ska i ditt repositorie skapa en fil i [markdown-format](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) där du reflekterar över följande saker:
@@ -36,7 +37,7 @@ Du ska i ditt repositorie skapa en fil i [markdown-format](https://github.com/ad
 1. Ni är fria att välja sätt att läsa in och extrahera data ur webbsidorna. Motivera ditt val!
 2. Vad finns det för risker med applikationer som innefattar automatisk skrapning av webbsidor? Nämn minst tre stycken!
 3. Tänk dig att du skulle skrapa en sida gjord i ASP.NET WebForms. Vad för extra problem kan man få då?
-4. Vad var svårast med denna uppgift?
+4. Har du gjort något med din kod för att vara "en god webbskrapare" med avseende på hur du skrapar sidan?
 5. Vad har du lärt dig av denna uppgift? 
 
 
@@ -48,11 +49,17 @@ För er som satsar på högre betyg i kursen finns här ett par extra funktioner
 
 
 ##Redovisning
-Laborationen redovisas genom att göra en realease med din kod på ditt github-repositorie samt genom en muntlig redovisning på schemalagt redovisningstillfälle.
+Redovisning sker på de schemalagda redovisningspassen som finns i schemat.
+Laborationen redovisas genom att göra en realease med din kod på ditt github-repositorie samt genom en muntlig redovisning på schemalagt redovisningstillfälle. Redovisningarna sker enskilt. Applikationen ska kunna nås via en URL examinatorn kan nå. 
+
+Distansstudenter redovisar genom det virtuella klassrummet.
+Campusstudenter redovisar hos någon av de kursansvarigas kontor. Se till att ha en körbar version man kan nå via en URL.
 
 
 ##Tips
 Studera de demonstrationsfilmer som finns på kurshemsidan.
+
+Surfa omkring på sidan med din webbläsare och studera hur den fungerar. Vad anropas vid inloggningen? Vilken data ska postas med? Hur håller sidan reda på den inloggade sessionen? Studera de HTTP-meddelanden som skcikas. Studera källkoden på sidorna. Hur är sidorna uppbyggda och hur kan de skrapas.
 
 #### Gör en release på din kod
 När du genomfört och vill examinera din applikation och för att du senare enkelt ska kunna gå tillbaka och se hur koden såg ut när genomfört laboration 1 ska du göra något som kallas för en tag eller release. 
