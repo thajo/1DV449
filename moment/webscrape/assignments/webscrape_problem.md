@@ -27,6 +27,8 @@ Du är helt fri att välja tekniker, programmeringsspråk och servermiljö för 
 	* Information som eventuellt saknas på producentsidorna t.ex. bilder, ort e.c.t.
 5. Gör en snygg och tydlig presentation (från datalagringen) i HTML (ska kommas åt via en URL)
 6. Skapa en fil med din reflektioner (se nedan)
+7. Din kod ska kontinuerligt pushas upp till github så man kan följa din kodutveckling.
+8. När uppgiften redovisas ska man ha gjort en release (tag) på sitt repositorie
 
 ##Reflektion
 Du ska i ditt repositorie skapa en fil i [markdown-format](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) där du reflekterar över följande saker:
@@ -51,6 +53,23 @@ Laborationen redovisas genom att göra en realease med din kod på ditt github-r
 
 ##Tips
 Studera de demonstrationsfilmer som finns på kurshemsidan.
+
+#### Gör en release på din kod
+När du genomfört och vill examinera din applikation och för att du senare enkelt ska kunna gå tillbaka och se hur koden såg ut när genomfört laboration 1 ska du göra något som kallas för en tag eller release. 
+
+1. Logga in på GitHub och gå till repositoriet för laborationen.
+2. Kontrollera att dina senaste ändringar finns tillgängliga på GitHub.
+3. Klicka på "releases" ovanför fillistningen.
+4. Välj att skapa en ny release.
+5. Se till att "Tag version" blir `L01` (Ludvig, nolla, etta).
+Titel och description fyller du i som du själv vill.
+![GitHub Release][github-release]
+6. Publicera releasen
+
+Se till att i fortsättningen göra ovanstående för samtliga laborationer (tag: L02, L03 etc.) när de är genomförda. Du kan nu fortsätta att arbete på laboration 2 och du har alltid en genväg för att gå tillbaka och se hur laboration 1 såg ut innan förändringarna som laboration 2 innebär.
+Kursledningen kan också på ett enkelt sätt överblicka klassens progression på de olika laborationerna.
+
+[github-release]: https://github.com/1ik415/Kursmaterial/raw/master/Laborationer/pics/github-release.png
 
 
 
