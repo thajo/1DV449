@@ -70,5 +70,12 @@ The Power and the Pitfalls of Big Data<br />
 <iframe width="640" height="360" src="//www.youtube.com/embed/buJUojhs80E?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>) 
 
 
+## För de som inte medverkar eller blir underkända på seminariumet
+Naturligtvis kan det finnas skäl för att man inte kan delta i ett seminarium. Meddela detta då till kursledningen snarast!
 
-### För de som inte medverkar eller blir underkända på seminariumet
+Alternativet är att skriva en mer utförlig rapport kring de frågor som kommer förekomma på  seminariumet. minst 1 och max 2 A4-sida per del i seminariumet. Rapporten ska vara utformat på ett tydligt sätt och rapporter innehållande för mycket stav- och grammatiska fel kommer återsändas för rättning utan vidare kommentarer. Till referenser och källhänvisningar används Harvardsystemet: [http://lnu.se/ub/sok-och-skrivhjalp/skriva-referenser](http://lnu.se/ub/sok-och-skrivhjalp/skriva-referenser)
+
+
+Rapporten commitas upp i ditt repositorie och du meddelar kursansvarige när detta är gjort. 
+Denna komplettering ska senast vara inlämnad en vecka efter aktuellt seminarium.
+Rapporten gås igenom av examinatorn inom en vecka förutsatt att den är inlämnad i tid.
