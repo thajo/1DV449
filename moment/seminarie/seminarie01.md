@@ -51,7 +51,7 @@ Webbskrapning handlar om att samla på sig information från en publik webbsida 
 
 * Vilka problem ser du med webbskrapning. Både som webbplatsägare (informationsägare) och som webbutvecklare. Nämn minst tre stycken, motivera dina val.
 
-* När man som webbutvecklare skrapar en sida finns det vissa etikettsregler som man bör följa för att vara en "good internet citizen". Kan du kommer på några sådana regler?
+* När man som webbutvecklare skrapar en sida finns det vissa etikettsregler som man bör försöka följa. Kan du kommer på några sådana regler?
 
 
 ## Diskussionsfråga 3 - Webbens framtid
