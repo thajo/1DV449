@@ -24,10 +24,10 @@ Du är helt fri att välja tekniker, programmeringsspråk och servermiljö för 
 	* producentens ort
 	
 3. Din kod ska kontinuerligt commitas upp på github och den slutliga koden ska ligga där tills kursen avslutas.
-4. Din data ska sparas undan permanent i en datalagring, på vilket sätt väljer du själv. Du ska spara all skrapad information om producenterna samt även eventuella resurser som inte finns att få tag på. 
+4. Din skrapade data ska sparas undan permanent i en datalagring på lämpligt sätt, hur du väljer att göra detta är upp till dig. Du ska spara all skrapad information om producenterna samt även eventuella resurser som inte finns att få tag på. 
 	* Döda länkar (404) 
 	* Information som eventuellt saknas på producentsidorna t.ex. bilder, ort e.c.t.
-5. Gör en snygg och tydlig presentation (från datalagringen) i HTML (ska kommas åt via en URL)
+5. Gör en snygg och tydlig presentation av informationen ovan som du skrapat (från datalagringen). Presentationen ska vara i HTML och rendrerad från din datalagring och ska kommas åt via en URL.
 6. Skapa en fil med din reflektioner (se nedan)
 7. När uppgiften redovisas ska man ha gjort en release (tag) på sitt repositorie
 
