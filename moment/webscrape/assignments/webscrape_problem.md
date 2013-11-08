@@ -10,6 +10,7 @@ Ditt script ska alltså automatiskt utgå från en URL, automatiskt göra en inl
 
 URL:en som inloggningsformuläret finns på är:
 [http://vhost3.lnu.se:20080/~1dv449/scrape/](http://vhost3.lnu.se:20080/~1dv449/scrape/)
+
 Användarnamnet är: admin
 Lösenordet är: admin
 
@@ -23,7 +24,7 @@ Du är helt fri att välja tekniker, programmeringsspråk och servermiljö för 
 	* url:en till producentens hemsida
 	* producentens ort
 	
-3. Din kod ska kontinuerligt commitas upp på github och den slutliga koden ska ligga där tills kursen avslutas.
+3. Du ska göra regelbundna commits av din kod och synkronisera denna till github.
 4. Din skrapade data ska sparas undan permanent i en datalagring på lämpligt sätt, hur du väljer att göra detta är upp till dig. Du ska spara all skrapad information om producenterna samt även eventuella resurser som inte finns att få tag på. 
 	* Döda länkar (404) 
 	* Information som eventuellt saknas på producentsidorna t.ex. bilder, ort e.c.t.
@@ -50,7 +51,7 @@ För er som satsar på högre betyg i kursen finns här ett par extra funktioner
 
 ##Redovisning
 Redovisning sker på de schemalagda redovisningspassen som finns i schemat.
-Laborationen redovisas genom att göra en realease med din kod på ditt github-repositorie samt genom en muntlig redovisning på schemalagt redovisningstillfälle. Redovisningarna sker enskilt. Applikationen ska kunna nås via en URL examinatorn kan nå. 
+Laborationen redovisas genom att göra en realease med din kod på ditt github-repositorie samt genom en muntlig redovisning på schemalagt redovisningstillfälle. Redovisningarna sker enskilt. Examinatorn ska kunna nå applikationen via en URL. 
 
 Distansstudenter redovisar genom det virtuella klassrummet.
 Campusstudenter redovisar hos någon av de kursansvarigas kontor. Se till att ha en körbar version man kan nå via en URL.
@@ -59,7 +60,7 @@ Campusstudenter redovisar hos någon av de kursansvarigas kontor. Se till att ha
 ##Tips
 Studera de demonstrationsfilmer som finns på kurshemsidan.
 
-Surfa omkring på sidan med din webbläsare och studera hur den fungerar. Vad anropas vid inloggningen? Vilken data ska postas med? Hur håller sidan reda på den inloggade sessionen? Studera de HTTP-meddelanden som skcikas. Studera källkoden på sidorna. Hur är sidorna uppbyggda och hur kan de skrapas.
+Surfa omkring på sidan med din webbläsare och studera hur den fungerar. Vad anropas vid inloggningen? Vilken data ska postas med? Hur håller sidan reda på den inloggade sessionen? Studera de HTTP-meddelanden som skickas. Studera källkoden på sidorna. Hur är sidorna uppbyggda och hur kan de skrapas.
 
 #### Gör en release på din kod
 När du genomfört och vill examinera din applikation och för att du senare enkelt ska kunna gå tillbaka och se hur koden såg ut när genomfört laboration 1 ska du göra något som kallas för en tag eller release. 
