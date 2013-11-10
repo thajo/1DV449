@@ -56,7 +56,7 @@ Webbskrapning handlar om att samla på sig information från en publik webbsida 
 
 ##Resurser som ska studeras innan seminariumet
 
-[En föreläsningsserie](http://fora.tv/2012/04/10/Data_is_the_New_Oil_From_Privacy_to_Publicy) med flera olika föreläsare paratar om "Data is the new Oil". Titta gärna igenom hela serien men framförallt Gerd Leonards fördrag.
+[En föreläsningsserie](http://fora.tv/2012/04/10/Data_is_the_New_Oil_From_Privacy_to_Publicy) med flera olika föreläsare pratar om "Data is the new Oil". Titta gärna igenom hela serien men framförallt Gerd Leonards och Jamais Cascios fördrag.
 
 [Storebror på Facebook](http://www.dnv.se/storebror-pa-facebook-integritet-och-risker-med-sociala-medier/) är en publikation skriven av Pär ström.
 
