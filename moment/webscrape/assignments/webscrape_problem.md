@@ -14,7 +14,7 @@ URL:en som inloggningsformuläret finns på är:
 Användarnamnet är: admin
 Lösenordet är: admin
 
-Du är helt fri att välja tekniker, programmeringsspråk och servermiljö för att lösa problemet. Koden ska dock redovisas via github.
+Du är helt fri att välja tekniker, programmeringsspråk och servermiljö för att lösa problemet. Koden ska dock redovisas via github samt muntligen på redovisningstillfället.
 
 ##Krav
 1. Scriptet ska vara helt automatiserat och utgå den nämnda URL:en
