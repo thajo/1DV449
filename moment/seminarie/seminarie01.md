@@ -58,7 +58,7 @@ Webbskrapning handlar om att samla på sig information från en publik webbsida 
 
 [En föreläsningsserie](http://fora.tv/2012/04/10/Data_is_the_New_Oil_From_Privacy_to_Publicy) med flera olika föreläsare pratar om "Data is the new Oil". Titta gärna igenom hela serien men framförallt Gerd Leonards och Jamais Cascios fördrag.
 
-[Storebror på Facebook](http://www.dnv.se/storebror-pa-facebook-integritet-och-risker-med-sociala-medier/) är en publikation skriven av Pär ström.
+[Storebror på Facebook](http://nyavalfarden.utv.hemsidor.nu/wp-content/uploads/2011/10/Storebror-p%C3%A5-Facebook.pdf) är en publikation skriven av Pär ström.
 
 The Power and the Pitfalls of Big Data<br />
 <iframe width="640" height="360" src="//www.youtube.com/embed/buJUojhs80E?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>) 
