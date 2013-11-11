@@ -75,7 +75,7 @@
        
 		
 		<br /><br />
-		<h1 class="big c">Web Science</h1>
+		<h1 class="big c">Föreläsning 2</h1>
 		<p class="very_small" style="margin-top: 60px;">
 				
 		</p>
@@ -97,9 +97,10 @@
 			<li>Varför web science?</li>
 			<li>Problem inom web science</li>
 			<li>Web of data</li>
+			<li>Web mining and big data</li>
 			<li>Webbskrapning</li>
-			<li>Semantiska webben</li>
-			<li>Web mining</li>
+			<li>Semantiska webben, länkad data</li>
+			<li>Microformat</li>
 		</ul>
 	</article>
 	
@@ -112,9 +113,22 @@
 			<a href="http://www.flickr.com/photos/psd/">http://www.flickr.com/photos/psd/</a> 
 		</p>
 		<img src="http://farm4.staticflickr.com/3156/2731067095_73f8f62020_b.jpg" height="100%"/>
+		<p class="note">
+			Webben är den största artifakt i människans hitoria.
+			Webben påverkas och utvecklas av männskor, bildar nya beteenden hos människor,
+			Sättet vi sprider information, sättet vi kommunicerar, sättet vi bedriver handel,
+			hälsa sjukvård, goverment
+			många aspekter i samhället.
+			The study of the web.
+			The study of how the people who use the web change the web
+			The study how the web change the people who use it
+			Synvinkel som datavetare. Mjukvara. Vad gör din applikation bra elle rinte bra.
+			Nytt område.
+			Hur kunde webben ta över världen?
+		</p>
 	</article>	
 	
-	<!-- Webben är den största artifakt i människans historia -->	
+	
 		
 	<!-- Vad är web science ? - Tvärvetenskaplig-->
     <article class="fill">
@@ -147,7 +161,7 @@
    	<p class="cc">Foto cc by Emilian Robert Vicol: <a href="http://www.flickr.com/photos/free-stock/"> http://www.flickr.com/photos/free-stock/</a> </p>
    	<img src="http://farm9.staticflickr.com/8144/7304232902_aa4cc352c5_h.jpg" width="100%"/>
 	<p class="note">
-		Hur kommer vi använda i denna kurs
+		Hur kommer vi använda i denna kurs, peka på de olika delarna
 	</p>
    	</article>	
 	
@@ -155,9 +169,9 @@
 	<article>
 		<h1>Resurser som WS</h1>
 		<p>
-			WS Trust
-			MOOC
-			University of southhampton
+			Web Science Trust (http://webscience.org/)
+			MOOC-kurs i Web Science: (https://www.futurelearn.com/courses/web-science/)
+			University of Southhampton (http://www.wais.ecs.soton.ac.uk/)
 		</p>
 	</article>
 	   	
@@ -165,15 +179,48 @@
     <article class="fill">
  		<h3 class="c">Web of Data</h3>
    		<p>
-			Semantic web, Linked data, Web of data
+			Big Data - Allt lagras?!
 		</p>
 		<p>
-			Webben är mänsklighetens största artifakt.<br />
-			All kunskap samlad, fri möjlighet att söka den<br />
+			digitalt lagrad information av sådan storlek (vanligen terabyte och petabyte), 
+			att det är svårt att bearbeta den med traditionella databasmetoder.
 		</p>
 		
    		<p>
-			Gå från en webb med länkade dokument till en webb med länkad data
+			Data is the new oil! 
+		</p>
+		
+   		<p class="cc">Foto cc by Cory Doctorow: 
+		<a href="http://www.flickr.com/photos/doctorow/"> http://www.flickr.com/photos/doctorow/</a> </p>
+   		<img src="http://farm4.static.flickr.com/3220/2711081060_ba91f69796.jpg" height="100%"/>
+		
+   	</article>
+
+	<!-- Web of data -->
+    <article class="fill">
+ 		<h3 class="c">Web mining</h3>
+   		<p>
+			 is the application of data mining techniques to discover patterns from the Web. 
+			According to analysis targets, web mining can be divided into three different types, 
+			which are Web usage mining, Web content mining and Web structure mining.
+		</p>
+		<p>
+			Web usage mining
+
+			Web usage mining is the process of extracting useful information from server logs
+			 Web usage mining is the process of finding out what users are looking for
+		</p>
+		
+   		<p>
+			Web structure mining[edit]
+
+			Web structure mining is the process of using graph theory to analyze the node and connection structure of a web site. According to the type of web structural data, web structure mining can be divided a into two kinds:
+			1. Extracting patterns from hyperlinks in the web: a hyperlink is a structural component that connects the web page to a different location.
+			2. Mining the document structure: analysis of the tree-like structure of page structures to describe HTML or XML tag usage.
+		</p>
+		<p>
+			Web content mining is the mining, extraction and integration of useful data, information and knowledge from Web page content. 
+			expanding information sources on the World Wide Web, such as hypertext documents, makes automated discovery, organization, and search and indexing tools of the Internet and the World Wide Web 
 		</p>
 		
    		<p class="cc">Foto cc by Cory Doctorow: 
@@ -183,16 +230,6 @@
    	</article>	
 	
 	
-	<!-- Web of data -->
-    <article >
- 		<h1 class="c">Hur kan vi hämta information från webben och använda, kombinera, dra nya slutsatser o.s.v.</h1>
-		<p>
-			<br />
-		<img src="images/linked_data_stars.png" />
-		</p>
-		<p class="cc">Tim Berners-Lee, 2010: 
-		<a href="http://www.w3.org/DesignIssues/LinkedData.html">http://www.w3.org/DesignIssues/LinkedData.html</a> </p>
-   	</article>	
 	
 	
 	<!-- Metoder för webbskrapning -->
@@ -200,6 +237,7 @@
     	<h3 class="c">Webbskrapning</h3>
 		<ul>
 			<li>Samlar ostrukturerad data och strukturerar upp det för lagring och analys</li>
+			Bild på HTML och en lista med e-pstadresser
 			<li>Spindlar/crawlers - Indexering</li>
 			<li>Screen scraping</li>
 			<li>Skrapscript</li>
@@ -208,7 +246,46 @@
 		<img src="http://farm5.staticflickr.com/4027/4463644938_dd457a50b9_b.jpg" />
 		<p class="cc">Foto cc by Espen Klem: 
 		<a href="http://www.flickr.com/photos/eklem/">http://www.flickr.com/photos/eklem/</a> </p>
-   	</article>	
+   	</article>
+
+	<article>
+		<h1>Tekniker vid webbskrapning</h1>
+		<p>
+			Skriva kod som gör HTTP-anrop
+			tar hand om resultatet och extraherar ut
+			data
+		</p>
+		<p>
+			Följa länkar
+		</p>
+		<p>
+			Strukturera data - Bild på ett antal sidor och en databastabell.
+		</p>
+	</article>
+	
+	<article>
+		<h1>Simulera HTTP-anrop</h1>
+		<p>
+			Verktyg för hantera HTTP-anrop
+			GET, POST, POST-parametrar, cookies, http-response (404, 200)
+			felhantering.
+		</p>
+		<pre>
+			fopen
+			file_get_contents("http://")
+			curl...
+		</pre>
+	</article>
+	
+	<article>
+		<h1>Kodexempel - curl</h1>
+	
+	</article>
+	
+	<article>
+		<h1>Vi har data - hur extraherar vi den vi vill ha?</h1>
+	
+	</article>
 	
 	<!-- Copy & paste -->
     <article class="fill">
@@ -253,19 +330,12 @@
     <article class="fill">
  		<h3 class="c">DOM Parsing - Exempel</h3>
    		<pre>
-			
+			Ta exempel från cloud 9
 		</pre>
-   	</article>
-	
-	<!-- Avancerade lösningar -->
-	<article>
-		<h1>Mer avancerade lösningar</h1>
 		<p>
-			Data mining - Generella algoritmer som samlar in stora mängder data ur stora webbplatser<br />
-			Specialskriven mjukvara - Web Scraping software
-			...
-			
-	</article>
+			Demonstrationsfilmer
+		</p>
+   	</article>
 	
 	
 	<!-- Web API:r och mashups -->
@@ -440,7 +510,7 @@
 			W3C standard
 		</h1>
 		<h2 class="c">
-			XML. RDF, OWL, SPARQL, RDFa, SKOS, RDFS, 
+			XML, XML Schema, RDF, OWL, SPARQL, RDFa, SKOS, RDFS, 
 			GRDDL, POWDER, PROV, RIF, SAWSDL, RDB2RDF
 		</h2>
 	</article>
@@ -476,7 +546,7 @@
 		<h1 class="c">
 			RDF - Resource Description Framework
 		</h1>
-		<p>
+		<p class="c">
 			Beskriver relationen mellan "saker"<br />
 			
 			<img src="images/RDF_example.png" width="600px" />
@@ -509,21 +579,15 @@
 		<iframe src="http://factforge.net/sparql"></iframe>
 	</article>
 	
+	<!-- Kritik -->
+	<article class="fill">
+		Utopi
+	</article>
+	
 	<!-- Microformat -->
     <article class="fill">
 		<iframe src="http://microformats.org/"></iframe>
 	</article>
-	
-	<!-- Big data -->
-	
-	<!-- Data mining -->
-	
-	<!-- Web mining -->
-	
-	<!-- resurser för vidare läsning -->
-	
-	<!-- Vad har vi lärt oss idag? -->
-	
 	
 	
     </section>
