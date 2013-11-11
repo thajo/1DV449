@@ -37,7 +37,7 @@ Du ska i ditt repositorie skapa en fil i [markdown-format](https://github.com/ad
 
 1. Ni är fria att välja sätt att läsa in och extrahera data ur webbsidorna. Motivera ditt val!
 2. Vad finns det för risker med applikationer som innefattar automatisk skrapning av webbsidor? Nämn minst tre stycken!
-3. Tänk dig att du skulle skrapa en sida gjord i ASP.NET WebForms. Vad för extra problem kan man få då?
+3. Tänk dig att du skulle skrapa en sida gjord i ASP.NET WebForms. Vad för extra problem skulle man kunna få då?
 4. Har du gjort något med din kod för att vara "en god webbskrapare" med avseende på hur du skrapar sidan?
 5. Vad har du lärt dig av denna uppgift? 
 
@@ -69,12 +69,12 @@ När du genomfört och vill examinera din applikation och för att du senare enk
 2. Kontrollera att dina senaste ändringar finns tillgängliga på GitHub.
 3. Klicka på "releases" ovanför fillistningen.
 4. Välj att skapa en ny release.
-5. Se till att "Tag version" blir `L01` (Ludvig, nolla, etta).
+5. Se till att "Tag version" blir `l01` (Ludvig, nolla, etta).
 Titel och description fyller du i som du själv vill.
 ![GitHub Release][github-release]
 6. Publicera releasen
 
-Se till att i fortsättningen göra ovanstående för samtliga laborationer (tag: L02, L03 etc.) när de är genomförda. Du kan nu fortsätta att arbete på laboration 2 och du har alltid en genväg för att gå tillbaka och se hur laboration 1 såg ut innan förändringarna som laboration 2 innebär.
+Se till att i fortsättningen göra ovanstående för samtliga laborationer (tag: l02, l03 etc.) när de är genomförda. 
 Kursledningen kan också på ett enkelt sätt överblicka klassens progression på de olika laborationerna.
 
 [github-release]: https://github.com/1ik415/Kursmaterial/raw/master/Laborationer/pics/github-release.png
