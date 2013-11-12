@@ -93,14 +93,13 @@
 	<article>
 		<h3>Dagens agenda</h3>
 		<ul>
-			<li>Vad är web science?</li>
-			<li>Varför web science?</li>
-			<li>Problem inom web science</li>
+			<li>Vad är Web Science?</li>
+			<li>Varför Web Science?</li>
+			<li>Problem inom Web Science</li>
 			<li>Web of data</li>
-			<li>Web mining and big data</li>
+			<li>Web mining</li>
 			<li>Webbskrapning</li>
-			<li>Semantiska webben, länkad data</li>
-			<li>Microformat</li>
+			<li>Länkad data, Semantiska webben, Microformat</li>
 		</ul>
 	</article>
 	
@@ -117,17 +116,26 @@
 			Webben är den största artifakt i människans hitoria.
 			Webben påverkas och utvecklas av männskor, bildar nya beteenden hos människor,
 			Sättet vi sprider information, sättet vi kommunicerar, sättet vi bedriver handel,
-			hälsa sjukvård, goverment
-			många aspekter i samhället.
+			hälsa sjukvård, goverment många aspekter i samhället.
 			The study of the web.
 			The study of how the people who use the web change the web
 			The study how the web change the people who use it
-			Synvinkel som datavetare. Mjukvara. Vad gör din applikation bra elle rinte bra.
+			
+			Flickr, visuell nyhetsrapportering, bombning Boston marathon.
+			Twitter handlar ej om vad jag åt. Nyhetsflöde, snabba nyheter
+			Alla data som sparats som kan analyseras. Inse epidimier genom att kombinera twitteruppdateringa roch 
+			lokalisering.
+			
+			Synvinkel som datavetare. Mjukvara. Vad gör din applikation bra eller  inte bra.
 			Nytt område.
 			Hur kunde webben ta över världen?
 		</p>
 	</article>	
 	
+	<!-- a framework for web science -->
+	<article class="fill">
+		<iframe src="http://www.nowpublishers.com/articles/foundations-and-trends-in-web-science/WEB-001;jsessionid=5F26CA1A1C3C2B87EE07B01898E1E67E"></iframe>
+	</article>
 	
 		
 	<!-- Vad är web science ? - Tvärvetenskaplig-->
@@ -137,7 +145,12 @@
 			<a href="http://www.clarehooper.net/blog/2012/06/dissecting-the-butterfly/websci-heatmap/"> 			http://www.clarehooper.net/blog/2012/06/dissecting-the-butterfly/websci-heatmap/</a>
 		</p>
 	   	<img src="http://www.clarehooper.net/blog/wp-content/uploads/2012/06/websci-heatmap.png" height="100%"/>
+		<p class="note">
+			Web Science är tvärvetenskapligt.
+			Måste se webben ur olika synvinklar
+		</p>
    	</article>	
+	
 	
 	<!-- Vilka problem? -->
     <article class="fill">
@@ -147,7 +160,7 @@
 					Länkad data, semantiska webben</br>
 					Webbprogrammering, Webb-AI</br>
 			</p>
-   			<p class="small"><strong>Analysera webben och dess användning</strong><br />
+   			<p class="small"><strong>Analysera webbens innehåll och dess möjligheter</strong><br />
 					Web of data, Web Mining</br>
 					Big Data</br>
 					Open Data</br>
@@ -212,23 +225,22 @@
  		<h3 class="c">Web mining</h3>
    		<p>
 			Data mining handlar om att anlysera och hitta mönster i stora datasamlingar.
-			Web mining är tekniker för att öpptäcka mönster på webben.
 		</p>
 		
 		<ul>
 			<li>
-				Web usage mining - Anlysera data från surfanvändares bettenden, loggar aktiviteter (clickstream data)
+				<strong>Web usage mining</strong> - Anlysera data från surfanvändares beteenden, loggar aktiviteter (clickstream data)
 			</li>
-			<li>Web content mining - Koncentreras sig på data som redan finns på webben, innehåll i webbsidor, sökmotorer - crawlers, Strukturera ostrukturerad data
+			<li><strong>Web content mining</strong> - Data som redan finns på webben, innehåll i webbsidor, sökmotorer - crawlers, Strukturera ostrukturerad data
 			</li>
 			<li>
-				Web-structure mining - Analyserar länkstruktur för att klassificera webbsidor. PageRank algoritmen, Analysera sociala nätverk.
+				<strong>Web-structure mining</strong> - Analyserar länkstruktur för att klassificera webbsidor. PageRank algoritmen, Analysera sociala nätverk.
 			</li> 
 		</ul>
 				
-   		<p class="cc">Foto cc by Cory Doctorow: 
-		<a href="http://www.flickr.com/photos/doctorow/"> http://www.flickr.com/photos/doctorow/</a> </p>
-   		<img src="http://farm4.static.flickr.com/3220/2711081060_ba91f69796.jpg" height="100%"/>
+   		<p class="cc">Foto from wikipedia: 
+		<a href="http://upload.wikimedia.org/wikipedia/commons/b/b8/Sao_Paulo_Stock_Exchange.jpg"> http://upload.wikimedia.org/wikipedia/commons/b/b8/Sao_Paulo_Stock_Exchange.jpg</a> </p>
+   		<img src="http://upload.wikimedia.org/wikipedia/commons/b/b8/Sao_Paulo_Stock_Exchange.jpg" height="100%"/>
 		
    	</article>	
 	
@@ -239,7 +251,7 @@
     <article class="fill">
     	<h3 class="c">Webbskrapning</h3>
 		<ul style="list-style-type:none;">
-			<li>Samlar ostrukturerad data och strukturerar upp det för lagring och analys</li>
+			<li>Samlar ostrukturerad data och strukturerar upp det för lagring och/eller analys</li>
 			<li class="c"><img src="images/scraper.jpg" /></li>
 			<li>Spindlar/crawlers - Indexering</li>
 			
@@ -271,8 +283,10 @@
 			<li>Skriva kod som gör HTTP-anrop</li>
 			<li>Ta hand om resultatet och extrahera ut data</li>
 			<li>Automatiskt följa länkar</li>
+			<li>Skicka med POST-data</li>
 			<li>Hantera sessioner</li>
 			<li>Hantera redirections och fel (301, 404, 500)</li>
+			<li>Tänk på webbplatsägaren!</li>
 		</ul>
 		
 	</article>
@@ -286,37 +300,36 @@
 $handle = fopen("http://www.example.com/", "r");
 
 
-$data = file_get_contents("http://www.example.com/")
+$data = file_get_contents("http://www.example.com/");
 		
 		</pre>
 	</article>
 	
 	<article>
-		<h1>Kodexempel - curl</h1>
+		<h1>Kodexempel - cURL</h1>
 		
 		<pre>
-&lt;?php
-
 $ch = curl_init();
 
+// curl_setopt ger massor med inställningsmöjligheter 
+// http://us2.php.net/manual/en/function.curl-setopt.php
 curl_setopt($ch, CURLOPT_URL, "http://www.example.com/"); 
 curl_setopt($ch, CURLOPT_HEADER, true);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE); 
-$p_data = curl_exec($ch);
+$data = curl_exec($ch);
 
-// Läser ut HTTP-status
+// Läser ut HTTP-status - http://us2.php.net/curl_getinfo
 $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-		</pre>
+
+// Stäng för att frigöra resurserna
+curl_close($ch);</pre>
 	</article>
 	
 	<article>
 		<h1 class="c">Vi har data<br />Hur extraherar vi den vi vill ha?</h1>
 	
 	</article>
-	
-	
-	
 	
 	<!-- Text grep -->
     <article class="fill">
@@ -398,10 +411,15 @@ foreach($items as $item) {
 					Semantiska webben
 				</h1>
 				<p>
+					2001
+				</p>
+				<p>
 					Om applikationer förstår meningen bakom informationen, 
 					kan de lära sig vad vi är intresserade av 
 					och hjälpa oss att enklare hitta det vi vill
 				</p>
+				<pre>
+&lt;item rdf:about="http://example.org/semantic-web/">Semantic Web&lt;/item></pre>
 				<p>
 					Mindre tid att leta efter saker, mindre tid att filtrera bort saker, mindre tid att förklara för datorn vad vi vill
 				</p>
@@ -411,17 +429,43 @@ foreach($items as $item) {
 		
 	</article>
 	
-	<!-- S0emantiska webben -->
-    <article class="fill">
-		<iframe src="http://embed.ted.com/talks/tim_berners_lee_on_the_next_web.html" width="560" height="315" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-		
+	
+	
+	<!-- XML vs. HTML -->
+    <article>
+		<h1 class="c">
+			XML vs. HTML
+		</h1>
+		<pre>
+&lt;p>12346&lt;/p></pre>
+
+		<h3>Webbläsaren vet att den ska rendera ut 58 som ett stycke (paragraph)</h3>
+		<br /><br />
+		<h3>Vad betyder 12346?</h3>
 	</article>
 	
+	<!-- XML vs. HTML -->
+    <article>
+		<h1 class="c">
+			XML - eXtensible Markup Language
+		</h1>
+		<p class="c">
+		<img src="images/XML.png" width="500px"/>
+		</p>
+<h3>XML är gjort för att märka upp data och för att vara ett dataformat för webben</h3>
+
+	</article>
+	
+	<!-- Tim Berners-Lee -->
+    <article class="fill">
+		<iframe src="http://www.w3.org/2001/sw/wiki/Main_Page"></iframe>
+	</article>
+		
 	<!-- Från dokument till databas -->
     <article class="fill">
  		<h3 class="c">Antag jag samlar kapsyler...</h3>
-   		<p class="cc">Idé snodd från: http://www.slideshare.net/freekbijl/web-30-explained-with-a-stamp</p>
-		<p class="cc">Foto cc by Joe Holst: 
+   		
+		<p class="cc">Idé snodd från: http://www.slideshare.net/freekbijl/web-30-explained-with-a-stamp, Foto cc by Joe Holst: 
 		<a href="http://www.flickr.com/photos/jyoseph/"> hhttp://www.flickr.com/photos/jyoseph/</a> </p>
    		<img src="http://farm3.staticflickr.com/2018/2316883985_bb07a06911_o.jpg" height="100%"/>
    	</article>	
@@ -494,9 +538,10 @@ foreach($items as $item) {
 	<!-- Vi måste beskriva data -->
     <article>
 		<h1 class="c">
-			Vi måste <strong>beskriva</strong> data på ett <strong>strukturerat</strong> sätt så
-			att applikationer kan förstå och automatisera sökningen på ett mer omfattande och intelligentare sätt
+			<strong>Beskriv</strong> data på ett <strong>strukturerat</strong> sätt så
+			att applikationer kan förstå och automatisera sökningen på ett mer omfattande och intelligentare sätt.
 		</h1>
+		<p class="c small">Definera verkligheten så maskiner förstår den</p>
    	</article>
 	
 	<!-- Struktur via databaser -->
@@ -513,6 +558,12 @@ foreach($items as $item) {
 		<h1 class="c">Länkad data (linked data)</h1>
    		
    	</article>
+	
+	<!-- S0emantiska webben -->
+    <article class="fill">
+		<iframe src="http://embed.ted.com/talks/tim_berners_lee_on_the_next_web.html" width="560" height="315" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		
+	</article>
 	
 	<!-- Semantiska webben -->
     <article class="fill">
@@ -537,10 +588,7 @@ foreach($items as $item) {
 	
 	
 	
-	<!-- Tim Berners-Lee -->
-    <article class="fill">
-		<iframe src="http://www.w3.org/2001/sw/wiki/Main_Page"></iframe>
-	</article>
+	
 	
 	<!-- Semantiska webben - Standards -->
     <article class="fill">
@@ -553,30 +601,7 @@ foreach($items as $item) {
 		</h2>
 	</article>
 	
-	<!-- XML vs. HTML -->
-    <article>
-		<h1 class="c">
-			XML vs. HTML
-		</h1>
-		<pre>
-&lt;p>12346&lt;/p></pre>
-
-		<h3>Webbläsaren vet att den ska rendera ut 58 som ett stycke (paragraph)</h3>
-		<br /><br />
-		<h3>Vad betyder 12346?</h3>
-	</article>
 	
-	<!-- XML vs. HTML -->
-    <article>
-		<h1 class="c">
-			XML - eXtensible Markup Language
-		</h1>
-		<p class="c">
-		<img src="images/XML.png" width="500px"/>
-		</p>
-<h3>XML är gjort för att märka upp data och för att vara ett dataformat för webben</h3>
-
-	</article>
 	
 		
 	<!-- RDF - semantiska webben -->
@@ -613,11 +638,7 @@ foreach($items as $item) {
     <article class="fill">
 		<iframe src="http://factforge.net/sparql"></iframe>
 	</article>
-	
-	<!-- Kritik -->
-	<article class="fill">
-		Utopi
-	</article>
+		
 	
 	<!-- Microformat -->
     <article class="fill">
