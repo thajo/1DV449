@@ -42,7 +42,7 @@ Kommunerna i Sverige har mycket data men det är svårt som medborgare att ta de
 
 [http://www.luii.lu.se/wp-content/uploads/2013/03/Fran-byrakrati-till-innovation-RAPPORT-FINAL-130311.pdf](En rapport om öppen data)
 
-
+* Vad tycker vi inte ska vara öppen data?
 * Surfa runt på Kalmar kommuns webbplats och fundera lite på vad för data du skulle tänka dig vara intressant att släppa öppen i ett första skede och 		vad för slags tjänster man skulle kunna bygga kring detta?
 * Vad för möjligheter- respektive risker ser du ur kommunens synvinkel att öppna upp sin data?
 * Vad för möjligheter- respektive risker ser du som medborgare?
