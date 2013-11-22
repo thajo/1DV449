@@ -10,8 +10,8 @@ Skriv ihop ca en A4 i [markdown-format](https://github.com/adam-p/markdown-here/
 * Hur tror du din roll som webbutvecklare kommer förändras? 
 
 
-###Fallstudie - 100% webb
-2010 publicerade Google ett [bloginlägg](http://googleenterprise.blogspot.se/2010/12/nothing-but-web.html) som man döpte till "Nothing but the web". Där pratar man om 100% webb som ett koncept där webben är den rådande mjukplattformen och där data lagras central i "cloudbaserade" lösningar och alla gränsnsitt är byggda av webbtekniker.
+###1.2 Fallstudie - 100% webb
+2010 publicerade Google ett [blogginlägg](http://googleenterprise.blogspot.se/2010/12/nothing-but-web.html) som man döpte till "Nothing but the web". Där pratar man om 100% webb som ett koncept där webben är den rådande mjukplattformen och där data lagras central i "cloudbaserade" lösningar och alla gränsnsitt är byggda av webbtekniker.
 
 * Vad tror du om konceptet 100% webb, både i dagsläget och i framtiden? 
 * Hur skulle du klara dig idag om du bara använde dig av en webbläsare som programplattform. Vilka tjänster/mjukvaror kan du inte köra i en webbläsare? 
@@ -27,26 +27,24 @@ Begreppet "Open data" eller "Öppen data" används allt mer och mer. [http://sv.
 * Vad finns det för krav på den data som kallas för öppen data?
 * Vad tror du tendenserna med mer öppen data kommer spela för roll för dig som webbutvecklare?
 
-###Fallstudie
-Kommunerna i Sverige sitter på mycket data och står inför ett förändringsarbete kring sin data.
-[http://www.kalmar.se](Kalmar kommun) är inget undantag.
 
+###2.1 Fallstudie
+Kommunerna i Sverige sitter på mycket data och står inför ett förändringsarbete kring sin data och dess öppenhet. Din kommun är säkerligen inget undantag?
 
-
-
-* Surfa runt på Kalmar kommuns webbplats för att orientera dig kring vilken information som finns där. Vilken skulle du vara intresserad av att få presenterad på ett mer strukturerat sätt (för enklare användning i dina applikationer t.ex. som webb-API). Kan du komma på några tjänster som man skulle kunna bygga med denna data som skulle komma kommun/kommuninvånare till gagn? Tror du det finns någon information som idagsläget inte är tillgänglig som Du skulle vilja komma åt för att bygga bra tjänster/applikationer?
+* Surfa runt på din kommuns webbplats för att orientera dig kring vilken information som finns där. Vilken skulle du vara intresserad av att få presenterad på ett mer strukturerat sätt (för enklare användning i dina applikationer t.ex. som webb-API). Kan du komma på några tjänster som man skulle kunna bygga med denna data som skulle komma kommun/kommuninvånare till gagn? Tror du det finns någon information som i dagsläget inte är tillgänglig som Du skulle vilja komma åt för att bygga bra tjänster/applikationer?
 * Vad för möjligheter- respektive risker ser du ur kommunens synvinkel att öppna upp sin data?
 * Vad för möjligheter- respektive risker ser du som medborgare?
 
 
-
 **Intressanta länkar:**
-[Open Data handbook](http://opendatahandbook.org/pdf/OpenDataHandbook.pdf)
-[Github goverment](http://government.github.com/)
-[http://www.opendata.se/](http://www.opendata.se/)
-[Joakim Jardenberg](http://jardenberg.se/) diskuterar kring fler områden och begrepp i sitt blogginlägg [Det är nu det händer](http://jardenberg.se/det-ar-nu-det-hander/). Inlägget har några år på nacken men det finns många intressanta länkar att följa för vidare läsning.
+
+* [Open Data handbook](http://opendatahandbook.org/pdf/OpenDataHandbook.pdf)
+* [Github goverment](http://government.github.com/)
+* [http://www.opendata.se/](http://www.opendata.se/)
+* [Joakim Jardenberg](http://jardenberg.se/) diskuterar kring fler områden och begrepp i sitt blogginlägg [Det är nu det händer](http://jardenberg.se/det-ar-nu-det-hander/). Inlägget har några år på nacken men det finns många intressanta länkar att följa för vidare läsning.
+* [Örebro kommun](http://www.orebro.se/12784.html)
 
 
-Rapport som kan läsas lite mer översiktligt
-[http://www.luii.lu.se/wp-content/uploads/2013/03/Fran-byrakrati-till-innovation-RAPPORT-FINAL-130311.pdf](En rapport om öppen data). 
+Rapport som kan läsas lite mer översiktligt men som ser på problemen med att öppna upp data inom organisationer.
+* [http://www.luii.lu.se/wp-content/uploads/2013/03/Fran-byrakrati-till-innovation-RAPPORT-FINAL-130311.pdf](En rapport om öppen data). 
 
