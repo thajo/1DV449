@@ -10,6 +10,7 @@ Skriv ihop ca en A4 i [markdown-format](https://github.com/adam-p/markdown-here/
 * Hur tror du din roll som webbutvecklare kommer förändras? 
 
 
+
 ###1.2 Fallstudie - 100% webb
 2010 publicerade Google ett [blogginlägg](http://googleenterprise.blogspot.se/2010/12/nothing-but-web.html) som man döpte till "Nothing but the web". Där pratar man om 100% webb som ett koncept där webben är den rådande mjukplattformen och där data lagras central i "cloudbaserade" lösningar och alla gränsnsitt är byggda av webbtekniker.
 
@@ -26,6 +27,7 @@ Begreppet "Open data" eller "Öppen data" används allt mer och mer. [http://sv.
 * Vad innebär egentligen begreppet "öppen data"? 
 * Vad finns det för krav på den data som kallas för öppen data?
 * Vad tror du tendenserna med mer öppen data kommer spela för roll för dig som webbutvecklare?
+
 
 
 ###2.1 Fallstudie
