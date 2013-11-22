@@ -48,5 +48,5 @@ Kommunerna i Sverige sitter på mycket data och står inför ett förändringsar
 
 
 Rapport som kan läsas lite mer översiktligt men som ser på problemen med att öppna upp data inom organisationer.
-* [http://www.luii.lu.se/wp-content/uploads/2013/03/Fran-byrakrati-till-innovation-RAPPORT-FINAL-130311.pdf](En rapport om öppen data). 
+* [En rapport om öppen data](http://www.luii.lu.se/wp-content/uploads/2013/03/Fran-byrakrati-till-innovation-RAPPORT-FINAL-130311.pdf). 
 
