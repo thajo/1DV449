@@ -6,15 +6,17 @@ Skriv ihop ca en A4 i [markdown-format](https://github.com/adam-p/markdown-here/
 ## Diskussionsfråga 1 - Webbens framtid
 
 * Hur tror du att vi kommer använda webben om fem till tio år? Både till vardags och som samhällsmedborgare?
-* Vilka typer av tjänster tror Du vi skulle kunna tänkas se i en framtida webb?
-* Hur tror du din roll som webbutvecklare kommer förändras? 
 
+* Vilka typer av tjänster tror Du vi skulle kunna tänkas se i en framtida webb?
+
+* Hur tror du din roll som webbutvecklare kommer förändras? 
 
 
 ### 1.2 Fallstudie - 100% webb
 2010 publicerade Google ett [blogginlägg](http://googleenterprise.blogspot.se/2010/12/nothing-but-web.html) som man döpte till "Nothing but the web". Där pratar man om 100% webb som ett koncept där webben är den rådande mjukplattformen och där data lagras central i "cloudbaserade" lösningar och alla gränsnsitt är byggda av webbtekniker.
 
 * Vad tror du om konceptet 100% webb, både i dagsläget och i framtiden? 
+
 * Hur skulle du klara dig idag om du bara använde dig av en webbläsare som programplattform. Vilka tjänster/mjukvaror kan du inte köra i en webbläsare? 
 
 
@@ -25,7 +27,9 @@ Inom mjukvaruutveckling känner vi alla till begreppet "Open source". Begreppet 
 Begreppet "Open data" eller "Öppen data" används allt mer och mer. [http://sv.wikipedia.org/wiki/PSI-lagen](PSI-lagen) är ett steg i denna riktning,
 
 * Vad innebär egentligen begreppet "öppen data"? 
+
 * Vad finns det för krav på den data som kallas för öppen data?
+
 * Vad tror du tendenserna med mer öppen data kommer spela för roll för dig som webbutvecklare?
 
 
@@ -34,7 +38,9 @@ Begreppet "Open data" eller "Öppen data" används allt mer och mer. [http://sv.
 Kommunerna i Sverige sitter på mycket data och står inför ett förändringsarbete kring sin data och dess öppenhet. Din kommun är säkerligen inget undantag?
 
 * Surfa runt på din kommuns webbplats för att orientera dig kring vilken information som finns där. Vilken skulle du vara intresserad av att få presenterad på ett mer strukturerat sätt (för enklare användning i dina applikationer t.ex. som webb-API). Kan du komma på några tjänster som man skulle kunna bygga med denna data som skulle komma kommun/kommuninvånare till gagn? Tror du det finns någon information som i dagsläget inte är tillgänglig som Du skulle vilja komma åt för att bygga bra tjänster/applikationer?
+
 * Vad för möjligheter- respektive risker ser du ur kommunens synvinkel att öppna upp sin data?
+
 * Vad för möjligheter- respektive risker ser du som medborgare?
 
 
