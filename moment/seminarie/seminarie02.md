@@ -24,7 +24,7 @@ Skriv ihop ca en A4 i [markdown-format](https://github.com/adam-p/markdown-here/
 Inom mjukvaruutveckling känner vi alla till begreppet "Open source". Begreppet med "openess" har spridit sig till flera olika delar av samhället. Inom utbildning talas det mycket om [OER (Open Educational Resources](http://en.wikipedia.org/wiki/Open_educational_resources) där öppna lärresurser görs tillgängliga både för studenter och andra lärare. [Open goverment](http://en.wikipedia.org/wiki/Open_government) är en annan rörelse där myndigheter gör sin data tillgänglig för allmänheten.
 
 
-Begreppet "Open data" eller "Öppen data" används allt mer och mer. [http://sv.wikipedia.org/wiki/PSI-lagen](PSI-lagen) är ett steg i denna riktning,
+Begreppet "Open data" eller "Öppen data" används allt mer och mer. [PSI-lagen](http://sv.wikipedia.org/wiki/PSI-lagen) är ett steg i denna riktning,
 
 * Vad innebär egentligen begreppet "öppen data"? 
 
