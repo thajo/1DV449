@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+
+  <head>
+   
+     <meta charset="utf-8" />
+     <title>Webbteknik II, 1DV449</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    
+    <meta name="description" content="Webben idag och i framtiden, Kalmar, Linnéuniversitetet" />
+    
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script src='slides.js' media="screen"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<style media="print">
+	         @page {
+	            size: A4 landscape;
+	             @top-right {
+	                content: "Page " counter(page);
+	             }
+	         }
+	          article {
+	            page-break-after: always;
+	            margin: auto;
+	          }
+	          article.next, article.past {
+	            display: block;    
+	          }
+	
+				iframe {
+					display: none;
+				}
+				article img {
+					display: none;
+				}
+	          body {
+	              display: block !important;
+	              font-family: 'Open Sans', Arial, sans-serif;
+	              font-size: 1.5em;
+				  }
+	</style>
+  </head>
+  
+
+
+  <body style='display: none'>
+
+    <section class='slides layout-widescreen template-default'>
+      <!-- http://lights.elliegoulding.com/ -->
+	
+
+	<!-- Första sidan -->
+    <article>
+       	<h3>
+          Webbteknik II, 1DV449
+          <br />
+          <span class="small">Linnéuniversitetet, Ht 2013</span>
+        </h3>
+       
+		
+		<br /><br />
+		<h1 class="big c">HTTP</h1>
+		<p class="very_small" style="margin-top: 60px;">
+				
+		</p>
+		
+		<p class="small_footer">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">
+					<img alt="Creative Commons-licens" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>&nbsp;&nbsp;Denna presentation är licensierat under en 
+					
+						<a rel="license" href="hhttp://creativecommons.org/licenses/by/3.0/deed.sv">Creative Commons Erkännande 3.0 Unported Licens</a>.<br/>
+		</p>
+ 	</article>
+	
+	<!-- Agenda -->
+	<article>
+		<h1>Agenda</h1>
+		<ul>
+			<li>HTTP historik, TCP/IP</li>
+			<li>HTTP Headers</li>
+			<li>Optimering med HTTP</li>
+			<li>HTTP-Cache</li>
+			<li>Problem med HTTP</li>
+			<li>AJAX, Comet</li>
+			<li>Mätning, inför laborationen</li>
+		</ul>
+	</article>
+	
+	<!-- HTTP -->
+  		
+    <article class="fill">
+		
+		<h3>Hypertext Transfer Protocol</h3>
+		
+			<img src="http://farm3.staticflickr.com/2216/2424654365_93d08147a7_z.jpg?zz=1" />
+			<p class="cc">Foto cc by Macco: <a href="http://www.flickr.com/photos/mako_side_b/">http://www.flickr.com/photos/mako_side_b/</a> </p>
+ 	</article>
+	
+	
+	
+	<!-- HTTP karaktär -->
+	<article>
+		<h1>HTTP...</h1>
+		<ul style="list-style-type:none;">
+			<li>...använder TCP som transportprotokoll</li>
+			<li>...bygger på förfrågan/svar mellan klient/server </li>
+			<li>...definierar dessa i sin "header" och "header fields"</li>
+			<li>...är stateless</li>
+			<li>...använder enkelt textformat för meddelande</li>
+		</ul>
+		<p class="note">
+			HTTP needs a reliable connection, standard port 80 - https 443<br />
+			HTTP är textbased<br />
+			HTTP är mer än bara filöverföring<br />
+		</p>	
+	</article>
+	
+	
+	
+		<!-- Recept för att hämta en webbsida -->
+		<article class="fill">
+			<h3>Hämta en webbsida</h3>
+
+			
+			<ol>
+				<li>Hitta adressen till webbservern i fråga</li>
+				<li>Hitta vägen till webbservern över Internet</li>
+				<li>Ansluta till webbservern och få en garanterad "säker" transport</li>
+				<li>Få HTML skickad till webbläsaren via HTTP</li>
+			</ol>
+			
+			<img src="images/internet_overview.png" />
+			<p class="note">
+				
+			</p>
+		</article>
+		
+		<!-- Vad är TCP/IP -->			
+		<article>
+			
+			<img src="images/TCP_IP.png" />
+			
+			<p class="note">
+				Protokollstack, många protokoll (samling regler)<br />
+				Grunden för all kommunikation på nätet<br />
+				Byta ut olika nivåer<br />
+				Paketbaserad<br />
+				Ta olika vägar för att komma fram<br />
+			</p>
+			<p class="note">
+				TCP/IP är grunden för all kommunikation över Internet. Det är en så kallad protokollstack
+				och innehåller mängder av olika protokoll för olika typer av tillämpningar.
+				<br /><br />
+				De olika nivåerna i stacken är separerade från varandra så att man enkelt kan bygga på del
+				och del. TCP/IP delar upp all trafik i mindre paket för att enklare kunna skicka 
+				dessa över Internet. Varje lager i TCP/IP-modellen lägger på sin information på paketet
+				och tar också hand om det på andra sidan.
+				<br /><br />
+			</p>
+		</article>	
+		
+		<!-- Vad består Internet av? -->
+		<article>
+			<h2>Internet</h2>
+			<p class="c">
+			<img src="images/internetz.png" />
+			</p>
+			<p class="note">
+				Internet består av miljontals servrar, routrar osv<br />
+				Trafiken kan ta olika vägar - Beroende på tillgänglighet, prestanda m.m. Det var själva
+				tanken med Internet. Går en väg ner ska trafiken alltid kunna ta en annan.<br />
+				Applikationer på internet - FTP, E-post, BitTorrent, Webben
+			</p>
+		</article>
+		
+		<!-- DNS vs IP -->	
+		<article>
+			<h1 class="bg">1. Hitta adressen till webbläsaren</h1>
+			
+			<p class="spaced bgy">Vi gillar domännamn <br /><strong>www.lnu.se</strong></p>
+			
+			<p class="spaced bgy">Datorer gillar IP-adresser <br />
+			<strong>194.173.221.1</strong><br />
+			<strong>2001:0db8:85a3:0000:0000:8a2e:0370:7334</strong></p>
+			
+			<p class="note">
+				På något sätt måste det finnas ett system för möjligheten att översätta
+				IPnummer till domännamn och vice versa...
+			</p>
+		</article>
+		
+		<!-- DNS FTW -->
+		<article>
+			<h2>Domain Name System</h2>
+			
+			<p class="c"><img src="images/dns_system.png" /></p>
+			<p class="small c">Översätt IP till domnnamn och vice versa</p>
+			<p class="note">
+				DNS systemet är centralstyrt system och högst upp i hierarkin finns 13 stycken root servrar.
+				De flesta uppslag vi gör hamnar dock på en betydligt närmare DNS-server än så då det finns
+				massor av namnservrar som kopierar ner listor med uppslag så att man kan minska 
+				anropens längd. Du har även en DNS cache i din lokala dator, både i operativsystemet 
+				och i webbläsaren.<br /><br />
+				DNS-servrarna kommunicerar med varandra internt för att hela tiden försöka ha den senaste 
+				listan. Om du någon gång pekat om en server och uppdaterats dess DNS register vet du att 
+				det kan ta en stund innan DNS:en har pekats om, anledning är just att det finns en viss
+				fördröjning innan all information spridits.
+				<br /><br />
+			</p>
+		</article>
+		
+		<!-- IP, routrar -->
+		<article>
+			<h1 class="bg">2. Vi vet IP, hur hittar vi servern?</h1>
+			
+			<img src="images/route.png" />
+			
+			<p class="c bgy">Internets routrar och IP-protokollet</p>
+			
+			<p class="note">
+				När vi vet IP-numret till den server vi ska ansluta till kommer
+				IP-protokollet och alla miljontals routrar som finns på nätet väl till
+				plats. En router känner till många andra routrar som ligger ute på nätet
+				och kan med hjälp av smarta algoritmer och en specifik routingtabell ta reda på hur 
+				paketen ska skickas vidare för att på bästa sätt hamna hor mottagaren.<br />
+				
+				Vad händer med ett paket som försöks skickas till endress som ingen svarar på?
+				TTL (tim-to-Live)
+			</p>
+		</article>
+		
+		<!-- TCP -->
+		<article>
+			<h1 class="bg">3. Hur ansluter vi?</h1>
+			<p class="c">
+			<img src="images/tcp.png" />
+			</p>
+			<p class="note">
+				TCP är ett transportprotokoll vars uppgift är att se till att
+				alla paket verkligen kommer fram. TCP ansvarar också för anslutningen till 
+				servern vi vill prata med. Man brukar tala om att man ansluter på olika portar<br />
+				En webbserver lyssnar (som standard) på portarna (80 och 443 - https)<br />
+				För varje anslutning till en server genomför TCP en så kallad handskakning 
+				(3-way handshake). Klienten skickar en anslutningsförfrågan till servern, servern 
+				svarar med ett OK (ACK) och ett synkroniseringsnummber och klienten skickar tillbaka 
+				ett OK och anslutningen är nu upprättad.<br />
+				<br />
+				UDP är ett annat transportprotokoll. Det är snabbare men har ingen kontroll 
+				på att allt kommer fram. UDP brukar användas t.ex. vid videoströmmar där man 
+				hellre tar en snabb koppling än att man tappar någon frame då och då.
+				
+			</p>
+		</article>
+		
+		<!-- HTTP -->
+		<article>
+			<h1 class="bg">4. Skicka informationen - HTTP</h1>
+			
+			<img src="images/4_HTTP.png" />
+			
+			<p class="note">
+				HTTP är det vi ska gå lite djupare in i denna kurs och titta på mer i detalj vad
+				som finns i det protokollet och vad som är viktigt för oss webbutvecklare.
+				
+			</p>
+		</article>
+		
+		<!-- Vad består Internet av? -->
+		<article class="fill">
+			
+			
+			<img src="images/internet_overview.png" height="800px" />
+			
+			<p class="note">
+				Hur kan det funka så bra!?!
+			</p>
+		</article>
+		
+		
+		<!-- Vad är TCP/IP -->			
+		<article>
+			
+			<img src="images/TCP_IP.png" />
+			
+			<p class="note">
+				OK, vi vet att vi skickar paket som innehåller information 
+				som varje protokoll behöver för att göra en förfrågan 
+				från en webbläsare till en webbserver...
+			</p>
+		</article>	
+		
+		<article>
+			<h1 class="c">En HTTP-session</h1>
+			<img src="images/http_timeline.png" />
+			<p class="c bgr">Tips! Undvik onödiga HTTP-requests!</p>
+			<p class="note">
+				Detta gäller för en HTML-sida, en bild osv.
+				En översiktlig del. Non-persistant (old way)
+				prestanda: undvik onödiga requests
+				Image maps, CSS Sprites, antal script och stilmallar
+			</p>	
+		</article>
+	
+	
+	<!-- HTTP intro -->
+	<article>
+		<h1>
+			HTTP - Standardiseras av W3C
+		</h1>
+		<ul>
+			<li>Version 0.9 (1991) - Knappt använd</li>
+			<li>Version 1.0 (1996) - Används sällan idag</li>
+			<li>Version 1.1 (1999) - Standard idag</li>
+		</ul>
+		<p class="small">
+			<a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">
+				http://www.w3.org/Protocols/rfc2616/rfc2616.html
+			</a>
+		</p>
+			
+		<div class="note">
+			Första versionen användes knappt. Hade endast GET.
+			<br />
+			Andra versionen kan idag användas i vissa webproxys.
+			GET, POST, HEAD, Ej standard med multiple connections.
+			<br />
+			Tredje versionen accepterades fort av webbläsare. Används idag.
+			Persistant connections, piplined connections (asynkrona anrop)
+		</div>
+	</article>
+	
+	<!-- Request Methods -->
+	<article>
+		<h1>HTTP Request Methods</h1>
+		<table class="">
+			<tr class="bgy spaced u">
+			<td class="b">GET</td>
+			<td>Hämta en resurs (via URL), "read-only"</td>
+			</tr>
+			
+			<tr class="u">
+			<td class="b">POST</dt>
+			<td>Posta data (formulär). Skickar data från klient till server</td>
+			</tr>
+			
+			<tr class="bgy spaced u">
+			<td class="b">HEAD</td>
+			<td>Hämta endast HTTP headern - ej ev. dokument</td>
+			</tr>
+			
+			<tr class="u">
+			<td class="b">PUT</td>
+			<td>Ladda upp utpekad resurs</td>
+			</tr>
+			
+			<tr class="bgy spaced u">
+			<td class="b">DELETE</td>
+			<td>Ta bort utpekad resurs</td>
+			</tr>
+			
+			<tr class="u">
+			<td class="b">TRACE</td>
+			<td>Skicka tillbaka förfrågan precis som den kom (upptäcka ändringar på vägen)</td>
+			</tr>
+			
+			<tr class="bgy spaced u">
+			<td class="b">OPTIONS</td>
+			<td>Får tillbaka en lista med vilka HTTP-kommandon som stöds</td>
+			</tr>
+			
+			<tr class="u">
+			<td class="b">CONNECT&nbsp;&nbsp;&nbsp;</td>
+			<td>Används vid SSL-tunnlar</td>
+			</tr>
+		</table>
+		
+		<p class="note">
+			GET och POST vanligast (betraktas som säkra)<br />
+			Ofta inte stöd för andra (många tolkas som GET)<br />
+			REST
+		</p>
+		
+	</article>
+	
+	<article>
+		<p class="c spaced">
+			<img class="bii" src="images/http_request.png" style="max-width: 60%"/>
+		</p>
+	</article>
+	<!-- HTTP response -->
+	<article>
+		<h1 class="c bg">HTTP Response</h1>
+		<p class="c spaced">
+			<img class="bi" src="images/http_response.png" />
+		</p>
+		<p class="small c bgy">Svar från webbserver till klient</p>
+		<p class="note">
+			Förstora bilden?
+		</p>
+	</article>
+	
+		
+	<!-- Redirects -->
+	<article>
+		<p class="c bg">Redirects</p>
+		<p class="small">
+			
+			<p class="c spaced"><img src="images/http_redirect.png" class="bi" />
+				
+		
+			<a class="small">http://w3.org/QA/Tips/reback</a>
+			
+		</p>
+	</article>
+	
+	<!-- Accept -->
+	<article>
+		<h1 class="small c bg">HTTP header field: <strong>Accept, Accept-encoding</strong></h1>
+		<p class=" small spaced bgy">Klient till server</p>
+				
+		<p class="small spaced c">	
+			<img src="images/http_accept.png" class="bi" />
+		</p>
+		<q class="pretty_small">
+			I want the resource and I want it in an HTML or XHTML format. 
+			If you cannot serve me this way, I'll take it in an XML instead. 
+			If you can't even give it to me in XML, well, 
+			I'll take anything you've got!
+		</q>
+		<p class="note">
+			q => Quality Value, Viktning av hur vi vill ha saker (används?)
+			API - REST
+			Server MAY compress
+		</p>
+	</article>
+	
+	<!-- Content -->
+	<article>
+		<h1 class="small c bg">HTTP header field: <strong>Content, Content-encoding</strong></h1>
+		<p class=" small spaced bgy">Server till client</p>
+				
+		<p class="small spaced c">	
+			<img class="bi" src="images/http_content.png" />
+		</p>
+		<q class="pretty_small">
+			Here you go! I give you javascript and it is compressed by gzip.
+			If you're a proxy make sure to get multiple versions for the clients 
+			who doesn't support HTTP 1.1 or don't support gzip
+		</q>
+		<p class="note">
+			
+		</p>
+	</article>
+	
+	<!-- Compression -->
+	<article>
+		<p class="bg c">Compression</p>
+		<p class="c spaced">
+			<img src="images/gzip.png" />
+		</p>
+		<p class="pretty_small bgy spaced">
+			Mindre filer, mindre nätverkstrafik, snabbare sidor?
+		</p>
+		<p class="pretty_small bgy spaced">
+			Vanligast är gzip (GNU), andra är t.ex. deflate
+		</p>
+		<p class="pretty_small bgy spaced">
+			HTML, XML, JSON-dokument, Script, CSS...<br />
+			Komprimera ej bilder, PDF och andra redan komprimerade resurser
+		</p>
+		
+		<a class="pretty_small" href="http://www.gidnetwork.com/tools/gzip-test.php">
+			http://www.gidnetwork.com/tools/gzip-test.php
+		</a>
+		
+		<p class="c bgr pretty_small spaced">
+			Tips! Testa alltid prestandan! <br />Snabbhet vs. storlek
+		</p>
+	</article>
+	
+	<!-- compression how -->
+	<article>
+		<p class="bg c">Compression - Hur gör jag?</p>
+		
+		<p class="small bgy spaced">
+			Konfigureras oftas på webbservern
+		</p>
+		<p class="small bg spaced">
+			I Apache görs detta i .htaccess i modulen <strong>mod_deflate</strong><br />
+		</p>
+		<p class="c">
+			<img src="images/apache_mod_deflate.png" class="bii" />
+		</p>
+		<p class="pretty_small bg">
+			Kan styras i PHP-kod via <a href="http://php.net/manual/en/function.ob-gzhandler.php">ob_gzhandler</a>
+		</p>
+		<p class="note">
+			Finns en mod_gzip, men är lit eäldre och bökigare
+		</p>
+	</article>
+	
+	
+	<!-- CACHE -->
+	
+	<article>
+		<p class="medium_small c bg">HTTP och cachning!</p>
+		
+		<p class="pretty_small bgy spaced c">
+			Ett sätt att spara kopior av en resurs<br /> på en plats närmare den som efter frågar den
+		</p>
+		<p class="c">
+			<img src="images/proxy_cache.png" style="max-width: 90%"/>
+		</p>
+		<p class="c bg small">
+			Bilder, script, css, statiska dokument
+		</p>
+			
+		<p class="note">
+			Spara kompior av ett reponse för att snabbare och effektivare
+			presenter data vid en förfrågan
+			Snabbare svar, mindre trafik
+			statiska sidor vs. dynamiska
+			
+			snabbare och minska trafik
+			
+			Stale - Data som inte är uppdaterad (ej dynamiska sidor)
+			Fräsh data
+		</p>
+	</article>
+	
+	<article>
+		<h1 class="medium_small c bg">Cache och HTTP</h1>
+		<p class="c spaced">
+			<img src="images/cache_overview.png" class="bi" />
+		</p>
+	
+	</article>
+	
+	
+	
+	<!-- Typer av cache? -->
+	<article>
+		<h1 class="c bg">Typer av web cachning</h1>
+		<ul class="small bgy spaced">
+			<li>Browser cache</li>
+			<li>Proxy cache</li>
+			<li>Gateway cache - Lastbalansering, CDN</li>
+			<li>Serverside cache</li>
+		</ul>
+		<p class="small c bg spaced">
+			Content Delivery Network - En server nära dig!
+		</p>
+		<p class="c">
+			<img src="images/cdn.png" />
+		</p>
+		<p class="note">
+			Content Delivery Network
+		</p>
+	</article>
+	
+	<!-- HTTP - alternativ -->		
+	<article>
+		<h1 class="small_medium c bg">Hur HTTP styr cachning</h1>
+			<ul class="small bgy spaced">
+			<li>Expires</li>
+			<li>Cache-Control</li>
+			<li>Last-Modified, If-Modified-Since</li>
+			<li>E-tag, If-None-Match</li>
+		</ul>
+		<p class="c">
+			<img class="bi" src="images/cache_response.png" />
+		</p>
+		<p class="c bg small">
+			<strong>Fresh</strong> - Lita på att serverns response är giltigt<br />
+			<strong>Stale</strong> - Cache:at response behöver uppdateras
+		</p>
+		<p class="note">
+			Age? Hitta en bild med alla?
+			
+		</p>
+	</article>
+	
+	<!-- Expire -->
+	<article>
+		<p class="c bg">Expires</p>
+		<p class="spaced pretty_small bgy c">
+			Kontrollerar fräschheten hos ett response mot ett HTTP datum
+			<br />
+			Om tiden gått ut görs en kontroll mot servern om nyare data finns
+		</p>
+		
+		<p class="c">
+			<img src="images/cache_example.png" />
+		</p>
+		
+			
+		</p>
+		<p class="note">
+			HTTP Date - Utgår från GMT
+			Stort stöd
+			Bilder och resuser som får tid långt framåt - Byt filnamn
+			
+			BILD
+			Klockan - Syncproblem
+			Lätt att glömma att man satt en tid långt fram
+		</p>
+	</article>
+			
+	<!-- Cache-control -->
+	<article>
+		<p class="c bg">Cache-Control</p>
+		<p class="c pretty_small">
+			Vanligt att man använder samtidigt som Expires. <br />Cache-Control prioriteras.
+		</p>
+		<p class="pretty_small bgy spaced">
+			<strong>max-age</strong> - Antal sekunder som innehållet anses giltigt
+		</p>
+			<p class="pretty_small bgy spaced">
+			<strong>public</strong> - Tillåts cache:as av alla 
+			</p>
+			<p class="pretty_small bgy spaced">
+			<strong>private </strong>- Tillåts endast cache-ning privat - webbläsare
+			</p>
+			<p class="pretty_small bgy spaced">
+			<strong>no-cache</strong> - Kontrollera med servern för att få släppa cachat data
+			</p>
+			<p class="pretty_small bgy spaced">
+			<strong>no-store</strong> - Ingen cache alls!
+			</p>
+			<p class="pretty_small bgy spaced">
+			<strong>must-revalidate</strong> - Måste följa cache-reglerna ovan (HTTP finns specialfall)
+			</p>
+		</p>
+		<p class="c"><img class="bi" src="images/cache-control.png" /></p>
+		
+		<p class="note">
+			Intruducerades med HTTP 1.1
+			Pragma - Stöds inte av de flesta cache
+		</p>
+	</article>
+	
+	<!-- Etag -->
+	<article>
+		<p class="c bg">ETag - Entity Tag</p>
+		<p class="small bgy spaced">
+			Unika identifierare sätts på servern för enklare(?) validering 
+		</p>
+		<p class="c">
+			<img src="images/etag.png" class="bi" />
+		</p>
+		
+		<p class="small bgy spaced">
+			<strong>If-None-Match</strong> - Validerar på servern ifall id:t har uppdaterats 
+		</p>
+		
+		<p class="note">
+			Problem vid web frms osv.
+		</p>
+	</article>
+	
+	<!-- Hur cacha som kodare? -->
+	<article>
+		<p class="c bg">Cache - i webbservern</p>
+		<p class="small bgy spaced">
+			De flesta webbservrar har redan cachning påslagen för statiska resurser.<br /><br />
+			Kan dock ställas om i konfigurationsfiler eller verktyg.<br /><br />
+			Sätta på filnivå, filändelsenivå o.s.v.
+		</p>
+		
+		<p class="bg c spaced small">
+			mod_expires, modul till Apache
+		</p>
+		<p class="c">
+			<img src="images/cache_apache.png" class="bi" />
+		</p>
+		
+		
+		<p class="note">
+			Problem vid web frms osv.
+		</p>
+	</article>
+	
+	<!-- PHP-kod -->
+	<article>
+		<p class="c bg">Cache - PHP</p>
+		<p class="small bgy spaced">
+			Resurser som skapats av PHP bör man vara lite försiktid med
+			att cache:a
+		</p>
+		<p class="c">
+			<img src="images/php_cache.png" class="bi spaced" />
+		</p>
+			
+		<p class="note">
+			Problem vid web frms osv.
+		</p>
+	</article>
+	
+	<!-- Tips och trix -->
+	<article>
+		<p class="c bgr">Tips!</p>
+		<p class="pretty_small">
+			Sätt lång cachetid på resurser som inte uppdateras ofta (bilder, css, script)<br /><br />
+			Om en fil som cachas ändras. Uppdatera dess filnamn på servern.<br /><br />
+			När du uppdaterar din site - flytta bara de filer som ska uppdateras<br /><br />
+			HTTPS är endast för sidor som behövs vara krypterade.<br /><br />
+			Skriv till statiska filer, slippa DB, enklare att cache:a.<br /><br />
+			Använd inte POST i onödan - Den förfrågan cache:as inte<br /><br />
+			Testa din webbplats noga! Hur är cachningen satt! Vad kan bli bättre?<br /><br />
+			Studera välbesökta webbplatser!<br /><br />
+		</p>
+		
+		<p class="note">
+			När du uppdaterar din site - flytta bara de filer som uppdateras (ändrar inga Last-Modified)
+			HTTPS är endast för sidor som behövs vara säkra. Sämre prestanda och noll cache.
+		</p>
+		
+	</article>
+			
+	
+	<!-- Problem -->
+	<article>
+		<h1 class="c bg">HTTP Connection</h1>
+		<p class="bgy spaced small">Hur många GET sker när du går till någon populär kvällstidningswebbplats?</p>
+		<p class="c">
+			<img src="images/http_timeline.png" />
+		</p>
+		
+		<p class="note">
+			453 requests!
+			Hur fungerar det med request/response
+		</p>
+	</article>
+	
+	
+	<!-- Persistant connection -->
+	<article>
+		<h1 class="bg c">Persistent connection</h1>
+		<p class="bgy spaced small">
+			Både från klienten (om stöd finns) och server<br />
+			Connection: keep-alive<br />
+		</p>
+		<p class="c">
+			<img src="images/keep_alive.png" />
+		</p>
+	</article>
+	
+	<!-- Pipline connection -->
+	<article>
+		<h1 class="small c bg">Piplined connection</h1>
+		<p class="c">
+			<img src="images/pipeline.png" class="bi" />
+		</p>
+	</article>
+	
+	<!-- Realtidswebben och dess problem -->
+	<article>
+		<h1 class="small c bg">Problem vid realtidsapplikationer</h1>
+		<img src="images/pull.png" />
+		<p class="note">
+			Smartare med längre och längre requeststider m.m.
+			Problem med HTTP vs realtid
+		</p>
+		
+	</article>
+	
+	<!-- Lösningar för realtidswebben -->		
+	<article>
+		<h1 class="small c bg">Lösningar för realtidswebben</h1>
+		<p class="small bgy spaced">
+			Flash, Java Applet<br />
+			Polling<br />
+			Long polling<br />
+			Forever frame<br />
+			XHR Streaming<br />
+			Web Sockets - Lösning på TCP-nivå<br />
+		</p>
+	</article>
+
+		
+	<!-- Long Polling -->
+	<article>
+		<h1 class="small c bg">Long-Polling</h1>
+		
+		<p class="bgy pretty_small spaced">
+		En request görs men servern svarar endast när ny data finns<br />
+		
+		Simulerar att man servern pushar ut meddelanden<br />
+		</p>
+		<p class="c">
+			<img src="images/long_polling.png" />
+		</p>
+		<p class="pretty_small bg">
+			Problem att man kan bli liggande med många öppna anslutningar
+		</p>
+		
+		
+	</article>
+	
+	<!-- iFrame -->
+	<article>
+		<h1 class="bg c">Forever frame</h1>
+		<p class="bgy small spaced">
+			Vanlig teknik förut. <br /><br />
+			Dold iframe med en sida som servern skickar ut javascriptkommandon till när uppdateringar finns.<br /><br />
+		
+			Servern använder "chunked encoding" så sidan i iframen fylls på efter 
+			hand med script som anropar "riktiga" sidan via en callback
+		</p>
+		<p class="note">
+			IE måste br-tagg läggas till
+			Safari minst 1KB,
+		</p>
+	</article>
+	
+	<!-- Streaming XHR -->
+	<article>
+			<h1 class="c bg">Streaming XHR</h1>
+			<p class="bgy small spaced">
+			Som long polling men du använder data så fort den kommer (chuncked)
+			</p>
+			<p class="c">
+				<img src="images/xhr_streaming.png" />
+			</p>
+			<p class="small bgr c">
+				Dåligt stöd i vissa webbläsare
+			</p>
+	</article>
+	
+	
+	
+	<!-- Mätning av prestanda -->	
+	
+	<!-- om laborationen, handledning -->
+		
+	
+    </section>
+  </body>
+</html>
+
+<!-- Status codes 
+<article>
+	<h1 class="c bg">Statuskod</h1>
+	
+		<table cellpadding="10" style="width: 100%; margin-top: 20px;" class="pretty_small">
+			<tr class="bgy spaced u">
+				<td colspan="2">1xx - Informational</td>
+			</tr>
+			<tr>	
+				<td>
+					Ett provisoriskt response
+				</td>
+				<td width="40%">	
+					100 Continue
+				</td>	
+			</tr>
+		</table>
+		
+		<table cellpadding="10" style="width: 100%; margin-top: 20px;" class="pretty_small">
+			<tr class="bgy spaced u">
+				<td colspan="2">2xx - Successful</td>
+			</tr>
+			<tr>	
+				<td>
+				Förfrågan gick bra, togs emot,<br /> blev förstådd och accepterad
+				</td>
+				<td width="40%">	
+					200 OK<br />
+					204 No Content
+				</td>	
+			</tr>
+		</table>
+		
+		<table cellpadding="10" style="width: 100%; margin-top: 20px;" class="pretty_small">
+			<tr class="bgy spaced u">
+				<td colspan="2">3xx - Redirections</td>
+			</tr>
+			<tr>	
+				<td>
+				För att hitta efterfrågad resurs måste klienten utföra ett nytt anrop
+				</td>
+				<td width="40%">	
+						301 Moved Permanently<br />
+						302 Found<br />
+						304 Not Modified<br />
+				</td>	
+			</tr>
+		</table>
+		
+		<table cellpadding="10" style="width: 100%; margin-top: 20px;" class="pretty_small">
+			<tr class="bgy spaced u">
+				<td colspan="2">4xx - Client Error</td>
+			</tr>
+			<tr>	
+				<td>
+				Något är fel i förfrågan
+				</td>
+				<td width="40%">	
+						400 Bad Request<br />
+						401 Unauthorized<br />
+						403 Forbidden<br />
+						404 Not Found</dd>
+				</td>	
+			</tr>
+		</table>
+		
+		<table cellpadding="10" style="width: 100%; margin-top: 20px;" class="pretty_small">
+			<tr class="bgy spaced u">
+				<td colspan="2">5xx - Server Error</td>
+			</tr>
+			<tr>	
+				<td>
+				Något är fel på servern
+				</td>
+				<td width="40%">	
+						500 Internal Server Error<br />
+						503 Service Unavailable<br />
+						
+				</td>	
+			</tr>
+		</table>
+			
+			<a class="pretty_small" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">
+				http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
+			</a>
+</article>
+	
+-->

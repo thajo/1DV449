@@ -182,6 +182,13 @@ padding: 40px;
 color: black;
 }
 
+article.fill ol {
+	font-size: 30px;
+background: rgba(255, 255, 255, .85);
+padding: 40px;
+color: black;
+}
+
 
 .bgy {
  background-color: #FFC;	
