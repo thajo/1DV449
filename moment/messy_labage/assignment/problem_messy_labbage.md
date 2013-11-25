@@ -88,7 +88,7 @@ Att HTTP-protokellet i sitt orginalutförande har lite begränsningar vet vi om.
 
 I dagsläget finns nyare tekniker så som [web sockets](http://en.wikipedia.org/wiki/WebSocket) och [server-sent events](https://developer.mozilla.org/en-US/docs/Server-sent_events/Using_server-sent_events). Vi ska dock i denna laboration studera en teknik som fungerar med äldre webbläsare och som utnyttjar HTTP-protokollet och [XMLHttpRequest](http://en.wikipedia.org/wiki/XMLHttpRequest).
 
-Lösningen brukar kallas [Comet](http://en.wikipedia.org/wiki/Comet_&#40;programming&#41;) och är egentligen ett paraply-begrepp för tekniker där webbservern pushar data till klienten. Det finns ett antal olika varianter för detta men du ska implementera en lösning som stödjer sig på metoden som kallas för **XMLHttpRequest long polling**
+Lösningen brukar kallas [Comet](http://en.wikipedia.org/wiki/Comet_&#40;programming&#41;) och är egentligen ett paraply-begrepp för tekniker där webbservern pushar data till klienten. Det finns ett antal olika varianter för detta men du ska implementera en lösning som stödjer sig på metoden som kallas för **XMLHttpRequest long polling** alternativt **XHR streaming**.
 
 Applikationen du har fått har ju möjlighet att skriva meddelande till de olika producenterna. Tanken är att du ska skriva om meddelande-hanteringen till en comet-lösning där servern meddelar klienten när ett nytt meddelande har skrivits. Du ska alltså kunna ha två webbläsarfönster öppna (med samma valda producent) och när du skriver ett meddelande i det ena ska det dyka upp i båda webbläsarfönstren.
 

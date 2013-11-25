@@ -110,8 +110,8 @@
 		
 		<h3>Hypertext Transfer Protocol</h3>
 		
-			<img src="http://farm3.staticflickr.com/2216/2424654365_93d08147a7_z.jpg?zz=1" />
-			<p class="cc">Foto cc by Macco: <a href="http://www.flickr.com/photos/mako_side_b/">http://www.flickr.com/photos/mako_side_b/</a> </p>
+			<img src="http://farm3.staticflickr.com/2189/2467553359_1fa1e53dee_z.jpg" />
+			<p class="cc">Foto cc by: <a href="http://www.flickr.com/photos/knightfoundation/">http://www.flickr.com/photos/knightfoundation/</a> </p>
  	</article>
 	
 	
@@ -120,11 +120,11 @@
 	<article>
 		<h1>HTTP...</h1>
 		<ul style="list-style-type:none;">
-			<li>...använder TCP som transportprotokoll</li>
 			<li>...bygger på förfrågan/svar mellan klient/server </li>
 			<li>...definierar dessa i sin "header" och "header fields"</li>
 			<li>...är stateless</li>
 			<li>...använder enkelt textformat för meddelande</li>
+			<li>...använder TCP som transportprotokoll</li>
 		</ul>
 		<p class="note">
 			HTTP needs a reliable connection, standard port 80 - https 443<br />
@@ -283,30 +283,6 @@
 			</p>
 		</article>
 		
-		<!-- Vad består Internet av? -->
-		<article class="fill">
-			
-			
-			<img src="images/internet_overview.png" height="800px" />
-			
-			<p class="note">
-				Hur kan det funka så bra!?!
-			</p>
-		</article>
-		
-		
-		<!-- Vad är TCP/IP -->			
-		<article>
-			
-			<img src="images/TCP_IP.png" />
-			
-			<p class="note">
-				OK, vi vet att vi skickar paket som innehåller information 
-				som varje protokoll behöver för att göra en förfrågan 
-				från en webbläsare till en webbserver...
-			</p>
-		</article>	
-		
 		<article>
 			<h1 class="c">En HTTP-session</h1>
 			<img src="images/http_timeline.png" />
@@ -318,13 +294,28 @@
 				Image maps, CSS Sprites, antal script och stilmallar
 			</p>	
 		</article>
-	
+			
+		<!-- Vad består Internet av? -->
+		<article class="fill">
+			<h3>Att det funkar så bra!?!</h3>
+			
+			<img src="images/internet_overview.png" height="800px" />
+			
+			<p class="note">
+				Hur kan det funka så bra!?!
+			</p>
+		</article>
+		
+		
+		
+		
+		
 	
 	<!-- HTTP intro -->
-	<article>
-		<h1>
-			HTTP - Standardiseras av W3C
-		</h1>
+	<article class="fill">
+		<h3>
+			HTTP - versioner
+		</h3>
 		<ul>
 			<li>Version 0.9 (1991) - Knappt använd</li>
 			<li>Version 1.0 (1996) - Används sällan idag</li>
@@ -335,6 +326,9 @@
 				http://www.w3.org/Protocols/rfc2616/rfc2616.html
 			</a>
 		</p>
+		
+		<img src="http://farm3.staticflickr.com/2216/2424654365_93d08147a7_z.jpg?zz=1" />
+		<p class="cc">Foto cc by Macco: <a href="http://www.flickr.com/photos/mako_side_b/">http://www.flickr.com/photos/mako_side_b/</a> </p>
 			
 		<div class="note">
 			Första versionen användes knappt. Hade endast GET.
@@ -345,6 +339,23 @@
 			Tredje versionen accepterades fort av webbläsare. Används idag.
 			Persistant connections, piplined connections (asynkrona anrop)
 		</div>
+	</article>
+	
+	<!-- Request / response -->
+	<article class="fill">
+		<h3 class="c">
+			REQUEST &lt;-- RESPONSE
+		</h3>
+		<img src="http://farm5.staticflickr.com/4038/4310311185_e77d8fa006_z.jpg?zz=1" />
+		<p class="cc">Foto cc by Tom Magliery: <a href="http://www.flickr.com/photos/mag3737/">http://www.flickr.com/photos/mag3737/</a> </p>
+	</article>
+	
+	<!-- HTTP request -->
+	<article>
+		<h1 class="c bg">HTTP Request</h1>
+		<p class="c spaced">
+			<img class="bii" src="images/http_request.png" style="max-width: 60%"/>
+		</p>
 	</article>
 	
 	<!-- Request Methods -->
@@ -399,24 +410,176 @@
 		</p>
 		
 	</article>
-	
-	<article>
-		<p class="c spaced">
-			<img class="bii" src="images/http_request.png" style="max-width: 60%"/>
-		</p>
-	</article>
+		
 	<!-- HTTP response -->
 	<article>
 		<h1 class="c bg">HTTP Response</h1>
 		<p class="c spaced">
-			<img class="bi" src="images/http_response.png" />
+			<img class="bii" src="images/http_response.png" />
 		</p>
-		<p class="small c bgy">Svar från webbserver till klient</p>
 		<p class="note">
 			Förstora bilden?
 		</p>
 	</article>
 	
+	
+	
+	
+	<!-- Problem -->
+	<article>
+		<h3 class="c bg">HTTP Connection</h3>
+		
+		<p class="c">
+			<img src="images/http_timeline.png" />
+		</p>
+		
+		
+	</article>
+	
+	<article>
+		<h3>Låt säga vi besöker en helt vanlig kvaällstidningssida</h3>
+		<p>
+			Hur många request tror du görs
+		</p>
+		
+		<p class="note">
+			453 requests!
+			Hur fungerar det med request/response
+		</p>
+		
+	</article>
+	
+	
+	<!-- Persistant connection -->
+	<article>
+		<h3 class="bg c">Persistent connection</h3>
+		
+		<p class="c">
+			<img src="images/keep_alive.png" />
+		</p>
+	</article>
+	
+	<!-- Pipline connection -->
+	<article>
+		<h3 class="c bg">Piplined connection</h3>
+		<p class="c">
+			<img src="images/pipeline.png" class="bi" />
+		</p>
+	</article>
+	
+	<!-- realtime webb -->
+	<article class="fill">
+		<h3>Realtidsapplikationer</h3>
+		<img src="images/realtime_docs.png" />
+		
+	</article>	
+		
+	
+	<!-- Realtidswebben och dess problem -->
+	<article>
+		<h3 class="c bg">Problem vid realtidsapplikationer</h3>
+		<p class="c">
+		<img src="images/pull.png" />
+		</p>
+		<p class="c">
+			Pull/Poll-tekniker, AJAX-polling
+		</p>
+		<p class="note">
+			Smartare med längre och längre requeststider m.m.
+			Problem med HTTP vs realtid
+		</p>
+		<p>
+		
+	</article>
+	
+	<!-- Lösningar för realtidswebben -->		
+	<article>
+		<h3 class="c bg">Lösningar för realtidswebben</h3>
+		<p class="bgy spaced">
+			Flash, Java Applet<br />
+			Forever frame<br />
+			(Ajax) Polling<br />
+			Long polling<br />
+			XMLHttpRequest Streaming<br />
+			Web Sockets - Lösning på TCP-nivå<br />
+			Server-Sent Events
+		</p>
+	</article>
+
+	<!-- iFrame -->
+	<article>
+		<h3 class="bg c">Forever frame</h3>
+		<p class="spaced">
+			Dold iframe med en sida som servern skickar ut data (i form av javascript) 
+			till webbläsaren när uppdateringar finns.<br /><br />
+			
+		
+			Servern använder "chunked encoding" så sidan i iframen fylls på efter 
+			hand med script som anropar "riktiga" sidan via en callback
+		</p>
+		<p>
+			<a href="http://www.javaworld.com/javaworld/jw-03-2008/jw-03-asynchhttp.html?page=6">
+				http://www.javaworld.com/javaworld/jw-03-2008/jw-03-asynchhttp.html?page=6
+			</a>
+		<p class="note">
+			IE måste br-tagg läggas till
+			Safari minst 1KB,
+			Ingen felhantering.
+		</p>
+	</article>
+
+		
+	<!-- Long Polling -->
+	<article>
+		<h1 class="small c bg">Long-Polling</h1>
+		
+		<p class="bgy pretty_small spaced">
+		En request görs men servern svarar endast när ny data finns<br />
+		
+		Simulerar att man servern pushar ut meddelanden<br />
+		</p>
+		<p class="c">
+			<img src="images/long_polling.png" />
+		</p>
+		<p class="pretty_small bg">
+			Problem att man kan bli liggande med många öppna anslutningar
+		</p>
+		
+		
+	</article>
+	
+	
+	
+	<!-- Streaming XHR -->
+	<article>
+			<h1 class="c bg">Streaming XHR</h1>
+			<p class="bgy small spaced">
+			Som long polling men du använder data så fort den kommer (chuncked)
+			</p>
+			<p class="c">
+				<img src="images/xhr_streaming.png" />
+			</p>
+			<p class="small bgr c">
+				Dåligt stöd i vissa webbläsare
+			</p>
+	</article>
+	
+	
+	<!-- Jämför de både brevid varandra -->
+	<article>
+		<h1 class="c bg">HTTP Response</h1>
+		<p class="c spaced">
+			<img class="bii" src="images/http_response.png" />
+		</p>
+		<p class="note">
+			I denna föreläsning ska vi koncentrera oss på vissa av dessa
+		</p>
+	</article>
+	
+	<!-- optimering -->
+	<article>
+		
+	</article>
 		
 	<!-- Redirects -->
 	<article>
@@ -431,48 +594,15 @@
 		</p>
 	</article>
 	
-	<!-- Accept -->
-	<article>
-		<h1 class="small c bg">HTTP header field: <strong>Accept, Accept-encoding</strong></h1>
-		<p class=" small spaced bgy">Klient till server</p>
-				
-		<p class="small spaced c">	
-			<img src="images/http_accept.png" class="bi" />
-		</p>
-		<q class="pretty_small">
-			I want the resource and I want it in an HTML or XHTML format. 
-			If you cannot serve me this way, I'll take it in an XML instead. 
-			If you can't even give it to me in XML, well, 
-			I'll take anything you've got!
-		</q>
-		<p class="note">
-			q => Quality Value, Viktning av hur vi vill ha saker (används?)
-			API - REST
-			Server MAY compress
-		</p>
-	</article>
 	
-	<!-- Content -->
-	<article>
-		<h1 class="small c bg">HTTP header field: <strong>Content, Content-encoding</strong></h1>
-		<p class=" small spaced bgy">Server till client</p>
-				
-		<p class="small spaced c">	
-			<img class="bi" src="images/http_content.png" />
-		</p>
-		<q class="pretty_small">
-			Here you go! I give you javascript and it is compressed by gzip.
-			If you're a proxy make sure to get multiple versions for the clients 
-			who doesn't support HTTP 1.1 or don't support gzip
-		</q>
-		<p class="note">
-			
-		</p>
-	</article>
+	
+	
+	
+	
 	
 	<!-- Compression -->
 	<article>
-		<p class="bg c">Compression</p>
+		<h1 class="bg c">Compression</h1>
 		<p class="c spaced">
 			<img src="images/gzip.png" />
 		</p>
@@ -652,7 +782,7 @@
 		<p class="c"><img class="bi" src="images/cache-control.png" /></p>
 		
 		<p class="note">
-			Intruducerades med HTTP 1.1
+			Introducerades med HTTP 1.1
 			Pragma - Stöds inte av de flesta cache
 		</p>
 	</article>
@@ -736,114 +866,7 @@
 	</article>
 			
 	
-	<!-- Problem -->
-	<article>
-		<h1 class="c bg">HTTP Connection</h1>
-		<p class="bgy spaced small">Hur många GET sker när du går till någon populär kvällstidningswebbplats?</p>
-		<p class="c">
-			<img src="images/http_timeline.png" />
-		</p>
-		
-		<p class="note">
-			453 requests!
-			Hur fungerar det med request/response
-		</p>
-	</article>
 	
-	
-	<!-- Persistant connection -->
-	<article>
-		<h1 class="bg c">Persistent connection</h1>
-		<p class="bgy spaced small">
-			Både från klienten (om stöd finns) och server<br />
-			Connection: keep-alive<br />
-		</p>
-		<p class="c">
-			<img src="images/keep_alive.png" />
-		</p>
-	</article>
-	
-	<!-- Pipline connection -->
-	<article>
-		<h1 class="small c bg">Piplined connection</h1>
-		<p class="c">
-			<img src="images/pipeline.png" class="bi" />
-		</p>
-	</article>
-	
-	<!-- Realtidswebben och dess problem -->
-	<article>
-		<h1 class="small c bg">Problem vid realtidsapplikationer</h1>
-		<img src="images/pull.png" />
-		<p class="note">
-			Smartare med längre och längre requeststider m.m.
-			Problem med HTTP vs realtid
-		</p>
-		
-	</article>
-	
-	<!-- Lösningar för realtidswebben -->		
-	<article>
-		<h1 class="small c bg">Lösningar för realtidswebben</h1>
-		<p class="small bgy spaced">
-			Flash, Java Applet<br />
-			Polling<br />
-			Long polling<br />
-			Forever frame<br />
-			XHR Streaming<br />
-			Web Sockets - Lösning på TCP-nivå<br />
-		</p>
-	</article>
-
-		
-	<!-- Long Polling -->
-	<article>
-		<h1 class="small c bg">Long-Polling</h1>
-		
-		<p class="bgy pretty_small spaced">
-		En request görs men servern svarar endast när ny data finns<br />
-		
-		Simulerar att man servern pushar ut meddelanden<br />
-		</p>
-		<p class="c">
-			<img src="images/long_polling.png" />
-		</p>
-		<p class="pretty_small bg">
-			Problem att man kan bli liggande med många öppna anslutningar
-		</p>
-		
-		
-	</article>
-	
-	<!-- iFrame -->
-	<article>
-		<h1 class="bg c">Forever frame</h1>
-		<p class="bgy small spaced">
-			Vanlig teknik förut. <br /><br />
-			Dold iframe med en sida som servern skickar ut javascriptkommandon till när uppdateringar finns.<br /><br />
-		
-			Servern använder "chunked encoding" så sidan i iframen fylls på efter 
-			hand med script som anropar "riktiga" sidan via en callback
-		</p>
-		<p class="note">
-			IE måste br-tagg läggas till
-			Safari minst 1KB,
-		</p>
-	</article>
-	
-	<!-- Streaming XHR -->
-	<article>
-			<h1 class="c bg">Streaming XHR</h1>
-			<p class="bgy small spaced">
-			Som long polling men du använder data så fort den kommer (chuncked)
-			</p>
-			<p class="c">
-				<img src="images/xhr_streaming.png" />
-			</p>
-			<p class="small bgr c">
-				Dåligt stöd i vissa webbläsare
-			</p>
-	</article>
 	
 	
 	
