@@ -94,32 +94,35 @@
 	<article>
 		<h1>Agenda</h1>
 		<ul>
-			<li>HTTP historik, TCP/IP</li>
-			<li>HTTP Headers</li>
-			<li>Optimering med HTTP</li>
+			<li>TCP/IP, HTTP</li>
+			<li>Optimering - HTTP</li>
+			<li>HTTP connection - Comet</li>
 			<li>HTTP-Cache</li>
-			<li>Problem med HTTP</li>
-			<li>AJAX, Comet</li>
-			<li>Mätning, inför laborationen</li>
+			<li>HTTP - Komprimering</li>
 		</ul>
 	</article>
 	
 	<!-- HTTP -->
-  		
-    <article class="fill">
+  	<article class="fill">
 		
 		<h3>Hypertext Transfer Protocol</h3>
 		
 			<img src="http://farm3.staticflickr.com/2189/2467553359_1fa1e53dee_z.jpg" />
 			<p class="cc">Foto cc by: <a href="http://www.flickr.com/photos/knightfoundation/">http://www.flickr.com/photos/knightfoundation/</a> </p>
- 	</article>
+ 	
+			<p class="note">
+				HTTP, URL, HTML
+				I vilket sammanhang, ingen säkerhet, ingen skalbarhet, 
+				skyffla dokument med länkar
+			</p>
 	
+	</article>
 	
-	
+		
 	<!-- HTTP karaktär -->
 	<article>
 		<h1>HTTP...</h1>
-		<ul style="list-style-type:none;">
+		<ul style="list-type-style:none;">
 			<li>...bygger på förfrågan/svar mellan klient/server </li>
 			<li>...definierar dessa i sin "header" och "header fields"</li>
 			<li>...är stateless</li>
@@ -134,27 +137,119 @@
 	</article>
 	
 	
-	
-		<!-- Recept för att hämta en webbsida -->
-		<article class="fill">
+	<!-- Recept för att hämta en webbsida -->
+	<article class="fill">
 			<h3>Hämta en webbsida</h3>
 
 			
-			<ol>
-				<li>Hitta adressen till webbservern i fråga</li>
-				<li>Hitta vägen till webbservern över Internet</li>
-				<li>Ansluta till webbservern och få en garanterad "säker" transport</li>
-				<li>Få HTML skickad till webbläsaren via HTTP</li>
+			<ol style="list-style-type: none;">
+				<li class="spaced">Hitta adressen till webbservern i fråga</li>
+				<li class="spaced">Hitta vägen till webbservern över Internet</li>
+				<li class="spaced">Ansluta till webbservern och få en garanterad "säker" transport</li>
+				<li class="spaced">Få HTML skickad till webbläsaren via HTTP</li>
 			</ol>
 			
 			<img src="images/internet_overview.png" />
 			<p class="note">
 				
 			</p>
-		</article>
+	</article>
 		
-		<!-- Vad är TCP/IP -->			
-		<article>
+	<!-- DNS vs IP -->	
+	<article>
+		<h1 class="bg">1. Hitta adressen till webbläsaren</h1>
+		
+		<p class="spaced bgy">Vi gillar domännamn <br /><strong>www.lnu.se</strong></p>
+		
+		<p class="spaced bgy">Datorer gillar IP-adresser <br />
+		<strong>194.173.221.1</strong><br />
+		<strong>2001:0db8:85a3:0000:0000:8a2e:0370:7334</strong></p>
+		
+		<p class="note">
+			På något sätt måste det finnas ett system för möjligheten att översätta
+			IPnummer till domännamn och vice versa...
+		</p>
+	</article>
+	
+	<!-- DNS FTW -->
+	<article>
+		<h1>Domain Name System</h1>
+		
+		<p class="c"><img src="images/dns_system.png" /></p>
+		
+		<p class="note">
+			DNS systemet är centralstyrt system och högst upp i hierarkin finns 13 stycken root servrar.
+			De flesta uppslag vi gör hamnar dock på en betydligt närmare DNS-server än så då det finns
+			massor av namnservrar som kopierar ner listor med uppslag så att man kan minska 
+			anropens längd. Du har även en DNS cache i din lokala dator, både i operativsystemet 
+			och i webbläsaren.<br /><br />
+			DNS-servrarna kommunicerar med varandra internt för att hela tiden försöka ha den senaste 
+			listan. Om du någon gång pekat om en server och uppdaterats dess DNS register vet du att 
+			det kan ta en stund innan DNS:en har pekats om, anledning är just att det finns en viss
+			fördröjning innan all information spridits.
+			<br /><br />
+		</p>
+	</article>
+	
+	<!-- IP, routrar -->
+	<article>
+		<h1 class="bg">2. Vi vet IP, hur hittar vi servern?</h1>
+		
+		<img src="images/route.png" />
+		
+		<p class="c bgy">Internets routrar och IP-protokollet</p>
+		
+		<p class="note">
+			När vi vet IP-numret till den server vi ska ansluta till kommer
+			IP-protokollet och alla miljontals routrar som finns på nätet väl till
+			plats. En router känner till många andra routrar som ligger ute på nätet
+			och kan med hjälp av smarta algoritmer och en specifik routingtabell ta reda på hur 
+			paketen ska skickas vidare för att på bästa sätt hamna hor mottagaren.<br />
+			
+			Vad händer med ett paket som försöks skickas till endress som ingen svarar på?
+			TTL (tim-to-Live)
+		</p>
+	</article>
+	
+	<!-- TCP -->
+	<article>
+		<h1 class="bg">3. Hur ansluter vi? (TCP, UDP)</h1>
+		<p class="c">
+		<img src="images/tcp.png" />
+		</p>
+		<p class="note">
+			TCP är ett transportprotokoll vars uppgift är att se till att
+			alla paket verkligen kommer fram. TCP ansvarar också för anslutningen till 
+			servern vi vill prata med. Man brukar tala om att man ansluter på olika portar<br />
+			En webbserver lyssnar (som standard) på portarna (80 och 443 - https)<br />
+			För varje anslutning till en server genomför TCP en så kallad handskakning 
+			(3-way handshake). Klienten skickar en anslutningsförfrågan till servern, servern 
+			svarar med ett OK (ACK) och ett synkroniseringsnummber och klienten skickar tillbaka 
+			ett OK och anslutningen är nu upprättad.<br />
+			<br />
+			UDP är ett annat transportprotokoll. Det är snabbare men har ingen kontroll 
+			på att allt kommer fram. UDP brukar användas t.ex. vid videoströmmar där man 
+			hellre tar en snabb koppling än att man tappar någon frame då och då.
+			
+		</p>
+	</article>
+	
+	<!-- HTTP -->
+	<article>
+		<h1 class="bg">4. Skicka informationen - HTTP</h1>
+		
+		<img src="images/4_HTTP.png" />
+		
+		<p class="note">
+			HTTP är det vi ska gå lite djupare in i denna kurs och titta på mer i detalj vad
+			som finns i det protokollet och vad som är viktigt för oss webbutvecklare.
+			
+		</p>
+	</article>	
+		
+		
+	<!-- Vad är TCP/IP -->			
+	<article>
 			
 			<img src="images/TCP_IP.png" />
 			
@@ -175,64 +270,18 @@
 				och tar också hand om det på andra sidan.
 				<br /><br />
 			</p>
-		</article>	
+	</article>	
 		
-		<!-- Vad består Internet av? -->
-		<article>
+	<!-- hela bilden-->
+	<article>
 			<p class="c">
 			<img src="images/TCP_IP2.png" />
 			</p>
 			<p class="note">
-				Internet består av miljontals servrar, routrar osv<br />
-				Trafiken kan ta olika vägar - Beroende på tillgänglighet, prestanda m.m. Det var själva
-				tanken med Internet. Går en väg ner ska trafiken alltid kunna ta en annan.<br />
-				Applikationer på internet - FTP, E-post, BitTorrent, Webben
-			</p>
-		</article>
-		
-				
-		<article>
-			<h1 class="bg">4. Skicka informationen - HTTP</h1>
-			
-			<img src="images/4_HTTP.png" />
-			
-			<p class="note">
-				HTTP är det vi ska gå lite djupare in i denna kurs och titta på mer i detalj vad
-				som finns i det protokollet och vad som är viktigt för oss webbutvecklare.
 				
 			</p>
-		</article>
+	</article>
 		
-		
-		
-		<!-- En http-session -->
-		<article>
-			<h1 class="c">En HTTP-session</h1>
-			<img src="images/http_timeline.png" />
-			<p class="c bgr">Tips! Undvik onödiga HTTP-requests!</p>
-			
-			<p class="note">
-				Detta gäller för en HTML-sida, en bild osv.
-				En översiktlig del. Non-persistant (old way)
-				prestanda: undvik onödiga requests
-				Image maps, CSS Sprites, antal script och stilmallar
-			</p>	
-		</article>
-			
-		
-		<!--Att det funkar så bra! -->
-		<article class="fill">
-			<h3>Att det funkar så bra!?!</h3>
-			
-			<img src="images/internet_overview.png" height="800px" />
-			
-			<p class="note">
-				Hur kan det funka så bra!?!
-			</p>
-		</article>
-		
-		
-	
 	<!-- HTTP intro -->
 	<article class="fill">
 		<h3>
@@ -242,6 +291,7 @@
 			<li>Version 0.9 (1991) - Knappt använd</li>
 			<li>Version 1.0 (1996) - Används sällan idag</li>
 			<li>Version 1.1 (1999) - Standard idag</li>
+			<li>Version 2.0 (????) - <a href="https://datatracker.ietf.org/wg/httpbis/charter/">https://datatracker.ietf.org/wg/httpbis/charter/</a>
 		</ul>
 		<p class="small">
 			<a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">
@@ -275,11 +325,11 @@
 	<!-- HTTP request -->
 	<article>
 		<h1 class="c bg">HTTP Request/Response</h1>
-		<p class="c spaced">
-			<img class="bi" src="images/http_request.png" />
+		<p class="spaced">
+			<img width="40%" class="bi" src="images/http_request.png" />
 		</p>
-		<p class="c spaced">
-			<img class="bii" src="images/http_response.png" />
+		<p class="spaced">
+			<img width="40%" class="bi" src="images/http_response.png" />
 		</p>
 	</article>
 	
@@ -335,16 +385,32 @@
 		</p>
 		
 	</article>
+	
+	<!-- Response code -->
+	<article>
+		<h1 class="c bg">Response - Statuskod</h1>
+	
+		<ul>
+				<li><strong>1xx - Informational</strong></li>
+				<li><strong>2xx - Successful</strong> - 200 OK, 204 No Content</li>
+				<li><strong>3xx - Redirections</strong> -301 Moved Permanently, 302 Found, 304 Not Modified</li>
+				<li><strong>4xx - Client Error</strong> - 400 Bad Request, 401 Unauthorized, 404 Not Found</li>
+				<li><strong>5xx - Server Error</strong> - 500 Internal Server Error</li>
+		</ul>
+			
+				<a class="pretty_small" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">
+					http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
+				</a>
+	</article>
 		
-	
-	
+	<!-- Optimering -->
 	<article>
 		<h1 class="c">HTTP - Optimering</h1>
 		<p>
 			<img height="200px" src="http://akamaicovers.oreilly.com/images/9780596529307/lrg.jpg" />
 		</p>
 		<ul>
-			<li>Hantering av statiska filer</li>
+			<li>Hantering av statiska filer (minimering, placering, obfuscation)</li>
 		</ul>
 		
 		<ul>
@@ -377,6 +443,17 @@
 		
 	</article>
 	
+	<!--Att det funkar så bra! -->
+	<article class="fill">
+			<h3>Att det funkar så bra!?!</h3>
+			
+			<img src="images/internet_overview.png" height="800px" />
+			
+			<p class="note">
+				Hur kan det funka så bra!?!
+			</p>
+	</article>
+	
 	
 	<!-- Persistant connection -->
 	<article>
@@ -384,6 +461,11 @@
 		
 		<p class="c">
 			<img src="images/keep_alive.png" />
+		</p>
+		
+		<p class="note">
+			Kallas också HTTP keep-alive,
+			SPDY [speedy]
 		</p>
 	</article>
 	
@@ -397,7 +479,7 @@
 	
 	<!-- realtime webb -->
 	<article class="fill">
-		<h3>Realtidsapplikationer</h3>
+		<h3>Realtidsdata</h3>
 		<img src="images/realtime_docs.png" />
 		
 	</article>	
@@ -410,7 +492,7 @@
 		<img src="images/pull.png" />
 		</p>
 		<p class="c">
-			Pull/Poll-tekniker, AJAX
+			AJAX Polling
 		</p>
 		<p class="note">
 			Smartare med längre och längre requeststider m.m.
@@ -424,13 +506,12 @@
 	<article class="fill">
 		<h3 class="c bg">"Lösningar"</h3>
 		<ul>
-			<li>Flash, Java Applet</li>
+			<li class="red">Flash, Java applet, Active X</li>
 			<li>Forever frame</li>
-			<li>(Ajax) Polling</li>
 			<li>(XMLHttpRequest) Long polling</li>
 			<li>XHR Streaming</li>
-			<li>Web Sockets</li>
-			<li>Server-Sent Events</li>
+			<li class="red">Web Sockets</li>
+			<li class="red">Server-Sent Events</li>
 		</ul>
 		
 	</article>
@@ -476,7 +557,7 @@ flush();
 		<p class="spaced">
 		En request görs men servern svarar endast när ny data finns<br />
 		Simulerar att servern pushar ut meddelanden<br />
-		<strong>XMLHttpRequest-object, AJAX</strong>
+		<strong>XMLHttpRequest, AJAX</strong>
 		</p>
 		
 		<p class="c">
@@ -490,6 +571,7 @@ flush();
 		
 	</article>
 	
+	<!-- Long Polling exempel -->
 	<article>
 		<h3 class="c bg">Long-Polling exempel</h3>
 		<p class="c">
@@ -506,7 +588,7 @@ flush();
 			</p>
 	</article>
 	
-		
+	<!-- Web Sockets -->	
 	<article>
 		<h1>Men Web Sockets...</h1>
 <pre>
@@ -520,8 +602,8 @@ websocket.send()
 
 <ul>
 	<li>WebSockets är inte till för att ersätta Comet-teknologin</li>
-	<li>Web Sockets kan vara svårt att integrera med HTTP-baserade tekniker (OAuth, REST, Cachning...)</li>
-	<li>Kräver en server (annan än vanlig HTTP-server)</li>
+	<li>Web Sockets kan vara svårt att integrera med HTTP-baserade tekniker (OAuth, REST, Caching...)</li>
+	<li>Kräver en server som kan hantera trafiken</li>
 	<li>Brandväggar, proxies, lastbalanserare...</li>
 </ul>	
 	</article>
@@ -530,18 +612,21 @@ websocket.send()
 		
 	
 	<!-- CACHE -->
+	<article>
+		<h1 class="c">Cache</h1>
+		<img src="images/cache_app.png" />
+	</article>
+	
 	<!-- Typer av cache? -->
 	<article>
-		<h3 class="c bg">Typer av web cachning</h3>
+		<h3 class="c bg">Typer av web cache</h3>
 		<ul>
 			<li>Browser cache</li>
 			<li>Proxy cache</li>
 			<li>Gateway cache - Lastbalansering, CDN</li>
 			<li>Serverside cache</li>
 		</ul>
-		<p>
-			Content Delivery Network - En server nära dig!
-		</p>
+		
 		<p class="c">
 			<img src="images/cdn.png" height="300px" />
 		</p>
@@ -552,14 +637,14 @@ websocket.send()
 	
 	<!-- http caching -->
 	<article>
-		<h3 class="c bg">HTTP och cachning!</p>
+		<h3 class="c bg">HTTP och cache</p>
 		
 		
 		<p class="c">
 			<img src="images/proxy_cache.png" style="max-width: 90%"/>
 		</p>
-		<p class="c bg small">
-			Bilder, script, css => statiska dokument
+		<p class="c bg">
+			Fresh vs. Stale	
 		</p>
 			
 		<p class="note">
@@ -586,12 +671,9 @@ websocket.send()
 			<li>E-tag, If-None-Match</li>
 		</ul>
 		<p class="c">
-			<img class="bi" src="images/cache_response.png" />
+			<img class="bii" src="images/cache_response.png" />
 		</p>
-		<p class="bg">
-			<strong>Fresh</strong> - Lita på att serverns response är giltigt<br />
-			<strong>Stale</strong> - Cache:at response behöver uppdateras
-		</p>
+		
 		<p class="note">
 			Age? Hitta en bild med alla?
 			
@@ -622,16 +704,19 @@ websocket.send()
 	<!-- Cache-control -->
 	<article>
 		<h3 class="c bg">Cache-Control</h3>
-	
+		
 		<ul>
 			<li><strong>max-age</strong> - Antal sekunder som innehållet anses giltigt</li>
-			<li><strong>public</strong> - Tillåts cache:as av alla </li>
-			<li><strong>private </strong>- Tillåts endast cache-ning privat - webbläsare</li>
-			<li><strong>no-cache</strong> - Kontrollera med servern för att få släppa cachat data</li>
+			<li><strong>public</strong> - Även autentiserade svar kan cache:as </li>
+			<li><strong>private </strong>- Tillåts endast caching privat - webbläsare</li>
+			<li><strong>no-cache</strong> - Kontrollera med servern för att få släppa cache:at data</li>
 			<li><strong>no-store</strong> - Ingen cache alls!</li>
-			<li><strong>must-revalidate</strong> - Måste följa cache-reglerna ovan (HTTP finns specialfall)</li>
+			<li><strong>must-revalidate</strong> - Måste följa cache-reglerna ovan (I HTTP finns specialfall)</li>
 			
 		</ul>
+		<p>
+			Om både Expires och Cache-Control finns tar den senare överhand
+		</p>
 	
 		<p class="c"><img class="bi" src="images/cache-control.png" /></p>
 		
@@ -684,11 +769,8 @@ websocket.send()
 	
 	<!-- PHP-kod -->
 	<article>
-		<p class="c bg">Cache - PHP</p>
-		<p class="small bgy spaced">
-			Resurser som skapats av PHP bör man vara lite försiktid med
-			att cache:a
-		</p>
+		<h3 class="c bg">Cache - PHP</h3>
+		
 		<p class="c">
 			<img src="images/php_cache.png" class="bi spaced" />
 		</p>
@@ -800,90 +882,6 @@ websocket.send()
 </html>
 
 <!-- Status codes 
-<article>
-	<h1 class="c bg">Statuskod</h1>
-	
-		<table cellpadding="10" style="width: 100%; margin-top: 20px;" class="pretty_small">
-			<tr class="bgy spaced u">
-				<td colspan="2">1xx - Informational</td>
-			</tr>
-			<tr>	
-				<td>
-					Ett provisoriskt response
-				</td>
-				<td width="40%">	
-					100 Continue
-				</td>	
-			</tr>
-		</table>
-		
-		<table cellpadding="10" style="width: 100%; margin-top: 20px;" class="pretty_small">
-			<tr class="bgy spaced u">
-				<td colspan="2">2xx - Successful</td>
-			</tr>
-			<tr>	
-				<td>
-				Förfrågan gick bra, togs emot,<br /> blev förstådd och accepterad
-				</td>
-				<td width="40%">	
-					200 OK<br />
-					204 No Content
-				</td>	
-			</tr>
-		</table>
-		
-		<table cellpadding="10" style="width: 100%; margin-top: 20px;" class="pretty_small">
-			<tr class="bgy spaced u">
-				<td colspan="2">3xx - Redirections</td>
-			</tr>
-			<tr>	
-				<td>
-				För att hitta efterfrågad resurs måste klienten utföra ett nytt anrop
-				</td>
-				<td width="40%">	
-						301 Moved Permanently<br />
-						302 Found<br />
-						304 Not Modified<br />
-				</td>	
-			</tr>
-		</table>
-		
-		<table cellpadding="10" style="width: 100%; margin-top: 20px;" class="pretty_small">
-			<tr class="bgy spaced u">
-				<td colspan="2">4xx - Client Error</td>
-			</tr>
-			<tr>	
-				<td>
-				Något är fel i förfrågan
-				</td>
-				<td width="40%">	
-						400 Bad Request<br />
-						401 Unauthorized<br />
-						403 Forbidden<br />
-						404 Not Found</dd>
-				</td>	
-			</tr>
-		</table>
-		
-		<table cellpadding="10" style="width: 100%; margin-top: 20px;" class="pretty_small">
-			<tr class="bgy spaced u">
-				<td colspan="2">5xx - Server Error</td>
-			</tr>
-			<tr>	
-				<td>
-				Något är fel på servern
-				</td>
-				<td width="40%">	
-						500 Internal Server Error<br />
-						503 Service Unavailable<br />
-						
-				</td>	
-			</tr>
-		</table>
-			
-			<a class="pretty_small" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">
-				http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
-			</a>
-</article>
+
 	
 -->
