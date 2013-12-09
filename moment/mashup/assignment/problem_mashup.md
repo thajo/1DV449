@@ -7,7 +7,7 @@ I denna laboration det meningen att du ska skriva en Mashup-applikation som komb
 Tanken är att du ska bygga en applikation som ska visa trafikinformation som Sveriges Radio ger dig och presentera dessa via en karta från Google.
 
 ### API:ernas dokumentation
-Som en del i uppgiften ingår det att läsa dokumentation av de API:er som nämns ovan och därifrån förstå hur man implementerar dessa en snyggt utformad webbapplikation. I dokumentationen hittar du hur du anropar API:et, hur du får den data du vill i det format du vill. Googles kart-API är ett javascript-API och det finns gott om guider på deras sida för tt se hur man använder detta.
+Som en del i uppgiften ingår det att läsa dokumentation av de API:er som nämns ovan och därifrån förstå hur man implementerar dessa en snyggt utformad webbapplikation. I dokumentationen hittar du hur du anropar API:et, hur du får den data du vill i det format du vill. Googles kart-API är ett javascript-API och det finns gott om guider på deras sida för att se hur man använder detta.
 
 
 ##Krav
