@@ -8,7 +8,7 @@ Vår förhoppning är att du i detta moment utvecklar en egen applikationsidé o
 ##En mashup-applikation
 Tanken är att du ska skapa en egen mashup-applikation utifrån en egen idé. Vad applikationen ska hanterar för slags data är upp till dig och din idé. Vi ser gärna att ni utvecklar en applikation kring något du brinner för. Förhoppningsvis jobbar du vidare på din idé från seminarium 3.
 
-Du börjar med att beskriva din idé i ett kort dokument som du publicerar på ditt github-repo som hör till kursen
+Du börjar med att beskriva din idé i ett kort dokument (i md-format) som du publicerar på ditt github-repo som hör till kursen.
 Gör detta så fort som möjligt men senast **19:e december 2013**.
 
 ##Krav på applikation för godkänt (betyg 3)
@@ -36,13 +36,13 @@ Dina anrop mellan klient och server ska ske helt asynkront.
 * Optimering och säkerhet
 Det ska framgå av din applikation och rapport att du tänkt på optimering och säkerheten i din applikation.
 
-
 * Cachning
 Din applikation bör cacha data både på front- och backend
 
 * Reflekterande rapport, inspelad redovisning
 Du redovisar din applikation genom att göra en muntlig redovisning. Denna gång ska dock denna redovisning vara inspelad som film på lämpligt format. Du ska under minst tre och max fem minuter beskriva din applikation och varför den är bra! 
 
+* All kod och dokumentation ska näs via ditt github-repo
 
 ##Eventuellt betygshöjande funktioner (betyg 4 och 5)
 
@@ -63,7 +63,7 @@ Din applikation kommer examineras på följande grunder:
 * Kvalité på din rapport. Ger din rapport en bra bild av din applikation. Har du reflekterat på ett bra sätt över det du gjort.
 * Den inspelade presentationen. Hur väl "säljer du in" och förklarar din applikation i din presentation.
 * Uppfyllande av leransdatum
-* Lärdommar utanför laborationskurs. Påvisar din applikation och rapport att du inkluderat och inskaffat ny kunskap som inte tagits upp i laborationskursen
+* Lärdomar utanför laborationskurs. Påvisar din applikation och rapport att du inkluderat och inskaffat ny kunskap som inte tagits upp i laborationskursen
 
 
 ##Viktiga datum
