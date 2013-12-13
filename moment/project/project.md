@@ -16,7 +16,6 @@ Vi kommer alltså ha en fri hållning till vad din applikation behandlar för da
 
 * Bygg en applikation som hämtar data från **minst två stycken externa API:er**. dessa ska såklart sammankopplas på ett dynamiskt sätt i din applikationskod.
 
-
 * Du ska implementera felhantering till din applikation så att användaren av applikationen blir medveten om t.ex. något av API:erna går ner.
 
 * Klientsidan ska vara en Single Page Applikation
@@ -31,10 +30,10 @@ Din applikation ska självklart fungera utan buggar eller ohanterade fel. Använ
 Det ska framgå av din applikation och rapport att du tänkt på optimering och säkerheten.
 
 * Cachning
-Din applikation ska cacha data både på front- och backend. Motivera eventuella undantag från detta i din rapport.
+Din applikation ska cacha data både på front- och backend. Beskriv din cachningsstrategi i din rapport, Motivera eventuella undantag från detta i din rapport.
 
 * Reflekterande rapport, inspelad redovisning
-Du redovisar din applikation genom att göra en muntlig och skriftlig redovisning. Denna gång ska dock den muntliga redovisningen vara inspelad som film. Du ska under minst tre och max fem minuter sälja in din applikation.
+Du redovisar din applikation genom att göra en muntlig och skriftlig redovisning. Denna gång ska dock den muntliga redovisningen vara inspelad som film. Du ska under minst tre och max fem minuter sälja in din applikation. Du väljer själv om du vill publicera den på youtube eller som en vanlig mp4-fil. Du redovisar en URL som pekar på din presentationsfilm. Filmerna kommer delas ut på kurshemsidan så att ni kan se varandras. 
 
 * All kod och dokumentation ska nås via ditt github-repo
 
@@ -68,18 +67,18 @@ Din applikation kommer examineras av kursledningen på följande grunder:
 ## Rapporten
 Den skriftliga projektrapporten du lämnar in ska innehålla följande:
 
-- Inledning där du beskriver vad du gjort och bakgrunden till din applikation
-- Inkludera en schematisk bild över applikationens beståndsdelar så att läsaren har enklare att förstå applikationens dataflöde.
-- Serversida: Beskriv hur din applikation fungerar på serversidan. Beskriv funktionaliteten och hur den är uppbyggd. Vald teknik/programmeringsspråk/ramverk? Hur fungerar cachningen? Hur sköter du felhanteringen m.m.
-- Klientsida: Hur fungerar din applikation på klientsidan. Beskriv på liknande sätt som serversidan.
-- Egenreflektion kring projektet: Här tar du upp hur projektet har gått. Vilka eventuella problem har du stött på? Finns det funktioner som du velat implementera men inte hunnit? Hur skulle du vilja jobba vidare med din applikation?
-- Risker med din applikation. Reflektera över vilka risker det finns med din applikation; rent tekniskt, säkerhet, etiskt m.m.
-- Skriv också om de eventuella delar du anser vara betygshöjande med din applikation. Motivera varför du anser dessa vara betygshöjande.
+* Inledning där du beskriver vad du gjort och bakgrunden till din applikation
+* Inkludera en schematisk bild över applikationens beståndsdelar så att läsaren har enklare att förstå applikationens dataflöde.
+* Serversida: Beskriv hur din applikation fungerar på serversidan. Beskriv funktionaliteten och hur den är uppbyggd. Vald teknik/programmeringsspråk/ramverk? Hur fungerar cachningen? Hur sköter du felhanteringen m.m.
+* Klientsida: Hur fungerar din applikation på klientsidan. Beskriv på liknande sätt som serversidan.
+* Egenreflektion kring projektet: Här tar du upp hur projektet har gått. Vilka eventuella problem har du stött på? Finns det funktioner som du velat implementera men inte hunnit? Hur skulle du vilja jobba vidare med din applikation?
+* Risker med din applikation. Reflektera över vilka risker det finns med din applikation; rent tekniskt, säkerhet, etiskt m.m.
+* Skriv också om de eventuella delar du anser vara betygshöjande med din applikation. Motivera varför du anser dessa vara betygshöjande.
 
 ## Tips
-- Använd gärna ramverk, både till klient- och serversidan.
-- Dyk upp på handledningspassen om du behöver fråga om något.
-- Campus-studenter - *KOM TILL SKOLAN OCH ARBETA HÄR!* Det är enklare att utbyta idéer och tankar vilket förenklar ert arbete.
-- Använd diskussionsforumet för att diskutera med varandra
-- Börja på rapporten tidigt för att kontinuerligt hålla den uppdaterad
+* Använd gärna ramverk, både till klient- och serversidan.
+* Dyk upp på handledningspassen om du behöver fråga om något.
+* Campus-studenter - *KOM TILL SKOLAN OCH ARBETA HÄR!* Det är enklare att utbyta idéer och tankar vilket förenklar ert arbete.
+* Använd diskussionsforumet för att diskutera med varandra
+* Börja på rapporten tidigt för att kontinuerligt hålla den uppdaterad
 
