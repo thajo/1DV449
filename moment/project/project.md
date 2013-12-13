@@ -45,8 +45,10 @@ Vi ser såklart gärna att ni utmanar er själva och testar nya grepp och teknik
 
 * Du ska ha en strategi för att hantera de tillfällen då applikationen inte har en internetuppkoppling (Offline-stöd). De delar av applikation som inte kräver uppkoppling ska fortsätta att fungera även offline. 
 * Inkludera flera HTML5-relaterade API:er så som geolocation, web workers, web sockets m.m.
-* Inkludera flera externa API:er och höj din applikations funktionallitet ytterligare
+* Inkludera flera externa API:er och höj din applikations funktionalitet ytterligare
 * Applikationens design ska vara responsiv alltså anpassa sig till enhetens skärmstorlek. Applikationen ska fungera väl i samtliga fall.
+* Det ska gå att bläddra framåt och tillbaka i din applikations state via webbläsarens normala navigation.
+* Fundera över SEO och applicera detta där möjligt. Var noga med att i rapporten ta upp din strategi kring detta.
 
 ##Bedömning
 Din applikation kommer examineras av kursledningen på följande grunder:
