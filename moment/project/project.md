@@ -20,6 +20,7 @@ Vi kommer alltså ha en fri hållning till vad din applikation behandlar för da
 
 * Klientsidan ska vara en Single Page Applikation
 Dina anrop mellan klient och server ska ske helt asynkront.
+_(Undantag kan göras för exempelvis autentieringsprocesser via OAuth där synkrona sidomladdningar kan krävas.)_
 
 
 * Stabilitet och design
