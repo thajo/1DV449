@@ -63,9 +63,9 @@ Din applikation kommer examineras av kursledningen på följande grunder:
 * Lärdomar utanför laborationskurs. Påvisar din applikation och rapport att du inkluderat och inskaffat ny kunskap som inte tagits upp i laborationskursen.
 
 
-##Viktiga datum
+##Viktiga datum och redovisning
 * 19:e december 23:59 - Deadline för att lämna in applikationsidé
-* 19:e januari 23:59 - Inlämning av kod, rapport, URL till körbar version av din applikation och inspelad redovisning. Allt ska finnas att få tag på via github.
+* 19:e januari 23:59 - Inlämning av kod (via release på ditt till kursen hörande github-repositorie), rapport (se nedan), URL till körbar version av din applikation och inspelad redovisning. Allt ska finnas att få tag på via github på det repositorie som du har delat med kursens github-konto.
 
 ## Rapporten
 Den skriftliga projektrapporten du lämnar in ska innehålla följande:
