@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Föreläsning 01 - 1DV449</title>
+    
+    <meta name="description" content="Föreläsning 1 i kursen webbteknik 2, Webbprogrammerareprogrammet, Kalmar, Linnéuniversitetet" />
+    <meta name="author" content="John Häggerud" />
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
+
+    <link href="css/impress.css" media="screen" rel="stylesheet" />
+	<link href="css/print.css" media="print" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body class="impress-not-supported">
+	
+
+			
+	<div class="fallback-message">
+	    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of 			this presentation.</p>
+	    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+	</div>
+
+	<div id="impress">
+		
+		
+		<!-- Första sidan -->
+		<div id="title" class="step" data-x="-5000" data-y="0" data-scale="4">
+					<div class="lefty">
+						<p class="medium_small">Webbteknik II</p>
+						<p class="big">1DV449</p>
+						<p class="medium_small">Föreläsning 2</p>
+					</div>
+					<div class="righty">
+						<img src="images/lnu.png" />
+					</div>
+					<div>
+						<p class="small lefty">Linnéuniversitetet, HT2012</p>
+					</div>
+					<p class="very_small" style="clear: both; text-align: right;">
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv"><img alt="Creative Commons-licens" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br />Detta verk är licensierat under en 
+						<br />
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">Creative Commons Erkännande-IckeKommersiell-DelaLika 3.0 Unported Licens</a>.
+					</p>
+		</div>
+		
+		<!-- agenda -->
+		<div class="step" data-x="0" data-y="0" data-scale="4" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="big c">HTTP</h1>
+			<p class="small c">HyperText Transfer Protocol</p>
+			<p class="pretty_small c">Compression, Cache, Connection</p>
+			<p class="note">
+				Förra föreläsningen pratade vi om webbens uppkomst och dess grunddelar där HTTP
+				var en av grundbultarna. <br />
+				I denna föreläsningen ska vi gå egenom detta protokoll, dess uppsättning av regler för hur
+				webbserver och webbklient ska kommunicera.<br />
+				Naturligtvis kommer vi inte gå igenom allt utan slå ner på några viktiga saker och dessutom 
+				i samband med det titta lite nogrannare på cachning, realtidswebben och compression
+			</p>
+		</div>
+		
+		<!-- versioner av HTTP -->
+		<div class="step" data-x="0" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="c bg">
+				Standardiseras av W3C
+			</p>
+			<ul>
+				<li class="small bgy spaced">Version 0.9 (1991) - Knappt använd</li>
+				<li class="small bgy spaced">Version 1.0 (1996) - Används sällan idag</li>
+				<li class="small bgy spaced">Version 1.1 (1999) - Standard idag</li>
+			</ul>
+			<p class="small">
+				<a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">
+					http://www.w3.org/Protocols/rfc2616/rfc2616.html
+				</a>
+			</p>
+				
+			<div class="note">
+				Första versionen användes knappt. Hade endast GET.
+				<br />
+				Andra versionen kan idag användas i vissa webproxys.
+				GET, POST, HEAD, Ej standard med multiple connections.
+				<br />
+				Tredje versionen accepterades fort av webbläsare. Används idag.
+				Persistant connections, piplined connections (asynkrona anrop)
+			</div>
+		</div>
+		
+		<!-- Definitioner av HTTP -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="bg">HTTP...</p>
+			<ul>
+				<li class="small bgy spaced">...använder TCP som transportprotokoll</li>
+				<li class="small bgy spaced">...bygger på förfrågan/svar mellan klient/server </li>
+				<li class="small bgy spaced">...definierar dessa i sin "header" och "header fields"</li>
+				<li class="small bgy spaced">...är stateless</li>
+				<li class="small bgy spaced">...använder enkelt textformat för meddelande"</li>
+			</ul>
+			<p class="note">
+				HTTP needs a reliable connection, standard port 80 - https 443<br />
+				HTTP är textbased<br />
+				HTTP är mer än bara filöverföring<br />
+			</p>	
+		</div>
+		
+		<!-- En typisk session -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="small bg c">En typisk HTTP-session</p>
+			<img src="images/http_timeline.png" />
+			<p class="small c bgr">Tips! Undvik onödiga HTTP-requests!</p>
+			<p class="note">
+				Detta gäller för en HTML-sida, en bild osv.
+				En översiktlig del. Non-persistant (old way)
+				prestanda: undvik onödiga requests
+				Image maps, CSS Sprites, antal script och stilmallar
+			</p>	
+		</div>
+		
+		<!-- HTTP headers -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small c bg">HTTP-headers</h1>
+			<ol>
+				<li class="small bgy spaced"><strong>Request, Response</strong></li>
+				<li class="small bgy spaced">Cookie</li>
+				<li class="small bgy spaced">Form data</li>
+				<li class="small bgy spaced"><strong>Accept, Accept-encoding, Accept-charset</strong></li>
+				<li class="small bgy spaced"><strong>Cache</strong></li>
+				<li class="small bgy spaced"><strong>Connection</strong></li>
+			</ol>
+			
+			<p class="note">
+				En översiktlig del. Non-persistant (old way)
+			</p>
+		</div>
+		
+		<!-- Inspector -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<img src="images/http_inspector.png"/>	
+		</div>
+		
+		<!-- HTTP request -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="c bg">HTTP Request</h1>
+			<p class="c spaced">
+				<img class="bi" src="images/http_request.png" />
+			</p>
+			<p class="bgy c">Från klienten till servern</p>
+			<p class="note">
+				Vad kallas översta raden, prata om den<br />
+				Headers fields
+			</p>
+		</div>
+		
+		<!-- Request Methods -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="medium_small bg c u">HTTP Request Methods</p>
+			<table class="pretty_small">
+				<tr class="bgy spaced u">
+				<td class="b">GET</td>
+				<td>Hämta en resurs (via URL), "read-only"</td>
+				</tr>
+				
+				<tr class="u">
+				<td class="b">POST</dt>
+				<td>Posta data (formulär). Skickar data från klient till server</td>
+				</tr>
+				
+				<tr class="bgy spaced u">
+				<td class="b">HEAD</td>
+				<td>Hämta endast HTTP headern - ej ev. dokument</td>
+				</tr>
+				
+				<tr class="u">
+				<td class="b">PUT</td>
+				<td>Ladda upp utpekad resurs</td>
+				</tr>
+				
+				<tr class="bgy spaced u">
+				<td class="b">DELETE</td>
+				<td>Ta bort utpekad resurs</td>
+				</tr>
+				
+				<tr class="u">
+				<td class="b">TRACE</td>
+				<td>Skicka tillbaka förfrågan precis som den kom (upptäcka ändringar på vägen)</td>
+				</tr>
+				
+				<tr class="bgy spaced u">
+				<td class="b">OPTIONS</td>
+				<td>Får tillbaka en lista med vilka HTTP-kommandon som stöds</td>
+				</tr>
+				
+				<tr class="u">
+				<td class="b">CONNECT&nbsp;&nbsp;&nbsp;</td>
+				<td>Används vid SSL-tunnlar</td>
+				</tr>
+			</table>
+			<p class="c spaced">
+				<img class="bii" src="images/http_request.png" style="max-width: 60%"/>
+			</p>
+			<p class="note">
+				GET och POST vanligast (betraktas som säkra)<br />
+				Ofta inte stöd för andra (många tolkas som GET)<br />
+				REST
+			</p>
+			
+		</div>
+		
+		<!-- HTTP response -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="c bg">HTTP Response</h1>
+			<p class="c spaced">
+				<img class="bi" src="images/http_response.png" />
+			</p>
+			<p class="small c bgy">Svar från webbserver till klient</p>
+			<p class="note">
+				Förstora bilden?
+			</p>
+		</div>
+		
+		<!-- Status codes -->
+		<div class="step" data-x="1900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="c bg">Statuskod</h1>
+			
+				<table cellpadding="10" style="width: 100%; margin-top: 20px;" class="pretty_small">
+					<tr class="bgy spaced u">
+						<td colspan="2">1xx - Informational</td>
+					</tr>
+					<tr>	
+						<td>
+							Ett provisoriskt response
+						</td>
+						<td width="40%">	
+							100 Continue
+						</td>	
+					</tr>
+				</table>
+				
+				<table cellpadding="10" style="width: 100%; margin-top: 20px;" class="pretty_small">
+					<tr class="bgy spaced u">
+						<td colspan="2">2xx - Successful</td>
+					</tr>
+					<tr>	
+						<td>
+						Förfrågan gick bra, togs emot,<br /> blev förstådd och accepterad
+						</td>
+						<td width="40%">	
+							200 OK<br />
+							204 No Content
+						</td>	
+					</tr>
+				</table>
+				
+				<table cellpadding="10" style="width: 100%; margin-top: 20px;" class="pretty_small">
+					<tr class="bgy spaced u">
+						<td colspan="2">3xx - Redirections</td>
+					</tr>
+					<tr>	
+						<td>
+						För att hitta efterfrågad resurs måste klienten utföra ett nytt anrop
+						</td>
+						<td width="40%">	
+								301 Moved Permanently<br />
+								302 Found<br />
+								304 Not Modified<br />
+						</td>	
+					</tr>
+				</table>
+				
+				<table cellpadding="10" style="width: 100%; margin-top: 20px;" class="pretty_small">
+					<tr class="bgy spaced u">
+						<td colspan="2">4xx - Client Error</td>
+					</tr>
+					<tr>	
+						<td>
+						Något är fel i förfrågan
+						</td>
+						<td width="40%">	
+								400 Bad Request<br />
+								401 Unauthorized<br />
+								403 Forbidden<br />
+								404 Not Found</dd>
+						</td>	
+					</tr>
+				</table>
+				
+				<table cellpadding="10" style="width: 100%; margin-top: 20px;" class="pretty_small">
+					<tr class="bgy spaced u">
+						<td colspan="2">5xx - Server Error</td>
+					</tr>
+					<tr>	
+						<td>
+						Något är fel på servern
+						</td>
+						<td width="40%">	
+								500 Internal Server Error<br />
+								503 Service Unavailable<br />
+								
+						</td>	
+					</tr>
+				</table>
+					
+					<a class="pretty_small" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">
+						http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
+					</a>
+		</div>
+			
+		<!-- Redirects -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="c bg">Redirects</p>
+			<p class="small">
+				
+				<p class="c spaced"><img src="images/http_redirect.png" class="bi" />
+					
+			
+				<a class="small">http://w3.org/QA/Tips/reback</a>
+				<p class="small bgr c">Tips! Kan redirects undvikas, gör det!</p>
+				<p class="note">
+					Använd HTTP redirects (SEO, backbuttons, prestanda (skickar ej body) osv)
+					istället för javascript os.v.
+				</p>
+			</p>
+		</div>
+		
+		<!-- Accept -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small c bg">HTTP header field: <strong>Accept, Accept-encoding</strong></h1>
+			<p class=" small spaced bgy">Klient till server</p>
+					
+			<p class="small spaced c">	
+				<img src="images/http_accept.png" class="bi" />
+			</p>
+			<q class="pretty_small">
+				I want the resource and I want it in an HTML or XHTML format. 
+				If you cannot serve me this way, I'll take it in an XML instead. 
+				If you can't even give it to me in XML, well, 
+				I'll take anything you've got!
+			</q>
+			<p class="note">
+				q => Quality Value, Viktning av hur vi vill ha saker (används?)
+				API - REST
+				Server MAY compress
+			</p>
+		</div>
+		
+		<!-- Content -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small c bg">HTTP header field: <strong>Content, Content-encoding</strong></h1>
+			<p class=" small spaced bgy">Server till client</p>
+					
+			<p class="small spaced c">	
+				<img class="bi" src="images/http_content.png" />
+			</p>
+			<q class="pretty_small">
+				Here you go! I give you javascript and it is compressed by gzip.
+				If you're a proxy make sure to get multiple versions for the clients 
+				who doesn't support HTTP 1.1 or don't support gzip
+			</q>
+			<p class="note">
+				
+			</p>
+		</div>
+		
+		<!-- Compression -->
+		<div class="step" data-x="1200" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="bg c">Compression</p>
+			<p class="c spaced">
+				<img src="images/gzip.png" />
+			</p>
+			<p class="pretty_small bgy spaced">
+				Mindre filer, mindre nätverkstrafik, snabbare sidor?
+			</p>
+			<p class="pretty_small bgy spaced">
+				Vanligast är gzip (GNU), andra är t.ex. deflate
+			</p>
+			<p class="pretty_small bgy spaced">
+				HTML, XML, JSON-dokument, Script, CSS...<br />
+				Komprimera ej bilder, PDF och andra redan komprimerade resurser
+			</p>
+			
+			<a class="pretty_small" href="http://www.gidnetwork.com/tools/gzip-test.php">
+				http://www.gidnetwork.com/tools/gzip-test.php
+			</a>
+			
+			<p class="c bgr pretty_small spaced">
+				Tips! Testa alltid prestandan! <br />Snabbhet vs. storlek
+			</p>
+		</div>
+		
+		<!-- compression how -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="bg c">Compression - Hur gör jag?</p>
+			
+			<p class="small bgy spaced">
+				Konfigureras oftas på webbservern
+			</p>
+			<p class="small bg spaced">
+				I Apache görs detta i .htaccess i modulen <strong>mod_deflate</strong><br />
+			</p>
+			<p class="c">
+				<img src="images/apache_mod_deflate.png" class="bii" />
+			</p>
+			<p class="pretty_small bg">
+				Kan styras i PHP-kod via <a href="http://php.net/manual/en/function.ob-gzhandler.php">ob_gzhandler</a>
+			</p>
+			<p class="note">
+				Finns en mod_gzip, men är lit eäldre och bökigare
+			</p>
+		</div>
+		
+		
+		<!-- CACHE -->
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="medium_small c bg">HTTP och cachning!</p>
+			
+			<p class="pretty_small bgy spaced c">
+				Ett sätt att spara kopior av en resurs<br /> på en plats närmare den som efter frågar den
+			</p>
+			<p class="c">
+				<img src="images/proxy_cache.png" style="max-width: 90%"/>
+			</p>
+			<p class="c bg small">
+				Bilder, script, css, statiska dokument
+			</p>
+				
+			<p class="note">
+				Spara kompior av ett reponse för att snabbare och effektivare
+				presenter data vid en förfrågan
+				Snabbare svar, mindre trafik
+				statiska sidor vs. dynamiska
+				
+				snabbare och minska trafik
+				
+				Stale - Data som inte är uppdaterad (ej dynamiska sidor)
+				Fräsh data
+			</p>
+		</div>
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="medium_small c bg">Cache och HTTP</h1>
+			<p class="c spaced">
+				<img src="images/cache_overview.png" class="bi" />
+			</p>
+		
+		</div>
+		
+		
+		
+		<!-- Typer av cache? -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="c bg">Typer av web cachning</h1>
+			<ul class="small bgy spaced">
+				<li>Browser cache</li>
+				<li>Proxy cache</li>
+				<li>Gateway cache - Lastbalansering, CDN</li>
+				<li>Serverside cache</li>
+			</ul>
+			<p class="small c bg spaced">
+				Content Delivery Network - En server nära dig!
+			</p>
+			<p class="c">
+				<img src="images/cdn.png" />
+			</p>
+			<p class="note">
+				Content Delivery Network
+			</p>
+		</div>
+		
+		<!-- HTTP - alternativ -->		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small_medium c bg">Hur HTTP styr cachning</h1>
+				<ul class="small bgy spaced">
+				<li>Expires</li>
+				<li>Cache-Control</li>
+				<li>Last-Modified, If-Modified-Since</li>
+				<li>E-tag, If-None-Match</li>
+			</ul>
+			<p class="c">
+				<img class="bi" src="images/cache_response.png" />
+			</p>
+			<p class="c bg small">
+				<strong>Fresh</strong> - Lita på att serverns response är giltigt<br />
+				<strong>Stale</strong> - Cache:at response behöver uppdateras
+			</p>
+			<p class="note">
+				Age? Hitta en bild med alla?
+				
+			</p>
+		</div>
+		
+		<!-- Expire -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="c bg">Expires</p>
+			<p class="spaced pretty_small bgy c">
+				Kontrollerar fräschheten hos ett response mot ett HTTP datum
+				<br />
+				Om tiden gått ut görs en kontroll mot servern om nyare data finns
+			</p>
+			
+			<p class="c">
+				<img src="images/cache_example.png" />
+			</p>
+			
+				
+			</p>
+			<p class="note">
+				HTTP Date - Utgår från GMT
+				Stort stöd
+				Bilder och resuser som får tid långt framåt - Byt filnamn
+				
+				BILD
+				Klockan - Syncproblem
+				Lätt att glömma att man satt en tid långt fram
+			</p>
+		</div>
+				
+		<!-- Cache-control -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="c bg">Cache-Control</p>
+			<p class="c pretty_small">
+				Vanligt att man använder samtidigt som Expires. <br />Cache-Control prioriteras.
+			</p>
+			<p class="pretty_small bgy spaced">
+				<strong>max-age</strong> - Antal sekunder som innehållet anses giltigt
+			</p>
+				<p class="pretty_small bgy spaced">
+				<strong>public</strong> - Tillåts cache:as av alla 
+				</p>
+				<p class="pretty_small bgy spaced">
+				<strong>private </strong>- Tillåts endast cache-ning privat - webbläsare
+				</p>
+				<p class="pretty_small bgy spaced">
+				<strong>no-cache</strong> - Kontrollera med servern för att få släppa cachat data
+				</p>
+				<p class="pretty_small bgy spaced">
+				<strong>no-store</strong> - Ingen cache alls!
+				</p>
+				<p class="pretty_small bgy spaced">
+				<strong>must-revalidate</strong> - Måste följa cache-reglerna ovan (HTTP finns specialfall)
+				</p>
+			</p>
+			<p class="c"><img class="bi" src="images/cache-control.png" /></p>
+			
+			<p class="note">
+				Intruducerades med HTTP 1.1
+				Pragma - Stöds inte av de flesta cache
+			</p>
+		</div>
+		
+		<!-- Etag -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="c bg">ETag - Entity Tag</p>
+			<p class="small bgy spaced">
+				Unika identifierare sätts på servern för enklare(?) validering 
+			</p>
+			<p class="c">
+				<img src="images/etag.png" class="bi" />
+			</p>
+			
+			<p class="small bgy spaced">
+				<strong>If-None-Match</strong> - Validerar på servern ifall id:t har uppdaterats 
+			</p>
+			
+			<p class="note">
+				Problem vid web frms osv.
+			</p>
+		</div>
+		
+		<!-- Hur cacha som kodare? -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="c bg">Cache - i webbservern</p>
+			<p class="small bgy spaced">
+				De flesta webbservrar har redan cachning påslagen för statiska resurser.<br /><br />
+				Kan dock ställas om i konfigurationsfiler eller verktyg.<br /><br />
+				Sätta på filnivå, filändelsenivå o.s.v.
+			</p>
+			
+			<p class="bg c spaced small">
+				mod_expires, modul till Apache
+			</p>
+			<p class="c">
+				<img src="images/cache_apache.png" class="bi" />
+			</p>
+			
+			
+			<p class="note">
+				Problem vid web frms osv.
+			</p>
+		</div>
+		
+		<!-- PHP-kod -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="c bg">Cache - PHP</p>
+			<p class="small bgy spaced">
+				Resurser som skapats av PHP bör man vara lite försiktid med
+				att cache:a
+			</p>
+			<p class="c">
+				<img src="images/php_cache.png" class="bi spaced" />
+			</p>
+				
+			<p class="note">
+				Problem vid web frms osv.
+			</p>
+		</div>
+		
+		<!-- Tips och trix -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<p class="c bgr">Tips!</p>
+			<p class="pretty_small">
+				Sätt lång cachetid på resurser som inte uppdateras ofta (bilder, css, script)<br /><br />
+				Om en fil som cachas ändras. Uppdatera dess filnamn på servern.<br /><br />
+				När du uppdaterar din site - flytta bara de filer som ska uppdateras<br /><br />
+				HTTPS är endast för sidor som behövs vara krypterade.<br /><br />
+				Skriv till statiska filer, slippa DB, enklare att cache:a.<br /><br />
+				Använd inte POST i onödan - Den förfrågan cache:as inte<br /><br />
+				Testa din webbplats noga! Hur är cachningen satt! Vad kan bli bättre?<br /><br />
+				Studera välbesökta webbplatser!<br /><br />
+			</p>
+			
+			<p class="note">
+				När du uppdaterar din site - flytta bara de filer som uppdateras (ändrar inga Last-Modified)
+				HTTPS är endast för sidor som behövs vara säkra. Sämre prestanda och noll cache.
+			</p>
+			
+		</div>
+				
+		
+		<!-- Problem -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="c bg">HTTP Connection</h1>
+			<p class="bgy spaced small">Hur många GET sker när du går till någon populär kvällstidningswebbplats?</p>
+			<p class="c">
+				<img src="images/http_timeline.png" />
+			</p>
+			
+			<p class="note">
+				453 requests!
+				Hur fungerar det med request/response
+			</p>
+		</div>
+		
+		
+		<!-- Persistant connection -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="bg c">Persistent connection</h1>
+			<p class="bgy spaced small">
+				Både från klienten (om stöd finns) och server<br />
+				Connection: keep-alive<br />
+			</p>
+			<p class="c">
+				<img src="images/keep_alive.png" />
+			</p>
+		</div>
+		
+		<!-- Pipline connection -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small c bg">Piplined connection</h1>
+			<p class="c">
+				<img src="images/pipeline.png" class="bi" />
+			</p>
+		</div>
+		
+		<!-- Realtidswebben och dess problem -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small c bg">Problem vid realtidsapplikationer</h1>
+			<img src="images/pull.png" />
+			<p class="note">
+				Smartare med längre och längre requeststider m.m.
+				Problem med HTTP vs realtid
+			</p>
+			
+		</div>
+		
+		<!-- Lösningar för realtidswebben -->		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small c bg">Lösningar för realtidswebben</h1>
+			<p class="small bgy spaced">
+				Flash, Java Applet<br />
+				Polling<br />
+				Long polling<br />
+				Forever frame<br />
+				XHR Streaming<br />
+				Web Sockets - Lösning på TCP-nivå<br />
+			</p>
+		</div>
+
+			
+		<!-- Long Polling -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="small c bg">Long-Polling</h1>
+			
+			<p class="bgy pretty_small spaced">
+			En request görs men servern svarar endast när ny data finns<br />
+			
+			Simulerar att man servern pushar ut meddelanden<br />
+			</p>
+			<p class="c">
+				<img src="images/long_polling.png" />
+			</p>
+			<p class="pretty_small bg">
+				Problem att man kan bli liggande med många öppna anslutningar
+			</p>
+			
+			
+		</div>
+		
+		<!-- iFrame -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="bg c">Forever frame</h1>
+			<p class="bgy small spaced">
+				Vanlig teknik förut. <br /><br />
+				Dold iframe med en sida som servern skickar ut javascriptkommandon till när uppdateringar finns.<br /><br />
+			
+				Servern använder "chunked encoding" så sidan i iframen fylls på efter 
+				hand med script som anropar "riktiga" sidan via en callback
+			</p>
+			<p class="note">
+				IE måste br-tagg läggas till
+				Safari minst 1KB,
+			</p>
+		</div>
+		
+		<!-- Streaming XHR -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+				<h1 class="c bg">Streaming XHR</h1>
+				<p class="bgy small spaced">
+				Som long polling men du använder data så fort den kommer (chuncked)
+				</p>
+				<p class="c">
+					<img src="images/xhr_streaming.png" />
+				</p>
+				<p class="small bgr c">
+					Dåligt stöd i vissa webbläsare
+				</p>
+		</div>
+		
+				
+		<!-- Web Sockets -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="big c">Web Socket</h1>
+			
+		</div>
+		
+		<!-- Realtidsramverk -->
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="c bg">Realtids-ramverk</h1>
+			<p class="bgy spaced">
+				Enklare, har fallbacks
+			</p>
+			<p class="bg spaced">	
+				node.js - socket.io<br /><br />
+				Meteor.js
+			</p>
+		</div>
+		
+		
+		<div class="step" data-x="900" data-y="2600" data-scale="0.2" data-rotate-x="70" data-rotate-y="-20">
+			<h1 class="c bgr">Get to know HTTP! </h1>
+			
+		</div>
+		
+	</div>
+	
+	<script src="js/impress.js"></script>
+	<script>
+	if ( !window.location.search.match(/print/) ) {
+	    impress().init();
+	}
+	</script>
+
+</body>
+</html>>
