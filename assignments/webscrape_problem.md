@@ -20,20 +20,19 @@ Koden ska dock redovisas via Github samt vara körbar för examinatorn via en UR
 	* Den URL kurswebbplatsen har
 	* Kurskod
 	* Den inledande texten om varje kurs
-	* Senaste inläggets rubrik, författare samt datum/klockslag (på formatet YYYY-MM-DD HH:MM)
+	* Senaste inläggets rubrik, författare samt datum/klockslag (på formatet YYYY-MM-DD HH:MM - Kan behöva reguljärt uttryck för att få ut detta)
 
-Om någon av uppgifterna saknas på respektive webbplats
+
 	
-3. Du ska göra regelbundna commits av din kod och synkronisera denna till github.
-4. Din skrapade data ska sparas undan permanent i en datalagring på lämpligt sätt, hur du väljer att göra detta är upp till dig. Du ska spara all skrapad information om producenterna samt även eventuella resurser som inte finns att få tag på. 
-	* Döda länkar (404) 
-	* Information som eventuellt saknas på producentsidorna t.ex. bilder, ort e.c.t.
-5. Gör en snygg och tydlig presentation av informationen ovan som du skrapat (från datalagringen). Presentationen ska vara i HTML och rendrerad från din datalagring och ska kommas åt via en URL.
-6. Skapa en fil med din reflektioner (se nedan)
-7. När uppgiften redovisas ska man ha gjort en release (tag) på sitt repositorie
+3. Du ska göra regelbundna commits av din kod och synkronisera denna till GitHub.
+4. All data ska sparas på disk i en fil i korrekt JSON-format. Fundera över hur du strukturerar upp din JSON.
+5. Om någon av uppgifterna saknas på något ska istället texten "none" anges (t.ex. "author" : "none")
+6. Du ska bara skrapa kurser! observera att visa sidor hör till ett projekt, ämne eller person. Hitta ett sätt att särskilja dem!
+7. 
+
 
 ##Reflektion
-Du ska i ditt repositorie skapa en fil i [markdown-format](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) där du reflekterar över följande saker:
+Du ska i ditt repositorie skapa en fil (reflektion_lab1.md) i [markdown-format](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) där du reflekterar över följande saker:
 
 1. Ni är fria att välja sätt att läsa in och extrahera data ur webbsidorna. Motivera ditt val!
 2. Vad finns det för risker med applikationer som innefattar automatisk skrapning av webbsidor? Nämn minst tre stycken!
@@ -45,8 +44,8 @@ Du ska i ditt repositorie skapa en fil i [markdown-format](https://github.com/ad
 ##Extrauppgifter
 För er som satsar på högre betyg i kursen finns här ett par extra funktioner för din applikation.
 
-1. De bilder man kan skrapa ska sparas ner lokalt i en egen mapp
-2. Utöka datalagringen med information om hur många gånger ditt skript har skrapat en producent och en timestamp om senaste gången informationen skrapades.
+1. Implementera algoritmen för skrapningen via rekursiva anrop.
+2. Skrapa även de andra typer av sidorna och skapa en JSON-fil för varje.
 
 
 ##Redovisning
@@ -60,7 +59,7 @@ Campusstudenter redovisar hos någon av de kursansvarigas kontor. Se till att ha
 ##Tips
 Studera de demonstrationsfilmer som finns på kurshemsidan.
 
-Surfa omkring på sidan med din webbläsare och studera hur den fungerar. Vad anropas vid inloggningen? Vilken data ska postas med? Hur håller sidan reda på den inloggade sessionen? Studera de HTTP-meddelanden som skickas. Studera källkoden på sidorna. Hur är sidorna uppbyggda och hur kan de skrapas.
+Surfa omkring på webbplatsen med din webbläsare (web inspector) och studera hur den fungerar. Hur är strukturen i sidorna. Hur är sidorna uppbyggda och hur kan de skrapas.
 
 #### Gör en release på din kod
 När du genomfört och vill examinera din applikation och för att du senare enkelt ska kunna gå tillbaka och se hur koden såg ut när genomfört laboration 1 ska du göra något som kallas för en tag eller release. 
@@ -69,13 +68,11 @@ När du genomfört och vill examinera din applikation och för att du senare enk
 2. Kontrollera att dina senaste ändringar finns tillgängliga på GitHub.
 3. Klicka på "releases" ovanför fillistningen.
 4. Välj att skapa en ny release.
-5. Se till att "Tag version" blir `l01` (Ludvig, nolla, etta).
+5. Se till att "Tag version" blir `L01_v.1.0`.
 Titel och description fyller du i som du själv vill.
 ![GitHub Release][github-release]
 6. Publicera releasen
 
-Se till att i fortsättningen göra ovanstående för samtliga laborationer (tag: l02, l03 etc.) när de är genomförda. 
-Kursledningen kan också på ett enkelt sätt överblicka klassens progression på de olika laborationerna.
 
 [github-release]: https://github.com/1ik415/Kursmaterial/raw/master/Laborationer/pics/github-release.png
 
