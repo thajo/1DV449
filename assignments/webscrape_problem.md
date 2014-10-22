@@ -1,16 +1,16 @@
 ##Problem
-I denna uppgift ska du skriva ett **automatiserat script** som skrapar data på en webbplats. Ditt script ska alltså ta ostrukturerad data och göra om till mer strukturerad. Det skrapade datat ska också sparas JSON-format.
+I denna uppgift ska du skriva ett **automatiserat script** som skrapar data på en webbplats. Ditt script ska alltså ta ostrukturerad data och göra om till mer strukturerad. Det skrapade datat ska sparas JSON-format.
 
-Du får i denna uppgift mycket gärna vara kreativ och välja en egen webbplats att skrapa på information. Dock ska omfattningen på uppgiften vara den samma som nedan beskrivna. Kontakta kursansvarige (twitter: @thajo) och kolla att ditt exempel uppfyller kraven innan du sätter igång.
+Du får i denna uppgift mycket gärna välja en egen webbplats att skrapa på information. Dock ska omfattningen på uppgiften vara den samma som nedan beskrivna. Kontakta kursansvarige (twitter: @thajo) och kolla att ditt exempel uppfyller kraven innan du sätter igång.
 
-För er utan fantasi kommer uppgiften att gå ut på att skrapa kursinformation ifrån CoursePress. Sidan ni startar ert script på, http://coursepress.lnu.se/kurser, kommer att innehålla en lista med kurser samt en pagenering till fler sidor som fortsätter lista kurserna. Din uppgift blir att skrapa ner alla kurser samt viss information om varje.
+För er utan fantasi kommer uppgiften att gå ut på att skrapa kursinformation ifrån CoursePress. Sidan ni startar ert script på, http://coursepress.lnu.se/kurser, kommer att innehålla en lista med kurser samt en paginering till fler sidor som fortsätter lista kurserna. Din uppgift blir att skrapa ner viss information (se kraven) om ALLA de kurser som finns på CoursePress.
 
 Skrapningen ska ske på ett så, för servern, skonsamt sätt som möjligt samt ha en utarbetad strategi för cahning.
 
 ##Val av teknik
-Du är helt fri att välja tekniker, programmeringsspråk och servermiljö för att lösa problemet. Fokus ligger i denna uppgift att du löser problemet och att du förstår de koncept som tas upp i samband med uppgiften.
+Du är helt fri att välja teknik, programmeringsspråk och servermiljö för att lösa problemet. Fokus ligger i denna uppgift att du löser problemet och att du förstår de koncept som tas upp i samband med uppgiften.
 
-Koden ska dock redovisas via Github samt att det ska finnas en körbar version för examinatorn via en URL. Uppgiften kommer också redovisas muntligen på examinationspassen. 
+Koden ska redovisas via Github samt att det ska finnas en körbar version för examinatorn att nå via en URL. Uppgiften kommer också redovisas muntligen på examinationspassen. 
 
 ##Krav
 1. Läs igenom HELA handledningen inan du börjar.
@@ -32,6 +32,7 @@ Koden ska dock redovisas via Github samt att det ska finnas en körbar version f
 8. Din skrapas alla HTTP-anrop ska identifiera dig på lämpligt sätt.
 9. Du ska skriva ner dina reflektioner i ett dokument i md-format som ska vara enkelt åtkommligt från ditt GitHub-repo.
 10. Välj ut två punkter kring din lösning du tycker är värd att diskutera vid redovisningen. Det kan röra val du gjort, tekniska lösningar eller lösningar du inte är riktigt nöjd med.
+11. När du anser dig klar med uppgiften gör du en release/tag på GitHub. Döp den liknande L01-v.1.0. Vid eventuella kompletteringar gör du en ny release L01-v.1.1 o.s.v.
   
 
 
@@ -70,23 +71,6 @@ Surfa omkring på webbplatsen med din webbläsare (web inspector) och studera hu
 
 Börja med en sida. Bryt ner problemet i delmängder. Tänk på att det är en skarp server vi nu skrapar mot
 
-#### Gör en release på din kod
-När du genomfört och vill examinera din applikation och för att du senare enkelt ska kunna gå tillbaka och se hur koden såg ut när genomfört laboration 1 ska du göra något som kallas för en tag eller release. 
+Använd handledningspassen och forumet till frågor. 
 
-1. Logga in på GitHub och gå till repositoriet för laborationen.
-2. Kontrollera att dina senaste ändringar finns tillgängliga på GitHub.
-3. Klicka på "releases" ovanför fillistningen.
-4. Välj att skapa en ny release.
-5. Se till att "Tag version" blir `L01_v.1.0`.
-Titel och description fyller du i som du själv vill.
-![GitHub Release][github-release]
-6. Publicera releasen
-
-
-[github-release]: https://github.com/1ik415/Kursmaterial/raw/master/Laborationer/pics/github-release.png
-
-
-
-
-
- 
+Behöver du en webbserver att lägga din applikation på. Använd [DigitalOcean](http://digitalocean.com) som du får via [GitHub Student Pack](https://education.github.com/).
