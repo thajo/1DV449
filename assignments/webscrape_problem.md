@@ -1,7 +1,7 @@
 ##Problem
 I denna uppgift ska du skriva ett **automatiserat script** som skrapar data på en webbplats. Ditt script ska alltså ta ostrukturerad data och göra om till mer strukturerad. Det skrapade datat ska sparas JSON-format.
 
-Du får i denna uppgift mycket gärna välja en egen webbplats att skrapa på information. Dock ska omfattningen på uppgiften vara den samma som nedan beskrivna. Kontakta kursansvarige (twitter: @thajo) och kolla att ditt exempel uppfyller kraven innan du sätter igång.
+Du får i denna uppgift mycket gärna välja en egen webbplats att skrapa på information. Dock ska omfattningen på uppgiften vara den samma som nedan beskrivna. Kontakta kursansvarige (twitter: @thajo_john) och kolla att ditt exempel uppfyller kraven innan du sätter igång.
 
 För er utan fantasi kommer uppgiften att gå ut på att skrapa kursinformation ifrån CoursePress. Sidan ni startar ert script på, http://coursepress.lnu.se/kurser, kommer att innehålla en lista med kurser samt en paginering till fler sidor som fortsätter lista kurserna. Din uppgift blir att skrapa ner viss information (se kraven) om ALLA de kurser som finns på CoursePress.
 
