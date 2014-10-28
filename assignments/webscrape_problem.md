@@ -65,7 +65,7 @@ Campusstudenter redovisar hos någon av de kursansvarigas kontor genom att boka 
 
 
 ##Tips
-Studera de demonstrationsfilmer som finns på kurshemsidan.
+Har du problem att komma igång kan du studera de demonstrationsfilmer som finns på kurshemsidan om [DomDocument](https://coursepress.lnu.se/kurs/webbteknik-ii/domdocument/) och [cURL](https://coursepress.lnu.se/kurs/webbteknik-ii/curl/)
 
 Surfa omkring på webbplatsen med din webbläsare (web inspector) och studera hur den fungerar. Hur är strukturen i sidorna. Hur är sidorna uppbyggda och hur kan de skrapas.
 

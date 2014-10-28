@@ -3,7 +3,7 @@
 
   Authors: Luke Mahé (code)
            Marcin Wichary (code and design)
-           
+
            Dominic Mazzoni (browser compatibility)
            Charles Chen (ChromeVox support)
 
@@ -26,47 +26,47 @@
 	.white-background {
 		background: white;
 		padding: 3px;
-		
+
 	}
-	
+
 	article.grey {
 		background-color: #333333;
 	}
-	
+
 	.big_point {
 		font-size: 45pt;
 		margin-bottom: 100px;
 		line-height:120%
 	}
-	
+
 	.small_italic {
 		font-style: italic;
 		font-size: 17pt;
 		padding-left: 20px;
 	}
-	
+
 	q.white-background {
 		padding-left: 40px;
 	}
-	
-	
+
+
 	article.fill p {
 		font-size: 30px;
 	  	background: rgba(255, 255, 255, .85);
 	  	padding: 10px;
 		color: black;
 	}
-	
-	
+
+
 	.top_right {
 		position: absolute;
 		left: 900px;
 		top: 30px;
 	}
-	
+
   .bottom {
     position: absolute;
-    
+
     bottom: 20px;
   }
 
@@ -77,7 +77,7 @@
 		max-width: 300px;
 		max-height: 300px;
 	}
-	
+
 	.top_right_bigger {
 		position: absolute;
 		left: 600px;
@@ -85,11 +85,11 @@
 		max-width: 300px;
 		max-height: 300px;
 	}
-	
+
 	.padding_top {
 		padding-top: 10px;
 	}
-	
+
 	.headlined {
 		font-size: 70px;
 	  background: rgba(255, 255, 255, .75);
@@ -101,20 +101,20 @@
 	  margin-right: -60px;
 	  padding-right: 60px;
 	}
-	
+
 	dt {
 		font-weight: bold;
 		margin-bottom: 15px;
 	}
-	
+
 	dd {
 		margin-bottom: 40px;
 	}
-	
+
 .big {
 	font-size: 3.3em;
 	font-weight: bold;
-	
+
 }
 
 .medium_big {
@@ -153,7 +153,7 @@
 }
 
 .c {
-text-align: center;	
+text-align: center;
 }
 
 .bi {
@@ -167,7 +167,7 @@ max-height: 90%;
 
 .biii {
 max-width: 300px;
-max-height: 190px;	
+max-height: 190px;
 }
 
 .bg {
@@ -191,7 +191,7 @@ color: black;
 
 
 .bgy {
- background-color: #FFC;	
+ background-color: #FFC;
 }
 
 .bgr {
@@ -200,9 +200,9 @@ color: black;
 
 .bgg {
 	background-color: #DDDDD5;
-	border-bottom: 1px solid black;	
-	border-top: 1px solid black;	
-	
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+
 }
 
 .top {
@@ -214,7 +214,7 @@ color: black;
 .spaced {
 	padding: 10px;
 	margin: 10px;
-	
+
 }
 
 .tight {
@@ -224,7 +224,7 @@ color: black;
 }
 
 .r {
-text-align: right;	
+text-align: right;
 }
 
 .b {
@@ -232,16 +232,16 @@ text-align: right;
 }
 
 .l {
-text-align: left;	
+text-align: left;
 }
 
 .u {
-	border-bottom: 1px solid black;	
+	border-bottom: 1px solid black;
 }
 
 dt {
 	font-weight: bold;
-	margin-top: 40px;	
+	margin-top: 40px;
 }
 
 dd {
@@ -254,7 +254,7 @@ background-position: 100% 85%;
 background-size: 30% Auto;
 
 }
-.note 
+.note
     {
         display: none;
     }
@@ -269,9 +269,9 @@ color: black;
     height: 40%;
     width: 70%;
     margin: -15% 0 0 -15%;
-	
+
 }
-	
+
 /*********
 GOOGLE
 **********/
@@ -289,7 +289,7 @@ body {
 
   height: 100%;
   min-height: 740px;
-  
+
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -320,7 +320,7 @@ font-family: 'Open Sans', sans-serif;
   height: 100%;
   left: 0;
   top: 0;
-  
+
   position: absolute;
 
   -webkit-transform: translate3d(0, 0, 0);
@@ -340,7 +340,7 @@ font-family: 'Open Sans', sans-serif;
 
   margin-left: -450px;
   margin-top: -350px;
-  
+
   padding: 40px 60px;
 
   box-sizing: border-box;
@@ -377,19 +377,19 @@ font-family: 'Open Sans', sans-serif;
 
 .slides.template-default > article:not(.nobackground) {
   background: 	url(images/colorbar.png) 0 200px repeat-x,
-	           	url(images/logo.png) -200px 650px  no-repeat;  
+	           	url(images/logo.png) -200px 650px  no-repeat;
 
-  background-size: 230px, 230px;		
-  background-color: white;  
-} 
+  background-size: 230px, 230px;
+  background-color: white;
+}
 
 .slides.template-io2011 > article:not(.nobackground):not(.biglogo) {
   background: url(images/colorbar.png) 0 600px repeat-x,
               url(images/googleio-logo.png) 640px 625px no-repeat;
 
-  background-size: 100%, 225px;  
+  background-size: 100%, 225px;
 
-  background-color: white;  
+  background-color: white;
 }
 
 
@@ -408,14 +408,14 @@ font-family: 'Open Sans', sans-serif;
   left: 0;
   top: 0;
   width: 150px;
-  height: 700px;  
+  height: 700px;
 
   left: 50%;
   top: 50%;
 
-  cursor: pointer;  
-  margin-top: -350px;  
-  
+  cursor: pointer;
+  margin-top: -350px;
+
   tap-highlight-color: transparent;
   -o-tap-highlight-color: transparent;
   -moz-tap-highlight-color: transparent;
@@ -648,7 +648,7 @@ h3 {
   color: rgb(51, 51, 51);
 }
 
-article.fill h3 {
+article.fill h3, h2 {
 	font-size: 70px;
   background: rgba(255, 255, 255, .75);
   padding-top: .4em;
@@ -659,6 +659,7 @@ article.fill h3 {
   margin-right: -60px;
   padding-right: 60px;
 }
+
 
 ul {
   list-style: none;
@@ -696,7 +697,7 @@ pre {
   font-size: 20px;
   line-height: 28px;
   padding: 5px 10px;
-  
+
   letter-spacing: -1px;
 
   margin-top: 40px;
@@ -706,7 +707,7 @@ pre {
   background: rgb(240, 240, 240);
   border: 1px solid rgb(224, 224, 224);
   box-shadow: inset 0 2px 6px rgba(0, 0, 0, .1);
-  
+
   overflow: hidden;
 }
 
@@ -791,7 +792,7 @@ th {
 }
 
 .noborder {
- border: none;	
+ border: none;
 }
 
 .source {
@@ -799,9 +800,9 @@ th {
   left: 60px;
   top: 644px;
   padding-right: 175px;
-  
+
   font-size: 15px;
-  letter-spacing: 0;  
+  letter-spacing: 0;
   line-height: 18px;
 }
 
@@ -809,10 +810,10 @@ article p.cc, article.fill p.cc {
   position: absolute;
   right: 20px;
   top: 642px;
-  
-  
+
+
   font-size: 12px;
-  letter-spacing: 0;  
+  letter-spacing: 0;
   line-height: 14px;
 }
 
@@ -825,39 +826,39 @@ q {
   display: block;
   font-size: 40px;
   line-height: 72px;
-  
+
   margin-left: 20px;
-  
+
   margin-top: 100px;
-  margin-right: 150px;    
+  margin-right: 150px;
 }
 q::before {
   content: '“';
-  
+
   position: absolute;
   display: inline-block;
   margin-left: -2.1em;
   width: 2em;
   text-align: right;
-  
+
   font-size: 90px;
   color: rgb(192, 192, 192);
 }
 q::after {
   content: '”';
 
-  position: absolute;  
+  position: absolute;
   margin-left: .1em;
 
   font-size: 90px;
-  color: rgb(192, 192, 192);  
+  color: rgb(192, 192, 192);
 }
 div.author {
-  text-align: right;  
+  text-align: right;
   font-size: 40px;
-  
+
   margin-top: 20px;
-  margin-right: 150px;    
+  margin-right: 150px;
 }
 div.author::before {
   content: '—';
@@ -907,30 +908,30 @@ article.smaller q::after {
 
 .prettyprint .str, /* string content */
 .prettyprint .atv { /* a markup attribute value */
-  color: rgb(0, 138, 53); 
-}  
+  color: rgb(0, 138, 53);
+}
 .prettyprint .kwd, /* a keyword */
 .prettyprint .tag { /* a markup tag name */
   color: rgb(0, 102, 204);
 }
 .prettyprint .com { /* a comment */
-  color: rgb(127, 127, 127); 
-  font-style: italic; 
-}  
+  color: rgb(127, 127, 127);
+  font-style: italic;
+}
 .prettyprint .lit { /* a literal value */
   color: rgb(127, 0, 0);
-}  
+}
 .prettyprint .pun, /* punctuation, lisp open bracket, lisp close bracket */
-.prettyprint .opn, 
-.prettyprint .clo { 
-  color: rgb(127, 127, 127); 
+.prettyprint .opn,
+.prettyprint .clo {
+  color: rgb(127, 127, 127);
 }
 .prettyprint .typ, /* a type name */
-.prettyprint .atn, /* a markup attribute name */ 
-.prettyprint .dec, 
+.prettyprint .atn, /* a markup attribute name */
+.prettyprint .dec,
 .prettyprint .var { /* a declaration; a variable name */
   color: rgb(127, 0, 127);
-}  
+}
 
 .image-src {
 
