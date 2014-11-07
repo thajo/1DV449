@@ -54,7 +54,7 @@ Du ska i ditt repositorie skapa en fil (reflektion_lab1.md) **i [markdown-format
 För er som satsar på högre betyg i kursen finns här ett par extra funktioner för din applikation. Du väljer själv hur många du implementerar.
 
 1. Implementera algoritmen för skrapningen via rekursiva anrop.
-2. Skrapa även de andra typer av sidorna (project, subject, blogg) och skapa en JSON-fil för varje.
+2. Skrapa även de andra typer av sidorna (project, subject, blogg, program) och skapa en JSON-fil för varje.
 3. När man är inloggad på coursepress kan man även komma åt "mina kurser" Skrapa även ner dessa i en egen JSON-fil. Det kan kräva att scriptet du skriver måste logga in på coursepress för att komma åt sidan.
 **STOR VARNING** Tänk efter hur du gö rmed ditt lösenord. LDet får unde ringa omständigheter spridas genom att t.ex. läggas på GitHub. Om du råkar göra det byt genast lösenordet!
 4. Sortera så att kurserna sparas i bokstavsordning på kursnamn i din JSON-fil.
