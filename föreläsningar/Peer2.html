@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+
+  <head>
+
+     <meta charset="utf-8" />
+     <title>Webbteknik II, 1dv449</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+    <meta name="description" content="Webben idag och i framtiden, Kalmar, Linnéuniversitetet" />
+
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script src='slides.js' media="screen"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<style media="print">
+	         @page {
+	            size: A4 landscape;
+	             @top-right {
+	                content: "Page " counter(page);
+	             }
+	         }
+	          article {
+	            page-break-after: always;
+	            margin: auto;
+	          }
+	          article.next, article.past {
+	            display: block;
+	          }
+
+				iframe {
+					display: none;
+				}
+				article img {
+					display: none;
+				}
+	          body {
+	              display: block !important;
+	              font-family: 'Open Sans', Arial, sans-serif;
+	              font-size: 1.5em;
+	          }
+	</style>
+  </head>
+
+
+
+  <body style='display: none'>
+
+    <section class='slides layout-widescreen template-default'>
+
+
+	<!-- Agenda -->
+	<article>
+		<h3>http://pingo.upb.de/9553</h3>
+	</article>
+
+
+
+
+	<!-- Web of data -->
+    <article class="fill">
+ 		<h3 class="c">Web mining</h3>
+   		<p>
+			Data mining handlar om att anlysera och hitta mönster i stora datasamlingar.
+		</p>
+
+		<ul>
+			<li>
+				<strong>Web usage mining</strong> - Anlysera data från surfanvändares beteenden, loggar aktiviteter (clickstream data)
+			</li>
+			<li><strong>Web content mining</strong> - Data som redan finns på webben, innehåll i webbsidor, sökmotorer - crawlers, Strukturera ostrukturerad data
+			</li>
+			<li>
+				<strong>Web-structure mining</strong> - Analyserar länkstruktur för att klassificera webbsidor. PageRank, Analysera sociala nätverk.
+			</li>
+		</ul>
+
+   		<p class="cc">Foto from wikipedia:
+		<a href="http://upload.wikimedia.org/wikipedia/commons/b/b8/Sao_Paulo_Stock_Exchange.jpg"> http://upload.wikimedia.org/wikipedia/commons/b/b8/Sao_Paulo_Stock_Exchange.jpg</a> </p>
+   		<img src="http://upload.wikimedia.org/wikipedia/commons/b/b8/Sao_Paulo_Stock_Exchange.jpg" height="100%"/>
+
+   	</article>
+
+   	<article>
+   		
+   	</article>
+
+
+	<article>
+		<h3>SPARQL</h3>
+		<p style="margin-top: 50px;">
+		<img src="images/SPARQL.png" width="80%"/>
+		</p>
+	</article>
+
+	<article class="fill">
+		<iframe src="http://dbpedia.org/snorql/?query=PREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0A%0D%0ASELECT+%3Fname+%3Fbirth+%3Fdeath+%3Fperson+WHERE+%7B%0D%0A+++++%3Fperson+dbo%3AbirthPlace+%3ABerlin+.%0D%0A+++++%3Fperson+dbo%3AbirthDate+%3Fbirth+.%0D%0A+++++%3Fperson+foaf%3Aname+%3Fname+.%0D%0A+++++%3Fperson+dbo%3AdeathDate+%3Fdeath+.%0D%0A+++++FILTER+%28%3Fbirth+%3C+%221900-01-01%22%5E%5Exsd%3Adate%29+.%0D%0A%7D%0D%0AORDER+BY+%3Fname"></iframe>
+
+	</article>
+
+	<article class="fill">
+		<iframe src="http://www.snee.com/sparql/spreadsheetSPARQL.html"></iframe>
+	</article>
+
+	<article class="fill">
+		<iframe src="http://factforge.net/sparql" />
+	</article>
+
+
+
+    </section>
+  </body>
+</html>
