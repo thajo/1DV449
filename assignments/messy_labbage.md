@@ -1,23 +1,24 @@
 ##Problem - Messy Labbage
-Denna laboration består av tre delar. Du kommer få en webbapplikation som kanske inte är uppbyggd på så sätt som du skulle vilja. Det är ganska vanligt att man kommer få "mindre bra" kod i sitt knä som man sedan tvingas jobba vidare med. Tanken med denna uppgift är att du med din kunskap ska analysera och förbättra denna applikation både ur ett prestanda- och ett säkerhetsperspektiv. Applikationen är ganska liten så vi kanske inte kommer se jättestora förändringar i prestandan men vi får i alla fall ett tillfälle att studera de teorier och tips som finns.
+Denna laboration består av tre delar. Du kommer få en webbapplikation som kanske inte riktigt är uppbyggd på det sätt du skulle vilja. Det är ganska vanligt att man kommer få "mindre bra" kod i sitt knä som man sedan tvingas jobba vidare med. Tanken med denna uppgift är att du med din kunskap ska analysera och förbättra denna applikation både ur ett prestanda- och ett säkerhetsperspektiv. Applikationen är ganska liten så vi kanske inte kommer se jättestora förändringar i prestandan men vi får i alla fall ett tillfälle att studera de teorier och tips som finns.
 
 * I första delen ska du identifiera och rätta till eventuella säkerhetsrisker med applikationen.
 * I andra delen av laborationen ska du försöka identifiera prestandaproblem i applikationen och försöka rätta till dessa.
-* I tredje delen ska du implementera lösning för meddelande-hantering i applikationen med en Comet-lösning (long-polling). Som extrauppgift kan amn också göra en lösning med WebSockets.
+* I tredje delen ska du implementera lösning för meddelande-hantering i applikationen med en Comet-lösning (long-polling). Som extrauppgift kan man också göra en lösning med WebSockets.
 
-Du har ganska stora friheter att ändra i applikationen så länge funktion och utseende inte skalas bort. 
+Du har ganska stora friheter att ändra i applikationen så länge funktion och utseende inte ändras. 
 
 ##Redovisning
 Redovisning av denna laboration sker muntligen, i form av en laborationsrapport samt i form av publicering av kod på GitHub. 
 
-Laborationsrapporten **ska** vara i md-format och finnas publicerad tillsammans med din kod i ditt  repositorie. Där ska också en URL till en körbar version av din omarbetade applikation tydligt framgå så vi kan testköra den.
+Laborationsrapporten **ska** vara i md-format och finnas publicerad tillsammans med koden i ditt repositorie. Där ska också en URL till en körbar version av din omarbetade applikation tydligt framgå så vi kan testköra den.
 
 ##Om applikationen
 Applikationen tankar du ner från följande adress: 
 <http://orion.lnu.se/pub/education/course/1DV449/ht14/zips/1DV449_L02.zip>
+
 Applikationen är skriven i PHP och kräver stöd för SQLite3 och PDO.
 
-Applikationen ska ha samma funktion när du är färdig med den men förhoppningsvis vara bättre, säkrare och snabbare. Fokus på denna laboration ligger som sagt på optimering och säkerhet men känner du att du helt eller delvis vill strukturera/skriva om applikationen är du fri att göra detta men i laborationsrapporten måste det **tydligt** framgå vilka prestanda- och säkerhetsförbättringar som du gjort.
+Applikationen ska ha samma funktion när du är färdig med den men förhoppningsvis vara bättre, säkrare och snabbare. Fokus på denna laboration ligger som sagt på optimering och säkerhet men kliar det i fingrarna får du helt eller delvis vill strukturera/skriva om applikationen men i laborationsrapporten måste det **tydligt** framgå vilka prestanda- och säkerhetsförbättringar som du gjort.
 
 Applikationen har en inloggningssida på sin startsida index.php. Just nu finns två användarkonton; *admin:admin och user:user*.
 Efter inloggning kommer man till en enkel applikation där man kan skriva meddelanden som dyker upp i en lista. Ni känner nog igen applikationen :) 
@@ -35,6 +36,7 @@ Dela upp varje säkerhetsrisk du hittar i följande punkter:
 * Vad för skada kan säkerhetsbristen göra?
 * Hur du har åtgärdat säkerhetshålet i applikationskoden?
 
+Säkerheten tas upp under vecka 3 i självstudier och peer-instructions
 
 ## Del 2 - Optimering
 Applikationen bör kunna optimeras både front- och backend (vi bortser från val av databashanterare som såklart också påverkar prestandan). Din uppgift blir att analysera applikationen och identifiera eventuella delar som går att optimera bättre. Du beskriver vilka delar du förändrar i din laborationsrapport och berättar också varför. Använd något verktyg som kan mäta laddning av sidan, förslagsvis någon webbläsares "web inspector".
@@ -46,6 +48,7 @@ Dela upp **varje olika del** i följande punkter:
 * Observation (laddningstid, storlekar av resurser, anrop m.m.) **efter** åtgärd (utan webläsar-cache - gärna ett medeltal av ett antal testningar)
 * Reflektion kring att testresultatet blev som det blev.
 
+Säkerheten tas upp under vecka 4 i självstudier och peer-instructions
 
 ####Tänk på följande angående mätningen
 HTTP-caching och gzip kan vara svårt att implementera på servrar man inte har full kontroll över (kan styras via php.ini / .htaccess i apache:s fall). I de flesta fall är redan webbservern förinställd. Därför kan dessa bortses ifrån i denna laboration men vill man får man gärna hantera dessa också.
@@ -56,7 +59,7 @@ Tänk på att om du kör applikationen lokalt går det väldigt fort och kan var
 
 Mindre kodoptimeringar så som att ++variable eventuellt anses snabbare än variable++ räknas inte i denna laboration utan vi letar efter saker som vi tar upp i kursen så som t.ex. antalet requests m.m.
 
-Kurslitteraturen går igenom många tips för frontends-optimering.
+Den rekommenderade kurslitteraturen går igenom många tips för frontends-optimering.
 
 
 ## Del 3 - Long-polling
@@ -68,6 +71,7 @@ Det finns ett antal olika varianter för så kallade Comet-tekniker men du ska i
 
 anken är att du ska skriva om meddelande-hanteringen till en comet-lösning där servern meddelar klienten när ett nytt meddelande har skrivits. Du ska alltså kunna ha två webbläsarfönster öppna och när du skriver ett meddelande i det ena ska det dyka upp i båda webbläsarfönstren.
 
+Long-polling tas upp under vecka 4 i självstudier och peer-instructions
 
 ####Krav
 * Sista skrivna meddelandet ska hamna högst upp i meddelandelistan 
@@ -75,10 +79,6 @@ anken är att du ska skriva om meddelande-hanteringen till en comet-lösning dä
 * Du förklarar din implementation i din laborationsrapport samt reflekterar över de för- och nackdelar som finns med en denna lösning.
 * Koden ska såklart redovisas på ditt github-konto tillsammans med en URL till en körbar version
 
-####Tips
-[http://www.ibm.com/developerworks/library/wa-reverseajax1/](http://www.ibm.com/developerworks/library/wa-reverseajax1/)
-
-Testa först implementera din lösning i ett enklare fall så du får ihop metoden och för sedan över den till applikationen
 
 ## Del 4 - Extrauppgift 1
 För er som vill och/eller satsar på högre betyg finns ytterligare en extrauppgift. Gör en ytterligare en implementation med Web Socket. Implementera applikationen så att long-pollingtekniken automatiskt körs som fallback för eventuella webbläsare som inte stödjer den nya tekniken.
