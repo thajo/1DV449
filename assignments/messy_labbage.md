@@ -81,6 +81,6 @@ Long-polling tas upp under vecka 4 i självstudier och peer-instructions
 
 
 ## Del 4 - Extrauppgift 1
-För er som vill och/eller satsar på högre betyg finns ytterligare en extrauppgift. Gör en ytterligare en implementation med Web Socket. Implementera applikationen så att long-pollingtekniken automatiskt körs som fallback för eventuella webbläsare som inte stödjer den nya tekniken.
+För er som vill och/eller satsar på högre betyg finns ytterligare en extrauppgift. Gör en implementation med Web Socket som pushar ut nya meddelanden. Implementera applikationen så att long-pollingtekniken automatiskt körs som fallback för eventuella webbläsare som inte stödjer Web Sockets.
 
 Jämför med long polling-tekniken och beskriv skillnaderna i din laborationsrapport tillsammans med en URL till en körbar version.
