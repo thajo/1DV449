@@ -39,7 +39,9 @@ Dela upp varje säkerhetsrisk du hittar i följande punkter:
 Säkerheten tas upp under vecka 3 i självstudier och peer-instructions
 
 ## Del 2 - Optimering
-Applikationen bör kunna optimeras både front- och backend (vi bortser från val av databashanterare som såklart också påverkar prestandan). Din uppgift blir att analysera applikationen och identifiera eventuella delar som går att optimera bättre. Du beskriver vilka delar du förändrar i din laborationsrapport och berättar också varför. Använd något verktyg som kan mäta laddning av sidan, förslagsvis någon webbläsares "web inspector".
+Applikationen bör främst kunna optimeras i både front- och till kasnke någon mindre del i backend (vi bortser från val av databashanterare som såklart också påverkar prestandan). Din uppgift blir att analysera applikationen och identifiera eventuella delar som går att optimera bättre. Du beskriver vilka delar du förändrar i din laborationsrapport och berättar också varför. Använd något verktyg som kan mäta laddning av sidan, förslagsvis någon webbläsares "web inspector".
+**Utgå här ifrån kurslitteraturen kapitel 1-12 för att hitta optimeringar**
+
 Dela upp **varje olika del** i följande punkter:
 
 * Namn på åtgärd Du gjort för att försöka förbättra prestandan
@@ -48,7 +50,8 @@ Dela upp **varje olika del** i följande punkter:
 * Observation (laddningstid, storlekar av resurser, anrop m.m.) **efter** åtgärd (utan webläsar-cache - gärna ett medeltal av ett antal testningar)
 * Reflektion kring att testresultatet blev som det blev.
 
-Säkerheten tas upp under vecka 4 i självstudier och peer-instructions
+
+Optimeringen tas upp under vecka 4 i självstudier och peer-instructions
 
 ####Tänk på följande angående mätningen
 HTTP-caching och gzip kan vara svårt att implementera på servrar man inte har full kontroll över (kan styras via php.ini / .htaccess i apache:s fall). I de flesta fall är redan webbservern förinställd. Därför kan dessa bortses ifrån i denna laboration men vill man får man gärna hantera dessa också.
@@ -57,9 +60,7 @@ HTTP-caching och gzip kan vara svårt att implementera på servrar man inte har 
 
 Tänk på att om du kör applikationen lokalt går det väldigt fort och kan vara svårt att upptäcka verkliga förändringar. Testa gärna dina förändringar på en extern server t.ex. ditt webbhotell eller varför inte någon molnbaserad tjänst.
 
-Mindre kodoptimeringar så som att ++variable eventuellt anses snabbare än variable++ räknas inte i denna laboration utan vi letar efter saker som vi tar upp i kursen så som t.ex. antalet requests m.m.
-
-Den rekommenderade kurslitteraturen går igenom många tips för frontends-optimering.
+Mindre kodoptimeringar så som att ++variable eventuellt anses snabbare än variable++ räknas inte i denna laboration utan vi letar efter saker som tas upp i kurslitteraturen så som t.ex. antalet requests, hur man hanterar statiska resurser o.s.v.
 
 
 ## Del 3 - Long-polling
