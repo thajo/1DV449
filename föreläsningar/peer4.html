@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+
+  <head>
+
+     <meta charset="utf-8" />
+     <title>Webbteknik II, 1DV449</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+    <meta name="description" content="Webben idag och i framtiden, Kalmar, Linnéuniversitetet" />
+
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script src='slides.js' media="screen"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<style media="print">
+	         @page {
+	            size: A4 landscape;
+	             @top-right {
+	                content: "Page " counter(page);
+	             }
+	         }
+	          article {
+	            page-break-after: always;
+	            margin: auto;
+	          }
+	          article.next, article.past {
+	            display: block;
+	          }
+
+				iframe {
+					display: none;
+				}
+				article img {
+					display: none;
+				}
+	          body {
+	              display: block !important;
+	              font-family: 'Open Sans', Arial, sans-serif;
+	              font-size: 1.5em;
+				  }
+	</style>
+  </head>
+
+
+
+  <body style='display: none'>
+
+    <section class='slides layout-widescreen template-default'>
+      <!-- http://lights.elliegoulding.com/ -->
+
+
+	<!-- Första sidan -->
+    <article class="fill">
+    	<img src="http://s.cdon.com/media-dynamic/images/product/toy/vidmatbordet/image1/ratt_start_pingu_bitleksak-17117834-40880426-.jpg" alt="">
+       	<h2 class="c">http://pingo.upb.de/9503</h2>
+ 	</article>
+
+	<!-- Agenda -->
+	<article>
+
+	</article>
+
+
+
+	<!-- Typer av cache? -->
+	<article>
+		<h3 class="c bg">Typer av web cache</h3>
+		<ul>
+			<li>Browser cache</li>
+			<li>Proxy cache</li>
+			<li>Gateway cache - CDN</li>
+			<li>Serverside cache</li>
+		</ul>
+
+		<p class="c">
+			<img src="images/cdn.png" height="300px" />
+		</p>
+		<p class="note">
+			Content Delivery Network
+		</p>
+	</article>
+
+
+	<!-- Expire -->
+	<article>
+		<p class="c bg">Expires</p>
+
+		<p class="c">
+			<img src="images/cache_example.png" />
+		</p>
+
+
+		</p>
+		<p class="note">
+			HTTP Date - Utgår från GMT
+			Stort stöd
+			Bilder och resuser som får tid långt framåt - Byt filnamn
+
+			BILD
+			Klockan - Syncproblem
+			Lätt att glömma att man satt en tid långt fram
+		</p>
+	</article>
+
+	<!-- Cache-control -->
+	<article>
+		<h3 class="c bg">Cache-Control</h3>
+
+		<ul>
+			<li><strong>max-age</strong> - Antal sekunder som innehållet anses giltigt</li>
+			<li><strong>public</strong> - Fritt fram att cache:a </li>
+			<li><strong>private </strong>- Tillåts endast caching privat - webbläsare</li>
+			<li><strong>no-cache</strong> - Kontrollera med servern för att få släppa cache:at data</li>
+			<li><strong>no-store</strong> - Ingen cache alls!</li>
+			<li><strong>must-revalidate</strong> - Måste följa cache-reglerna ovan (I HTTP finns specialfall)</li>
+
+		</ul>
+		<p>
+			Om både Expires och Cache-Control finns tar den senare överhand
+		</p>
+
+		<p class="c"><img class="bi" src="images/cache-control.png" /></p>
+
+		<p class="note">
+			Introducerades med HTTP 1.1
+			Pragma - Stöds inte av de flesta cache
+		</p>
+	</article>
+
+
+
+	<!-- PHP-kod -->
+	<article>
+		<h3 class="c bg">Cache - PHP</h3>
+
+		<p class="c">
+			<img src="images/php_cache.png" class="bi spaced" />
+		</p>
+
+		<p class="note">
+			Problem vid web forms osv.
+		</p>
+	</article>
+
+
+
+
+	<article>
+		<img src="images/defer.png" height="95%" />
+	</article>
+
+
+    </section>
+  </body>
+</html>
+
+<!-- Status codes
+
+
+-->

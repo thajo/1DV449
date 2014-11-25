@@ -1,109 +1,103 @@
 1. Vad menas i webbsammanhang med en CDN?
-A. Ett sätt att distribuera ut statiska filer närmare användaren för snabbare åtkomst
+A. Ett sätt att distribuera ut filer närmare användaren för snabbare åtkomst
 B. Ett sätt att tala om hur data ska cache:as hos klienten
 C. Ett sät att tala om hur data ska cache:as hos servern
 D. Ett sätt att fördela anropen till två eller flera servrar
 
 2. När man pratar om cache hör man ibland uttrycket "Stale". Vad menas med det?
-A. Det är när en attackerare får tag i cache:ad känslig data
+A. Det är när en attackerare får tag i cachad känslig data
 B. När det levereras cachad data fast det egentligen finns ny att få tag på
-C. Man har cache:at på ett ooptimalt sätt och vinne ringen prestanda på det
+C. Man har cachat data på ett icke optimalt sätt och vinner ingen prestanda på det
 D. Stale cache är cache som ligger på servern till skillnad från browser cache
 
 
-3. Hur kan man tala om att cachning endast för ske i webbläsaren (inte i någon mellanligande webbproxy) vilket man kanske vill ska ske vid viss typ av privat data som annars kan leda till säkerhetsproblem om web proxies cachar känslig data
-A. Du stänger av cachningen
-B. Du använder HTTPS som aldrig cache:as
-C. Du använder HTTP POST på alla dina anrop
-D. Du sätter sätter HTTP headern cache-control till private
-
-
-4. Vilket av följande anses bättre att använda HTTP headern Cache-Control istället för HTTP headern Expires? (flerval)
+3. Vilket av följande anses bättre att använda HTTP headern; Cache-Control eller HTTP headern Expires? (flerval)
 A. Expires använder ett klockslag (proxy, server, klient kan ha olika uppfattningar om tid)
 B. Cache-Control tar så pass mycket mindre plats i headern att det blir mycket effektivare
 C. Du har mer kontroll över cache-hanteringen med Cache-Control
 D. Cache-Control ser även till att det körs en gzip på innehållet
 
 
-5. Expiresheadern i HTTP använder en HTTP date. Du sitter i Stockholm och studerar ett paket och ser följande fält:
-Expires: Tis, 25 nov 2014 14:00:19 GMT
-När innebär det att cachen på detta paket går ut om ingen annan cache-information finns?
-B. 2014-11-25 13:00:19
-A. 2014-11-25 14:00:19
-C. 2014-11-25 15:00:19
-D. 2014-11-25 23:59:59
+4. Hur rekommenderas man att tala om att ingen cachning får ske (inte i någon mellanliggande webbproxy) vilket man kanske vill ska ske vid viss typ av privat data som annars kan leda till säkerhetsproblem om web proxies cachar känslig data
+A. Du stänger av cachningen
+B. Du använder HTTPS som aldrig cache:as
+C. Du använder HTTP POST på alla dina anrop
+D. Du uppdaterar HTTP headern cache-control
 
 
-6. Hur fungerar ETags i HTTP-protokollet (flera alternativ kan vara rätt)
-A. En hashad sträng som representerar ett datum sätts i headern som sedan kollas mot If-Modified-Since, har datumet gått ut hämtas en ny kopia av innehållet
-B. En unik identifierare produceras till ETag-headern som sedan kollas mot If-None-Match, är det ett ntt id hämtas en ny kopia ner
+
+
+
+5. Hur fungerar ETags i HTTP-protokollet (flera alternativ kan vara rätt)
+A. En hashad sträng som representerar ett datum sätts i headern som sedan kollas mot If-Modified-Since. Har datumet gått ut hämtas en ny kopia av innehållet
+B. En unik identifierare produceras till ETag-headern som sedan kollas mot If-None-Match. Är det ett nytt id hämtas en ny kopia ner
 C. Genom en ETag kan man tala om för serverscriptapplikationen att endast ett fragment av sidan ska cache:as
 D. Genom en ETag kan man tala om för serverscriptapplikationen att man bör cache:a SQL-frågan som körs
 
 
-7. Du använder såklart minifiering av din javascript på din tjänst. Du sätter din Cache-Control till att vara en väääldigt lång tid. Efter några timmer uppdaterar du din javascript. Hur kan du då undvika att klienterna laddar ner den redan cachade resursen?
+6. Du använder såklart minifiering av din javascript på din tjänst. Du sätter din Cache-Control till att vara en väääldigt lång tid. Efter några timmer uppdaterar du din javascript. Hur kan du då undvika att klienterna laddar ner den redan cachade resursen?
 A. Registerar en callback-URL som anropas när det är uppdaterat
 B. Döda sessionsvariablen som skapar response-koden (som innehåller HTTP-headers)
 C. Pushar ut data till klienten som därmed uppdaterar cachen på vägen
-D. Döp dessa resurser och länkarna till dem
+D. Döp om dessa resurser och länkarna till dem
 
-8. Man vill självklart cacha så mycket som möjligt av en välbesökt statisk HTML-sida. Dock märker man efter ett tag att besöksstatistiken sätts ur spel då besökaren endast får sidan av en web proxy. Vilka är lämpliga sätt att motverka detta tycker du? (flerval)
+7. Man vill självklart cacha så mycket som möjligt av en välbesökt statisk HTML-sida. Dock märker man efter ett tag att besöksstatistiken sätts ur spel då besökaren endast får sidan av en web proxy. Vilka är lämpliga sätt att motverka detta tycker du? (flerval)
 A. Se till att de på sidan finns en liten resurs som inte cachas.
 B. Tar bort cachning helt från startsidan
 C: Ser till att bädda in statistik script i webbsidan (AJAX)
 D: Undviker att cache:a statiska resurser
 
 
-9. Vilken typer av resurser bör zippas när de skickas över HTTP? Flera alternativ KAN vara rätt.
+8. Vilken typer av resurser bör zippas när de skickas över HTTP? Flera alternativ KAN vara rätt.
 A. Bilder
 B. Javascriptfiler
 C. CSS-filer
 D. Flashfiler
 
 
-10. Vad menas med Obfuscation när man pratar javascript?
+9. Vad menas med Obfuscation när man pratar javascript?
 A. Det är samma sak som minifiering
 B. Man tar bort whitespaces men gör även om koden så den tar mindre plats
 C. Man delar upp javascripten från resten av applikationen för enklare caching
 D. Man ser till att helt ladda DOM:en med hjälp av javascript för snabbare rendrering
 
 
-11. Vad är en lastbalanserare?
+10. Vad är en lastbalanserare?
 A. En mjukvara som stoppar trafiken när det blir för mycket (t.ex. vid en SYN-attack)
 B. En maskin/dator som ansvarar för cachningen i större uppskalade webbapplikationen
 C. En maskin/dator som dirigerar om trafiken till två eller flera applikationsservrar
-D. En maskin som fungerar som en distribuerad nod i ett CDN
+D. En maskin som fungerar som en distribuerad nod i ett Content Delivery Network
 
-12. Hur bör man servera javascript respektive CSS-filer för en webbklient för att underlkätta en snabbare upplevelse av sidladdningen?
+11. Hur bör man servera javascript respektive CSS-filer för en webbklient för att ge en snabbare upplevelse av sidladdningen?
 A: CSS placeras på så sätt att de läses in så snabbt som möjligt (head-taggen)
 B. CSS placeras så att de läses in först när DOM:en är klar
 C. Javascript placeras så att de läses in så snabbt som (head-taggen)
 D. Javascript länkas in så sent som möjligt för att inte hindra inladdningen av sidan
 
 
-13. Mark Nottingham talar i sin video om utvecklingsarbetet kring HTTP/2. Vilket är det största skälet enligt honom till att man satte igång arbetet med en ny specifikation?
+12. Mark Nottingham talar i sin video om utvecklingsarbetet kring HTTP/2. Vilket är det största skälet enligt honom till att man satte igång arbetet med en ny specifikation?
 A. Säkerhet
 B. Nya typer av tekniker måste implementeras för att tillgodose utevcklarna
 C. Prestanda
 D. Kostnaderna för att driva gammal teknik skenar i höjden
 
 
-14. Varför är HTTP request så kostbara ur prestandasynpunkt? (flerval)
+13. Varför är HTTP request så kostbara ur prestandasynpunkt? (flerval)
 A. TCP är byggt så att man har en ganska långsam "startprocess" innan datatrafiken börjar skickas (för att undvika trafikstockningar) som kallas "TCP Slow start"
 B. Kombinationen TCP och HTTP kan idagslägen bara skicka ett request/reponse i taget
 C. En vanlig webbklient använder bara 4-8 samtidiga connections till en webbserver för att undvika trafikstockningar
 D. En webbklient måste hela tiden ligga och fråga servern efter svar (Polla servern)
 
 
-15. I videon om HTTP/2 talar Mark Nottingham om att "HTTP Headers are verbose" - Vad menar han med detta?
+14. I videon om HTTP/2 talar Mark Nottingham om att "HTTP Headers are verbose" - Vad menar han med detta?
 A. I dagslägen skickar HTTP mycket onödig information i sin header
 B. Webbläsartillverkarna får ibland chansa hur de ska skicka trafiken på bästa sätt
-C. HTTP Headers är "högljudda" och skickas meddelanden till en mängd noder som inet behöve rinformationen (broadcasting)
+C. HTTP Headers är "högljudda" och skickas onödiga meddelanden till en mängd noder som inte behöver informationen (broadcasting)
 D. HTTP headerna är okomprimerade när de skickas
 
 
-16. Mark Nottingham nämner också Multiplexing - Vad menas med detta begrepp? (flera alternativ KAN vara rätt)
+15. Mark Nottingham nämner också Multiplexing - Vad menas med detta begrepp? (flera alternativ KAN vara rätt)
 A. Att man med hjälp av ett stream-id kan skicka headers i obestämd ordning allt eftersom de är klara
 B. Att man ska kunna öppna betydligt fler TCP-uppkopplingar för att snabbare kunna ta emot och skicka data
-C. Att man i protokollet får stöd för så kallad P2P (peer-to-peer) så att data kan skickas mellan webbklienter istället för att behäva gå hela vägen till servern
+C. Att man i protokollet får stöd för så kallad P2P (peer-to-peer) så att data kan skickas mellan webbklienter istället för att behöva gå hela vägen till servern
 D. Att man kan prioritera viss trafik t.ex. är tabb sju öppen i webbläsaren prioteras dess trafik före eventuell annan trafik som laddas.
