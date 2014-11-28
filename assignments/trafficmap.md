@@ -21,11 +21,11 @@ Vill du byta ut google maps mot ett annat kart-API går det också bra så läng
 * Din applikation ska inte fråga efter data mot API:et i onödan. Infoga en cachningsstrategi. 
 * Du ska använda JSON som returformat
 * Det är inte tillåtet att använda JSONP
-* Du ska fundera kring säkerhet och optimering i din applikation för att implementera den på ett så bra sätt som möjligt.
+* Applikationen ska självklart vara buggfri, säker och optimerad.
 
 ## Reflektion
 * Vad finns det för krav du måste anpassa dig efter i de olika API:erna?
-* Hur och hur länga cachar du ditt data för att slippa anropa API:ena i onödan?
+* Hur och hur länga cachar du ditt data för att slippa anropa API:erna i onödan?
 * Vad finns det för risker med din applikation?
 * Hur har du tänkt kring säkerheten i din applikation?
 * Hur har du tänkt kring optimeringen i din applikation?
