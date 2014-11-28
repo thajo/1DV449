@@ -18,8 +18,9 @@ Vill du byta ut google maps mot ett annat kart-API går det också bra så läng
 * Användaren ska kunna filtrera trafikhändelserna genom att på något sätt ge användaren möjlighet bara visa en specifik kategori: Vägtrafik, Kollektivtrafik, Planerad störning, Övrigt eller Alla kategorier. Se API-dokumentationen för mer information.
 * Applikationen ska också ha en lista med alla aktuella händelser (sorterad efter tidpunkt - senast högst upp). När användaren klickar på en händelse ska man på något sätt se detta i kartan (narkören hoppar eller liknande)
 * Naturligtvis ska applikationen se bra ut. Använd gärna ett front-end ramverk för att förenkla detta t.ex. [bootstrap](http://getbootstrap.com/) eller [Foundation](http://foundation.zurb.com/).
-* Din applikation ska inte fråga efter data mot API:en i onödan. Infoga en cachningsstrategi. 
-* Du ska använda JSON som returformat (det är ej tillåtet att använda JSONP)
+* Din applikation ska inte fråga efter data mot API:et i onödan. Infoga en cachningsstrategi. 
+* Du ska använda JSON som returformat
+* Det är inte tillåtet att använda JSONP
 * Du ska fundera kring säkerhet och optimering i din applikation för att implementera den på ett så bra sätt som möjligt.
 
 ## Reflektion
@@ -33,6 +34,7 @@ Vill du byta ut google maps mot ett annat kart-API går det också bra så läng
 ##Extrauppgift
 1. Trafikinformationen har olika prioritet. Visa detta genom att ge olika utseende på kartans olika markers för de olika prioriteringarna som finns (Mycket allvarlig händelse, Stor händelse, Störning, Information, Mindre störning)
 2. Gör en ytterligare funktion i applikationen där man använder SR.s trafikområden. Presentera dessa i en lista. När användaren väljer ett område zommas detta in och trafikhändelserna presenteras där.
+
 
 ##Redovisning
 Redovisning av denna uppgift sker muntligen på de schemalagda redovisningstiderna. Man kommer dock få boka en egen redovisningstid.
