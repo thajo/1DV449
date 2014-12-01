@@ -13,12 +13,13 @@ Vill du byta ut google maps mot ett annat kart-API går det också bra så läng
 
 
 ##Krav
-* Mashupapplikationen ska hämta de senaste 100 posterna (finns det färre ta alla) av trafikinfo från SR:s API. Dessa ska presenteras på lämpligt sätt på sidan samt även på en karta på sidan med en "marker" som representerar platsen för den aktuella händelsen. När man klickar på en marker ska mer information om den aktuella händelsen komma upp (titel, datum, beskrivning och kategori - Se API-dokumentationen för mer information) via ett infowindow (se google maps dokumentation). 
+* Mashupapplikationen ska hämta de senaste 100 posterna (finns det färre ta alla) av trafikinfo från SR:s API. Dessa ska presenteras på lämpligt sätt på sidan i en lista samt även på en karta med en "marker" som representerar platsen för den aktuella händelsen. 
+* När man klickar på en marker ska mer information om den aktuella händelsen komma upp (titel, datum, beskrivning och kategori - Se API-dokumentationen för mer information) via ett infowindow (se google maps dokumentation). 
 * Man ska inte kunna klicka upp flera noteringsrutor så att man döljer information.
 * Användaren ska kunna filtrera trafikhändelserna genom att på något sätt ge användaren möjlighet bara visa en specifik kategori: Vägtrafik, Kollektivtrafik, Planerad störning, Övrigt eller Alla kategorier. Se API-dokumentationen för mer information.
 * Applikationen ska också ha en lista med alla aktuella händelser (sorterad efter tidpunkt - senast högst upp). När användaren klickar på en händelse ska man på något sätt se detta i kartan (markören hoppar eller liknande)
 * Naturligtvis ska applikationen se bra ut. Använd gärna ett front-end ramverk för att förenkla detta t.ex. [bootstrap](http://getbootstrap.com/) eller [Foundation](http://foundation.zurb.com/).
-* Din applikation ska inte fråga efter data mot API:et i onödan. Infoga en cachningsstrategi. 
+* Din applikation ska inte fråga efter data mot API:et i onödan. Implementera en cachningsstrategi som du reflekterar kring i rapporten. 
 * Du ska använda JSON som returformat
 * Det är inte tillåtet att använda JSONP
 * Applikationen ska självklart vara buggfri, säker och optimerad.
