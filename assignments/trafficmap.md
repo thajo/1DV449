@@ -34,7 +34,11 @@ Vill du byta ut google maps mot ett annat kart-API går det också bra så läng
 
 ##Extrauppgift
 1. Trafikinformationen har olika prioritet. Visa detta genom att ge olika utseende på kartans olika markers för de olika prioriteringarna som finns (Mycket allvarlig händelse, Stor händelse, Störning, Information, Mindre störning)
-2. Gör en ytterligare funktion i applikationen där man använder SR.s trafikområden. Presentera dessa i en lista. När användaren väljer ett område zommas detta in och trafikhändelserna presenteras där.
+2. Gör en ytterligare funktion i applikationen där man också använder SR:s API för trafikområde och sorterar trafikmeddelandena med avseende på trafikområden. Då API:et är uppbyggt som det är får man begränsa antalet förfrågningar för att härleda en händelse till ett trafikområde genom att endast visa upp de senaste meddelandena sorterat på dess trafikområde (välj lämpligt antal eller tidsspan). Här bör man såklart också fundera på hur man kan cacha dessa förfrågningar på ett effektivt sätt för att slippa göra om dem. 
+
+Man ska också kunna välja ett trafikområde för att kunna zooma in på kartan (dessa kordinater kanske får undersökas manuellt och hårdkodas in om man inte kan hitta lämplig tjänst för detta). 
+
+Har du någon egen idé om hur du kan använda trafikområden och koppla dessa till trafikmeddelandena är du fri att göra det. Något med geolocation?
 
 
 ##Redovisning
