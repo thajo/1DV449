@@ -27,7 +27,7 @@ Vi kommer alltså ha en fri hållning till vad din applikation behandlar för da
 * Stabilitet och design
 Din applikation ska självklart fungera utan buggar eller ohanterade fel. Användaren ska hela tidens veta vad som pågår i applikationen. Krashar din applikation och ej har god felhanteringen underkänns den.
 
-* I din applikation ska du i möjligaste mån utgå från begrepp så som "offline first" och "mobile first". Det är inte säkert att din applikation helt kan anpassas efter dessa arkitektoriska tankar men det bör i så fall återspeglas som en reflektion i din rapport. Du ska ha en plan för hur din applikation ska bete sig när man befinner sig i "offline-läge" och hur man kan anpassa applikation utifrån detta.
+* I din applikation ska du i möjligaste mån utgå från begrepp så som "offline first" och "mobile first". Det är inte säkert att din applikation helt kan anpassas efter dessa arkitektoriska tankar men avkall från detta bör i så fall återspeglas som en reflektion i din rapport. 
 
 * Cachning
 Din applikation ska cacha data både på front- och backend. Beskriv din cachningsstrategi i din rapport, Motivera eventuella undantag från detta i din rapport.
