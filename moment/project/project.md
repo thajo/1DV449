@@ -67,10 +67,10 @@ Den skriftliga projektrapporten du lämnar in ska innehålla följande:
 Din applikation kommer bedömas av kursledningen främst på följande grunder:
 
 ### Hur väl fungerar din applikation. Buggar, användbarhet.
-U - Applikationen innehåller lösningar som inte fungerar
-3 - Applikationen fungerar utan buggar eller andra konstigheter
-4 - Som 3 samt; Applikationen är stabil och känns genomtänkt med avseende på funktioner och design. Applikationen är designad så att den fungerar på olika typer av enheter.
-5 - Som 4 samt; Applikationen känns proffsig och så gott som klar för produktion. 
+* U - Applikationen innehåller lösningar som inte fungerar
+* 3 - Applikationen fungerar utan buggar eller andra konstigheter
+* 4 - Som 3 samt; Applikationen är stabil och känns genomtänkt med avseende på funktioner och design. Applikationen är designad så att den fungerar på olika typer av enheter.
+* 5 - Som 4 samt; Applikationen känns proffsig och så gott som klar för produktion. 
 
 ###Kreativitet och nyfikenhet
 * U - Applikationen uppfyller inet de grundkrav som finns och är inlämnad trots att den inte är färdig.
