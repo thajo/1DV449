@@ -1,43 +1,41 @@
-##Projekt - Webbteknik II - 2013/2014
+##Projekt - Webbteknik II
 
 ###Inledning
-Som avslutning av denna kurs ska Du skriva en komplett applikation som ska sammanfatta vad du lärt dig under kursens gång samt förhoppningsvis tillskansa dig ny kunskap och ny erfarenhet kring hur man jobbar mot befintliga webb-API:r. Projektet är också tänkt att ge dig kunskaper om nya och HTML5-relaterade API:er för JavaScript-klienter. 
+Som avslutning av denna kurs ska Du skriva en komplett applikation som ska sammanfatta vad du lärt dig under kursens gång samt förhoppningsvis tillskansa dig ny kunskap och ny erfarenhet kring hur man utvecklar kompletta webbapplikationer mot befintliga webb-API:r. Projektet är också tänkt att ge dig kunskaper om nya och HTML5-relaterade API:er för JavaScript-klienter med utgångspunkt av "offline-first". 
 
-Vår förhoppning är att du i detta moment utvecklar en egen applikationsidé och som du utan problem skulle kunna visa upp för tilltänkta arbetsgivare när du söker jobb. Det är också klart önskvärt att du låter ditt eget driv och kreativitet som webbutvecklare komma fram här. Applikationen ska vara av sådan kvalité att den ska kunna köras skarpt.
+Vår förhoppning är att du i detta moment utvecklar en egen applikationsidé och som du utan problem skulle kunna visa upp för tilltänkta arbetsgivare när du söker jobb. Det är också klart önskvärt att du låter din egen nyfikenhet och kreativitet som webbutvecklare komma fram. 
 
 ##En mashup-applikation
-Tanken är att du ska skapa en egen mashup-applikation utifrån en egen idé. Vad applikationen ska hanterar för slags data är upp till dig och din idé. Vi ser gärna att ni utvecklar en applikation kring något du brinner för. Förhoppningsvis jobbar du vidare på din idé från seminarium 3.
+Tanken är att du ska skapa en egen mashup-applikation utifrån en egen idé. Vad applikationen ska hanterar för slags data är upp till dig och din idé. Försök hitta en idé du tykcer är intressant och brinner för då arbetet kommer gå betydligt lättare.
 
 Du börjar med att beskriva din idé i ett kort dokument (i md-format) som du publicerar på ditt github-repo som hör till kursen.
-Gör detta så fort som möjligt men senast **19:e december 2013**.
+Gör detta så fort som möjligt men senast ** klockan 13:00, 16:e december**. Skulle kursledningen ha några synpunkter på ditt projekt meddelas det via GitHub senast 17:e december.
 
 ##Krav på applikation för godkänt (betyg 3)
-Vi kommer alltså ha en fri hållning till vad din applikation behandlar för data och hur du bygger den men det finns ett antal krav vi kommer ha på applikatinen för godkänt (betyg 3) på projektet.
+Vi kommer alltså ha en fri hållning till vad din applikation behandlar för data och du är fri att själv välja tekniken du vill använda men det finns ett antal krav vi kommer ha på applikatinen för godkänt (betyg 3) på projektet.
 
 * Bygg en applikation som hämtar data från **minst två stycken externa API:er**. dessa ska sammankopplas på ett dynamiskt sätt i din applikationskod.
 
-* Applikationen ska ha en OAuth-koppling d.v.s. använderen ska kunna logga in via en tredjepartstjänst. Har du ingen anning om vad du ska använda en inloggning till i din applikation så skriv en inställningssida för användaren där man t.ex. kan ändra på offline-stödet elle rnågot annat i applikationen. 
+* I din applikation ska du i möjligaste mån utgå från begreppet "offline first" dvs. fungera på ett bra sätt även om man inte har någon uppkoppling. Det är inte säkert att din applikation helt kan anpassas efter dessa arkitektoriska tankar men avkall från detta bör i så fall återspeglas som en reflektion i din rapport.
+
+* Applikationen ska ha en OAuth-koppling d.v.s. användaren ska kunna logga in via en tredjepartstjänst. Har du ingen anning om vad du ska använda en inloggning till i din applikation så skriv en inställningssida för användaren eller kanske använda de resurser tjänsten som du loggar in emot på något sätt i din applikation.
 
 * Du ska implementera felhantering till din applikation så att användaren av applikationen blir medveten om t.ex. något av API:erna går ner.
 
 * Applikationen ska vara publicerad och körbar på en publik URL.
 
-* Applikationen ska vara genomarbetad med avseende på design, användarvänlighet, säkerhet och optimering. Designen ska kännas proffsig och genomarbetad. Nej, en ogenomarbetad design är INTE "enkel och stilren".
+* Applikationen ska vara genomarbetad med avseende på design, användarvänlighet, säkerhet och optimering. Designen ska kännas proffsig och genomarbetad. Att inte arbeta med designen är INTE samma sak som "enkel och stilren". 
 
 * Stabilitet och design
 Din applikation ska självklart fungera utan buggar eller ohanterade fel. Användaren ska hela tidens veta vad som pågår i applikationen. Krashar din applikation och ej har god felhanteringen underkänns den.
 
-* I din applikation ska du i möjligaste mån utgå från begrepp så som "offline first" och "mobile first". Det är inte säkert att din applikation helt kan anpassas efter dessa arkitektoriska tankar men avkall från detta bör i så fall återspeglas som en reflektion i din rapport. 
-
 * Cachning
-Din applikation ska cacha data både på front- och backend. Beskriv din cachningsstrategi i din rapport, Motivera eventuella undantag från detta i din rapport.
+Din applikation ska eftersträva hög prestanda och bör därför cacha data både på front- och backend. Beskriv din cachningsstrategi i din rapport, Motivera eventuella undantag från detta i din rapport.
 
 * Reflekterande rapport, inspelad redovisning
-Du redovisar din applikation genom att göra en muntlig och skriftlig redovisning. Rapporten ska tydligt beskriva hur arbetet gått till, vilka tekniker du använt, de reflektioner du gjort samt vad du lärt dig under arbetet.
+Du redovisar din applikation genom att göra en muntlig och skriftlig redovisning. Rapporten ska tydligt beskriva hur arbetet gått till, vilka tekniker du använt, de reflektioner du gjort samt vad du lärt dig under arbetet (se nedan). Rapporten ska finns på github och vara skriven i md-format.
 
-Denna gång ska dock den muntliga redovisningen vara inspelad som film. Du ska under minst tre och max fem minuter sälja in din applikation. Du väljer själv om du vill publicera den på youtube eller som en vanlig mp4-fil. 
-
-Du redovisar en URL som pekar på din presentationsfilm i ditt repositories readme - där ska också en länk till rapporten och en publika URL:en finnas. Filmerna kommer delas ut på kurshemsidan så att ni kan se varandras. 
+Den muntliga redovisningen vara inspelad som film. Du ska under minst tre och max fem minuter sälja in din applikation och visa hur den fungerar och vad man kan göra med den. Du väljer själv om du vill publicera den på youtube, vimeo eller som en vanlig mp4-fil. Du redovisar en URL som pekar på din presentationsfilm i ditt repositories readme - där ska också en länk till rapporten och en publika URL:en finnas. Filmerna kommer sedan visas upp på kurshemsidan så att ni kan se varandras. 
 
 * All kod och dokumentation ska nås via ditt github-repo
 
@@ -45,43 +43,85 @@ Du redovisar en URL som pekar på din presentationsfilm i ditt repositories read
 
 För högre betyg än (G/3) ska applikationen redovisas innan utsatt leveransdatum. Se kurshemsida.
 
-Vi ser såklart gärna att ni utmanar er själva och testar nya grepp och tekniker vilket kan ses som betygshöjande. Här är några förslag som skulle kunna vara betygshöjande funktioner i din applikation. Ju fler som implementeras på ett tillfredsställande sätt ökar chansen till ett högre betyg.
+Vi ser såklart gärna att ni utmanar er själva och testar nya grepp och tekniker vilket kan ses som betygshöjande. Här är några förslag som skulle kunna vara betygshöjande funktioner i din applikation. Ju fler som implementeras på ett tillfredsställande sätt ökar chansen till ett högre betyg. Stor del av bedömningen sker också på de reflektioner ni gör i er rapport som påvisar den kunskap i ämnet ni besitter.
 
-* Inkludera HTML5-relaterade API:er så som geolocation, web workers, web sockets m.m.
-* Inkludera flera externa API:er och höj din applikations funktionalitet ytterligare
+* Inkludera flera relevanta API:er och höj din applikations funktionalitet ytterligare
 * Applikationens design ska vara responsiv alltså anpassa sig till enhetens skärmstorlek. Applikationen ska fungera väl i samtliga fall.
-* Det ska gå att bläddra framåt och tillbaka i din applikations state via webbläsarens normala navigation.
-* Fundera över SEO och applicera detta där möjligt. Var noga med att i rapporten ta upp din strategi kring detta.
-
-##Bedömning
-Din applikation kommer examineras av kursledningen på följande grunder:
-
-* Krativitet och nyfikenhet. Är din applikation nytänkande och intressant samt har du utmanat dig själv.
-* Förmåga att lösa problem.
-* Hur väl fungerar din applikation. Buggar, användbarhet.
-* Funktionallitet - Hur mycket funktioner har din applikation. Vilket mervärde ger applikationen. 
-* Kvalité på din rapport. Ger din rapport en bra bild av din applikation. Har du reflekterat på ett bra sätt som visar den kunskap du besitter i ämnet.
-* Den inspelade presentationen. Hur bra lyckas du förmedla bilden av din applikation.
-* Uppfyllande av leveransdatum. 
-* Lärdomar utanför laborationskurs. Påvisar din applikation och rapport att du inkluderat och inskaffat ny kunskap som inte tagits upp i laborationskursen.
-
+* Inkludera HTML5-relaterade API:er så som geolocation, web workers, web sockets m.m.
+* Se bedömningsmatrisen för ytterligare information
 
 ## Rapporten
 Den skriftliga projektrapporten du lämnar in ska innehålla följande:
 
-* Inledning där du beskriver vad du gjort och bakgrunden till din applikation. Finns det liknande applikationer redan?
-* Inkludera en schematisk bild över applikationens beståndsdelar så att läsaren har enklare att förstå applikationens dataflöde.
-* Serversida: Beskriv hur din applikation fungerar på serversidan. Beskriv funktionaliteten och hur den är uppbyggd. Vald teknik/programmeringsspråk/ramverk? Hur fungerar cachningen? Hur sköter du felhanteringen m.m.
-* Klientsida: Hur fungerar din applikation på klientsidan. Beskriv på liknande sätt som serversidan.
-* Egenreflektion kring projektet: Här tar du upp hur projektet har gått. Vilka eventuella problem har du stött på? Finns det funktioner som du velat implementera men inte hunnit? Hur skulle du vilja jobba vidare med din applikation?
-* Risker med din applikation. Reflektera över vilka risker det finns med din applikation; rent tekniskt, säkerhet, etiskt m.m.
-* Skriv också om de eventuella delar du anser vara betygshöjande med din applikation. Motivera varför du anser dessa vara betygshöjande.
+* **Inledning** där du beskriver vad du gjort och bakgrunden till din applikation. Finns det liknande applikationer redan?
+* Inkludera en **schematisk bild över applikationens beståndsdelar** så att läsaren har enklare att förstå applikationens dataflöde.
+* **Serversida**: Beskriv hur din applikation fungerar på serversidan. Beskriv funktionaliteten och hur den är uppbyggd. Vald teknik/programmeringsspråk/ramverk? Hur fungerar cachningen? Hur sköter du felhanteringen m.m.
+* **Klientsida**: Hur fungerar din applikation på klientsidan. Beskriv på liknande sätt som serversidan.
+* **Säkerhet och optimering** - Hur har du funderat kring säkerhet och optimering och vilken teori har du kopplat detta emot.
+* **Offline-first**: Hur har du tänkt kring offline-first?
+* **Egen reflektion kring projektet**: Här tar du upp hur projektet har gått. Vilka eventuella problem har du stött på? Finns det funktioner som du velat implementera men inte hunnit? Hur skulle du vilja jobba vidare med din applikation?
+* **Risker med din applikation**: Reflektera över vilka risker det finns med din applikation; rent tekniskt, säkerhet, etiskt m.m.
+* Skriv också om de eventuella delar **du anser vara betygshöjande med din applikation**. Motivera varför du anser dessa vara betygshöjande.
 
-## Tips
-* Du är fri att använda ramverk, både till klient- och serversidan.
-* Använd diskussionsforumet för att diskutera med varandra
+##Examination
+Din applikation kommer bedömas av kursledningen främst på följande grunder:
+
+### Hur väl fungerar din applikation. Buggar, användbarhet.
+U - Applikationen innehåller lösningar som inte fungerar
+3 - Applikationen fungerar utan buggar eller andra konstigheter
+4 - Som 3 samt; Applikationen är stabil och känns genomtänkt med avseende på funktioner och design. Applikationen är designad så att den fungerar på olika typer av enheter.
+5 - Som 4 samt; Applikationen känns proffsig och så gott som klar för produktion. 
+
+###Kreativitet och nyfikenhet
+* U - Applikationen uppfyller inet de grundkrav som finns och är inlämnad trots att den inte är färdig.
+* 3 - Studenten har implementerat grundkraven och använt sig av den teori som tagits upp i kursen kring detta
+* 4, 5 - Som 3 samt; Studenten har genom implementationen och rapporten visat prov på att ny kunskap och teori har införskaffats
+
+### Funktionalitet och övergripande intryck av applikationen
+* U - Applikationen uppfyller inte de grundkrav som finns
+* 3 - Applikationen uppfyller de grundkrav som finns men inte mycket mer
+* 4 - Applikationen har en genomtänkt funktionalitet som är lätt att använda och förstå
+* 5 - Applikationen har en högre grad genomtänkt funktionalitet och får oss att vilja visa upp applikationen som reklam för programmet.
+
+### Offline-first
+* U - Ingen reflektion eller implemntation kring "offline-first"
+* 3 - Viss implementation av de terorier kring offline-first som tagits upp i kursen
+* 4 - Som 3 samt; tydlig reflektion i rapporten kring hur taktiken kring "offline-first" har implementerats.
+* 5 - Som 4 samt; reflekterar kring teorier kring offline-first, sätter dessa emot varandra och kan i rapporten på ett tydligt sätt argumentera för sina val.
+
+### Prestandaoptimering och säkerhet
+* U - Applikationen har inte optimerats på något sätt och/eller har uppenbara säkerhetshål
+* 3 - Applikationen har optimerats och är fri från uppenbara säkerhetshål
+* 4 - Som 3 samt; rapporten visar på studentens arbete och kunskap kring de teorier kring optimering och säkerhet som implementerats i applikationen
+* 5 - Som 4 samt; reflekterar kring dessa teorier, sätter dessa emot varandra och kan på ett tydligt sätt argumentera för sina val i rapporten
+
+### Kvalité på rapporten
+* U - Rapporten har dålig struktur/dåligt skriftligt språk med vanlig fröekommst av grammatik- och stavfel. Rapporten är inlämnad i fel format. Rapporten är pladdrig och innehåller inte relevanta saker.
+* 3 - Rapporten ger en godtagbar bild över applikationen och arbetets gång med viss reflektion och hänvisning till teorin
+* 4 - Som 3 samt att rapporten visar studentens kunskap genom tydlig koppling till teori 
+* 5 - Som 4 samt; Studenten reflekterar kring olika teorier, sätter dessa emot varandra och kan på ett tydligt sätt argumentera för sina val i rapporten.
+
+### Kod
+* U - Koden är ostrukturerad, oindenterad och saknar helt kommentarer
+* 3 - Koden är har en tydlig struktur och är delvis kommenterad
+* 4, 5 - Som 3 samt; koden är av god kvalité och applikationen känns skalbar och enkel att bygga vidare på. Kommentarer som förenklar kodläsning. Man kan tydligt se hur koden vuxit fram via täta commits på GitHub.
+
+### Den inspelade presentationen 
+U - Ingen inspelad video finns eller går inte att spela upp i en modern webbläsare
+3 - Publicerad video enligt instruktioner och överstämmer med den publicerade applikationen
+4, 5 - Som 3 samt; Videoinspelningen ger en tydlig bild av hur applikationen fungerar och vilka funktioner som den har.
+
+### Uppfyllande av leveransdatum. 
+U - Arbetet lämnas in ofullständigt
+3: Fullständigt arbete lämnas in fast efter fastslagen deadline
+4, 5: Arbetet lämnas in till fastslagen deadline
+
+
+## Övrigt
+* Du är fri att använda ramverk, både till klient- och serversidan. Val av teknik ska tydligt framgå i rapporten liksom motivering till varför.
+* Använd diskussionsforumet
 * Börja på rapporten tidigt för att kontinuerligt hålla den uppdaterad
-* Gör kontinuerligt commits
+* Gör kontinuerligt commits.
 * Testa tidigt att din applikation fungerar på en extern server. testa inte detta dagen innan leverans.
 * Testa din kod...testa din applikation. Leverera inte något som inte fungerar!
 
