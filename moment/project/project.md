@@ -107,14 +107,14 @@ Din applikation kommer bedömas av kursledningen främst på följande grunder:
 * 4, 5 - Som 3 samt; koden är av god kvalité och applikationen känns skalbar och enkel att bygga vidare på. Kommentarer som förenklar kodläsning. Man kan tydligt se hur koden vuxit fram via täta commits på GitHub.
 
 ### Den inspelade presentationen 
-U - Ingen inspelad video finns eller går inte att spela upp i en modern webbläsare
-3 - Publicerad video enligt instruktioner och överstämmer med den publicerade applikationen
-4, 5 - Som 3 samt; Videoinspelningen ger en tydlig bild av hur applikationen fungerar och vilka funktioner som den har.
+* U - Ingen inspelad video finns eller går inte att spela upp i en modern webbläsare
+* 3 - Publicerad video enligt instruktioner och överstämmer med den publicerade applikationen
+* 4, 5 - Som 3 samt; Videoinspelningen ger en tydlig bild av hur applikationen fungerar och vilka funktioner som den har.
 
 ### Uppfyllande av leveransdatum. 
-U - Arbetet lämnas in ofullständigt
-3: Fullständigt arbete lämnas in fast efter fastslagen deadline
-4, 5: Arbetet lämnas in till fastslagen deadline
+* U - Arbetet lämnas in ofullständigt
+* 3: Fullständigt arbete lämnas in fast efter fastslagen deadline
+* 4, 5: Arbetet lämnas in till fastslagen deadline
 
 
 ## Övrigt
