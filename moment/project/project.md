@@ -6,19 +6,19 @@ Som avslutning av denna kurs ska Du skriva en komplett applikation som ska samma
 Vår förhoppning är att du i detta moment utvecklar en egen applikationsidé och som du utan problem skulle kunna visa upp för tilltänkta arbetsgivare när du söker jobb. Det är också klart önskvärt att du låter din egen nyfikenhet och kreativitet som webbutvecklare komma fram. 
 
 ##En mashup-applikation
-Tanken är att du ska skapa en egen mashup-applikation utifrån en egen idé. Vad applikationen ska hanterar för slags data är upp till dig och din idé. Försök hitta en idé du tykcer är intressant och brinner för då arbetet kommer gå betydligt lättare.
+Tanken är att du ska skapa en egen mashup-applikation utifrån en egen idé. Vad applikationen ska hanterar för slags data är upp till dig och din idé. Försök hitta en idé du tycker är intressant och brinner för då arbetet kommer gå betydligt lättare.
 
 Du börjar med att beskriva din idé i ett kort dokument (i md-format) som du publicerar på ditt github-repo som hör till kursen.
-Gör detta så fort som möjligt men senast ** klockan 13:00, 16:e december**. Skulle kursledningen ha några synpunkter på ditt projekt meddelas det via GitHub senast 17:e december.
+Gör detta så fort som möjligt men senast *klockan 13:00, 16:e december*. Skulle kursledningen ha några synpunkter på ditt projekt meddelas det via GitHub senast 17:e december.
 
 ##Krav på applikation för godkänt (betyg 3)
 Vi kommer alltså ha en fri hållning till vad din applikation behandlar för data och du är fri att själv välja tekniken du vill använda men det finns ett antal krav vi kommer ha på applikatinen för godkänt (betyg 3) på projektet.
 
-* Bygg en applikation som hämtar data från **minst två stycken externa API:er**. dessa ska sammankopplas på ett dynamiskt sätt i din applikationskod.
+* Bygg en applikation som hämtar data från *minst två stycken externa API:er*. dessa ska sammankopplas på ett dynamiskt sätt i din applikationskod.
 
 * I din applikation ska du i möjligaste mån utgå från begreppet "offline first" dvs. fungera på ett bra sätt även om man inte har någon uppkoppling. Det är inte säkert att din applikation helt kan anpassas efter dessa arkitektoriska tankar men avkall från detta bör i så fall återspeglas som en reflektion i din rapport.
 
-* Applikationen ska ha en OAuth-koppling d.v.s. användaren ska kunna logga in via en tredjepartstjänst. Har du ingen anning om vad du ska använda en inloggning till i din applikation så skriv en inställningssida för användaren eller kanske använda de resurser tjänsten som du loggar in emot på något sätt i din applikation.
+* Applikationen ska ha en OAuth-koppling d.v.s. användaren ska kunna logga in via en tredjepartstjänst. Har du ingen anning om vad du ska använda en inloggning till i din applikation så skriv en inställningssida för användaren eller kanske använda de resurser tjänsten som du loggar in emot i din applikation.
 
 * Du ska implementera felhantering till din applikation så att användaren av applikationen blir medveten om t.ex. något av API:erna går ner.
 
@@ -26,16 +26,13 @@ Vi kommer alltså ha en fri hållning till vad din applikation behandlar för da
 
 * Applikationen ska vara genomarbetad med avseende på design, användarvänlighet, säkerhet och optimering. Designen ska kännas proffsig och genomarbetad. Att inte arbeta med designen är INTE samma sak som "enkel och stilren". 
 
-* Stabilitet och design
-Din applikation ska självklart fungera utan buggar eller ohanterade fel. Användaren ska hela tidens veta vad som pågår i applikationen. Krashar din applikation och ej har god felhanteringen underkänns den.
+* Din applikation ska självklart fungera utan buggar eller ohanterade fel. Användaren ska hela tidens veta vad som pågår i applikationen. Krashar din applikation och ej har god felhanteringen underkänns den.
 
-* Cachning
-Din applikation ska eftersträva hög prestanda och bör därför cacha data både på front- och backend. Beskriv din cachningsstrategi i din rapport, Motivera eventuella undantag från detta i din rapport.
+* Din applikation ska eftersträva hög prestanda och bör därför cacha data både på front- och backend. Beskriv din cachningsstrategi i din rapport, Motivera eventuella undantag från detta i din rapport.
 
-* Reflekterande rapport, inspelad redovisning
-Du redovisar din applikation genom att göra en muntlig och skriftlig redovisning. Rapporten ska tydligt beskriva hur arbetet gått till, vilka tekniker du använt, de reflektioner du gjort samt vad du lärt dig under arbetet (se nedan). Rapporten ska finns på github och vara skriven i md-format.
+* Du redovisar din applikation genom att göra en muntlig och skriftlig redovisning. Rapporten ska tydligt beskriva hur arbetet gått till, vilka tekniker du använt, de reflektioner du gjort samt vad du lärt dig under arbetet (se nedan). Rapporten ska finns på github och vara skriven i md-format.
 
-Den muntliga redovisningen vara inspelad som film. Du ska under minst tre och max fem minuter sälja in din applikation och visa hur den fungerar och vad man kan göra med den. Du väljer själv om du vill publicera den på youtube, vimeo eller som en vanlig mp4-fil. Du redovisar en URL som pekar på din presentationsfilm i ditt repositories readme - där ska också en länk till rapporten och en publika URL:en finnas. Filmerna kommer sedan visas upp på kurshemsidan så att ni kan se varandras. 
+* Den muntliga redovisningen vara inspelad som film. Du ska under minst tre och max fem minuter sälja in din applikation och visa hur den fungerar och vad man kan göra med den. Du väljer själv om du vill publicera den på youtube, vimeo eller som en vanlig mp4-fil. Du redovisar en URL som pekar på din presentationsfilm i ditt repositories readme - där ska också en länk till rapporten och en publika URL:en finnas. Filmerna kommer sedan visas upp på kurshemsidan så att ni kan se varandras applikationer.
 
 * All kod och dokumentation ska nås via ditt github-repo
 
@@ -46,18 +43,18 @@ För högre betyg än (G/3) ska applikationen redovisas innan utsatt leveransdat
 Vi ser såklart gärna att ni utmanar er själva och testar nya grepp och tekniker vilket kan ses som betygshöjande. Här är några förslag som skulle kunna vara betygshöjande funktioner i din applikation. Ju fler som implementeras på ett tillfredsställande sätt ökar chansen till ett högre betyg. Stor del av bedömningen sker också på de reflektioner ni gör i er rapport som påvisar den kunskap i ämnet ni besitter.
 
 * Inkludera flera relevanta API:er och höj din applikations funktionalitet ytterligare
-* Applikationens design ska vara responsiv alltså anpassa sig till enhetens skärmstorlek. Applikationen ska fungera väl i samtliga fall.
+* Applikationens design ska vara responsiv alltså anpassa sig till enhetens skärmstorlek.
 * Inkludera HTML5-relaterade API:er så som geolocation, web workers, web sockets m.m.
-* Se bedömningsmatrisen för ytterligare information
+* Se bedömningsmatrisen nedan för ytterligare information
 
 ## Rapporten
 Den skriftliga projektrapporten du lämnar in ska innehålla följande:
 
-* **Inledning** där du beskriver vad du gjort och bakgrunden till din applikation. Finns det liknande applikationer redan?
+* **Inledning** där du kort beskriver vad du gjort och bakgrunden till din applikation. Finns det liknande applikationer redan?
 * Inkludera en **schematisk bild över applikationens beståndsdelar** så att läsaren har enklare att förstå applikationens dataflöde.
 * **Serversida**: Beskriv hur din applikation fungerar på serversidan. Beskriv funktionaliteten och hur den är uppbyggd. Vald teknik/programmeringsspråk/ramverk? Hur fungerar cachningen? Hur sköter du felhanteringen m.m.
 * **Klientsida**: Hur fungerar din applikation på klientsidan. Beskriv på liknande sätt som serversidan.
-* **Säkerhet och optimering** - Hur har du funderat kring säkerhet och optimering och vilken teori har du kopplat detta emot.
+* **Säkerhet och prestandaoptimering** - Hur har du funderat kring säkerhet och prestanda och vilken teori har du kopplat detta emot.
 * **Offline-first**: Hur har du tänkt kring offline-first?
 * **Egen reflektion kring projektet**: Här tar du upp hur projektet har gått. Vilka eventuella problem har du stött på? Finns det funktioner som du velat implementera men inte hunnit? Hur skulle du vilja jobba vidare med din applikation?
 * **Risker med din applikation**: Reflektera över vilka risker det finns med din applikation; rent tekniskt, säkerhet, etiskt m.m.
