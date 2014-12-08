@@ -81,7 +81,7 @@ Din applikation kommer bedömas av kursledningen främst på följande grunder:
 * U - Applikationen uppfyller inte de grundkrav som finns
 * 3 - Applikationen uppfyller de grundkrav som finns men inte mycket mer
 * 4 - Applikationen har en genomtänkt funktionalitet som är lätt att använda och förstå
-* 5 - Applikationen har en högre grad genomtänkt funktionalitet och får oss att vilja visa upp applikationen som reklam för programmet.
+* 5 - Applikationen har en högre grad genomtänkt funktionalitet som känns klar för leverans.
 
 ### Offline-first
 * U - Ingen reflektion eller implemntation kring "offline-first"
