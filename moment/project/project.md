@@ -1,7 +1,7 @@
 ##Projekt - Webbteknik II
 
 ###Inledning
-Som avslutning av denna kurs ska Du skriva en komplett applikation som ska sammanfatta vad du lärt dig under kursens gång samt förhoppningsvis tillskansa dig ny kunskap och ny erfarenhet kring hur man utvecklar kompletta webbapplikationer mot befintliga webb-API:r. Projektet är också tänkt att ge dig kunskaper om nya och HTML5-relaterade API:er för JavaScript-klienter med utgångspunkt av "offline-first". 
+Som avslutning av denna kurs ska Du skriva en komplett applikation som ska sammanfatta vad du lärt dig under kursens gång samt förhoppningsvis tillskansa dig ny kunskap och ny erfarenhet kring hur man utvecklar kompletta webbapplikationer mot befintliga webb-API:r. Projektet är också tänkt att ge dig kunskaper om nya och HTML5-relaterade API:er för JavaScript-klienter samt att bygga applikation med tanke på hur den ska bete sig även ifall den inte har någon uppkoppling (diskuteras i samband med "offline-first")
 
 Vår förhoppning är att du i detta moment utvecklar en egen applikationsidé och som du utan problem skulle kunna visa upp för tilltänkta arbetsgivare när du söker jobb. Det är också klart önskvärt att du låter din egen nyfikenhet och kreativitet som webbutvecklare komma fram. 
 
@@ -16,7 +16,7 @@ Vi kommer alltså ha en fri hållning till vad din applikation behandlar för da
 
 * Bygg en applikation som hämtar data från *minst två stycken externa API:er*. dessa ska sammankopplas på ett dynamiskt sätt i din applikationskod.
 
-* I din applikation ska du i möjligaste mån utgå från begreppet "offline first" dvs. fungera på ett bra sätt även om man inte har någon uppkoppling. Det är inte säkert att din applikation helt kan anpassas efter dessa arkitektoriska tankar men avkall från detta bör i så fall återspeglas som en reflektion i din rapport.
+* I din applikation ska du i möjligaste mån utgå från begreppet "offline-first" dvs. applikationen ska fungera på ett bra sätt även om man inte har någon uppkoppling. Det är inte säkert att din applikation helt kan anpassas efter dessa arkitektoriska tankar men avkall från detta bör i så fall återspeglas som en reflektion i din rapport.
 
 * Applikationen ska ha en OAuth-koppling d.v.s. användaren ska kunna logga in via en tredjepartstjänst. Har du ingen anning om vad du ska använda en inloggning till i din applikation så skriv en inställningssida för användaren eller kanske använda de resurser tjänsten som du loggar in emot i din applikation.
 
