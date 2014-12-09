@@ -9,7 +9,9 @@ Vår förhoppning är att du i detta moment utvecklar en egen applikationsidé o
 Tanken är att du ska skapa en egen mashup-applikation utifrån en egen idé. Vad applikationen ska hanterar för slags data är upp till dig och din idé. Försök hitta en idé du tycker är intressant och brinner för då arbetet kommer gå betydligt lättare.
 
 Du börjar med att beskriva din idé i ett kort dokument (i md-format) som du publicerar på ditt github-repo som hör till kursen.
-Gör detta så fort som möjligt men senast *klockan 13:00, 16:e december*. Skulle kursledningen ha några synpunkter på ditt projekt meddelas det via GitHub senast 17:e december.
+Gör detta så fort som möjligt men senast **klockan 13:00, 16:e december**. Skulle kursledningen ha några synpunkter på ditt projekt meddelas det via GitHub senast 17:e december.
+
+Slutlig deadline på projektet då allt ska vara inskickat till kursledning är **15:e januari klockan 13:00**
 
 ##Krav på applikation för godkänt (betyg 3)
 Vi kommer alltså ha en fri hållning till vad din applikation behandlar för data och du är fri att själv välja tekniken du vill använda men det finns ett antal krav vi kommer ha på applikatinen för godkänt (betyg 3) på projektet.
