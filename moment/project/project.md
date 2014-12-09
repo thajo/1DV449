@@ -20,7 +20,7 @@ Vi kommer alltså ha en fri hållning till vad din applikation behandlar för da
 
 * I din applikation ska du i möjligaste mån utgå från begreppet "offline-first" dvs. applikationen ska fungera på ett bra sätt även om man inte har någon uppkoppling. Det är inte säkert att din applikation helt kan anpassas efter dessa arkitektoriska tankar men avkall från detta bör i så fall återspeglas som en reflektion i din rapport.
 
-* Applikationen ska ha en OAuth-koppling d.v.s. användaren ska kunna logga in via en tredjepartstjänst. Har du ingen anning om vad du ska använda en inloggning till i din applikation så skriv en inställningssida för användaren eller kanske använda de resurser tjänsten som du loggar in emot i din applikation.
+* Applikationen ska ha en OAuth-koppling d.v.s. användaren ska kunna logga in via en tredjepartstjänst. Har du ingen anning om vad du ska använda en inloggning till i din applikation så skriv en inställningssida för användaren eller utnyttja de resurser tjänsten som du loggar in emot erbjuder.
 
 * Du ska implementera felhantering till din applikation så att användaren av applikationen blir medveten om t.ex. något av API:erna går ner.
 
@@ -34,7 +34,7 @@ Vi kommer alltså ha en fri hållning till vad din applikation behandlar för da
 
 * Du redovisar din applikation genom att göra en muntlig och skriftlig redovisning. Rapporten ska tydligt beskriva hur arbetet gått till, vilka tekniker du använt, de reflektioner du gjort samt vad du lärt dig under arbetet (se nedan). Rapporten ska finns på github och vara skriven i md-format.
 
-* Den muntliga redovisningen vara inspelad som film. Du ska under minst tre och max fem minuter sälja in din applikation och visa hur den fungerar och vad man kan göra med den. Du väljer själv om du vill publicera den på youtube, vimeo eller som en vanlig mp4-fil. Du redovisar en URL som pekar på din presentationsfilm i ditt repositories readme - där ska också en länk till rapporten och en publika URL:en finnas. Filmerna kommer sedan visas upp på kurshemsidan så att ni kan se varandras applikationer.
+* Den muntliga redovisningen ska vara inspelad som film. Du ska under minst tre och max fem minuter sälja in din applikation och visa hur den fungerar och vad man kan göra med den. Du väljer själv om du vill publicera den på youtube, vimeo eller som en vanlig mp4-fil. Du redovisar en URL som pekar på din presentationsfilm i ditt repositories readme - där ska också en länk till rapporten och en publika URL:en finnas. Filmerna kommer sedan visas upp på kurshemsidan så att ni kan se varandras applikationer.
 
 * All kod och dokumentation ska nås via ditt github-repo
 
@@ -42,7 +42,7 @@ Vi kommer alltså ha en fri hållning till vad din applikation behandlar för da
 
 För högre betyg än (G/3) ska applikationen redovisas innan utsatt leveransdatum. Se kurshemsida.
 
-Vi ser såklart gärna att ni utmanar er själva och testar nya grepp och tekniker vilket kan ses som betygshöjande. Här är några förslag som skulle kunna vara betygshöjande funktioner i din applikation. Ju fler som implementeras på ett tillfredsställande sätt ökar chansen till ett högre betyg. Stor del av bedömningen sker också på de reflektioner ni gör i er rapport som påvisar den kunskap i ämnet ni besitter.
+Vi ser såklart gärna att ni utmanar er själva och testar nya grepp och tekniker vilket kan ses som betygshöjande. Här är några förslag som skulle kunna vara betygshöjande funktioner i din applikation. Ju fler som implementeras på ett tillfredsställande sätt ökar chansen till ett högre betyg. Stor del av bedömningen sker också på de reflektioner ni gör i er rapport som påvisar den kunskap och det djup i ämnet ni besitter.
 
 * Inkludera flera relevanta API:er och höj din applikations funktionalitet ytterligare
 * Applikationens design ska vara responsiv alltså anpassa sig till enhetens skärmstorlek.
@@ -72,7 +72,7 @@ Din applikation kommer bedömas av kursledningen främst på följande grunder:
 * 5 - Som 4 samt; Applikationen känns proffsig och så gott som klar för produktion. 
 
 ###Kreativitet och nyfikenhet
-* U - Applikationen uppfyller inet de grundkrav som finns och är inlämnad trots att den inte är färdig.
+* U - Applikationen uppfyller inte de grundkrav som finns och är inlämnad trots att den inte är färdig.
 * 3 - Studenten har implementerat grundkraven och använt sig av den teori som tagits upp i kursen kring detta
 * 4, 5 - Som 3 samt; Studenten har genom implementationen och rapporten visat prov på att ny kunskap och teori har införskaffats
 
@@ -95,15 +95,15 @@ Din applikation kommer bedömas av kursledningen främst på följande grunder:
 * 5 - Som 4 samt; reflekterar kring dessa teorier, sätter dessa emot varandra och kan på ett tydligt sätt argumentera för sina val i rapporten
 
 ### Kvalité på rapporten
-* U - Rapporten har dålig struktur/dåligt skriftligt språk med vanlig fröekommst av grammatik- och stavfel. Rapporten är inlämnad i fel format. Rapporten är pladdrig och innehåller inte relevanta saker.
+* U - Rapporten har dålig struktur/dåligt skriftligt språk med vanlig förekommst av grammatik- och stavfel. Rapporten är inlämnad i fel format. Rapporten är pladdrig och innehåller inte relevanta saker.
 * 3 - Rapporten ger en godtagbar bild över applikationen och arbetets gång med viss reflektion och hänvisning till teorin
-* 4 - Som 3 samt att rapporten visar studentens kunskap genom tydlig koppling till teori 
+* 4 - Som 3 samt att rapporten visar studentens kunskap genom tydlig koppling till teori. Referenser till teorierna ska anges i rapporten.
 * 5 - Som 4 samt; Studenten reflekterar kring olika teorier, sätter dessa emot varandra och kan på ett tydligt sätt argumentera för sina val i rapporten.
 
 ### Kod
 * U - Koden är ostrukturerad, oindenterad och saknar helt kommentarer
 * 3 - Koden är har en tydlig struktur och är delvis kommenterad
-* 4, 5 - Som 3 samt; koden är av god kvalité och applikationen känns skalbar och enkel att bygga vidare på. Kommentarer som förenklar kodläsning. Man kan tydligt se hur koden vuxit fram via täta commits på GitHub.
+* 4, 5 - Som 3 samt; koden är av god kvalité och applikationen känns skalbar och enkel att bygga vidare på. Kommentarer som förenklar kodläsning. Man kan tydligt se hur koden vuxit fram via täta commits på GitHub. Applikationen ska vara fri från återupprepad kod (DRY).
 
 ### Den inspelade presentationen 
 * U - Ingen inspelad video finns eller går inte att spela upp i en modern webbläsare
