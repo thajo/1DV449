@@ -34,6 +34,6 @@ Som en del i uppgiften ingår det att läsa dokumentation av de API som nämns o
 Trafikinformationen har olika prioritet. Visa detta genom att ge olika utseende på kartans olika markers för de olika prioriteringarna som finns (Mycket allvarlig händelse, Stor händelse, Störning, Information, Mindre störning)
 
 
-## Redovisning
-Redovisning av denna uppgift sker muntligen på de schemalagda redovisningstiderna. Man kommer dock få boka en egen redovisningstid.
+## Redovisning och examination
+Exainationen av denna uppgift sker muntligen på de schemalagda redovisningstiderna. Man kommer dock få boka en egen redovisningstid. I samband med redovisningen av uppgiften kommer också reflektionsfrågorna och frågor kring de delar som ingår i peer-instruction 3-5 ställas.
 
