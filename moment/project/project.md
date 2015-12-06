@@ -1,7 +1,7 @@
 ##Projekt - Webbteknik II
 
 ###Inledning
-Som avslutning av denna kurs ska Du skriva en komplett webbapplikation som ska sammanfatta vad du lärt dig under kursens gång samt förhoppningsvis tillskansa dig ny kunskap och ny erfarenhet kring hur man utvecklar kompletta webbapplikationer mot befintliga webb-API:r. Projektet är också tänkt att ge dig kunskaper om nya och HTML5-relaterade API:er för JavaScript-klienter samt att bygga applikation med tanke på hur den ska bete sig även ifall den inte har någon uppkoppling (diskuteras i samband med "offline-first")
+Som avslutning av denna kurs ska Du skriva en komplett webbapplikation som ska sammanfatta vad du lärt dig under kursens gång samt förhoppningsvis tillskansa dig ny kunskap och ny erfarenhet kring hur man utvecklar kompletta webbapplikationer mot befintliga webb-API:er. Projektet är också tänkt att ge dig kunskaper om nya och HTML5-relaterade API:er för JavaScript-klienter samt att bygga applikation med tanke på hur den ska bete sig även ifall den inte har någon uppkoppling (diskuteras i samband med "offline-first")
 
 Vår förhoppning är att du i detta moment utvecklar en egen applikationsidé och som du utan problem skulle kunna visa upp för tilltänkta arbetsgivare när du söker jobb. **Det är också klart önskvärt att du låter din egen nyfikenhet och kreativitet som webbutvecklare komma fram.**
 
