@@ -5,7 +5,7 @@ I denna laboration det meningen att du ska skriva en Mashup-applikation som komb
 * [Open streetmap](https://www.openstreetmap.org/)
 * [Google Map](https://developers.google.com/maps/documentation/javascript/tutorial). 
 
-Tanken är att du ska bygga en javascript-applikation som ska visa den trafikinformation som Sveriges Radio ger dig och presentera dessa via en webbapplikation som bland annat plottrar ut de positioner som hör till varje trafikmeddelande.
+Tanken är att du ska bygga en webbapplikation som ska visa den trafikinformation som Sveriges Radio ger dig och presentera dessa via en webbapplikation som bland annat plottrar ut de positioner som hör till varje trafikmeddelande.
 
 ### API:ernas dokumentation
 Som en del i uppgiften ingår det att läsa dokumentation av de API som nämns ovan och därifrån förstå hur man implementerar dessa en snyggt utformad webbapplikation. I dokumentationen hittar du hur du anropar API:et, hur du får den data du vill i det format du vill. Hur du implementerar karttjänsterna bör du också kunna hitta information om. Kanske [http://leafletjs.com/](http://leafletjs.com/) kan vara ett tips.
