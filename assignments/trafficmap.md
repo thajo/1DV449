@@ -1,5 +1,5 @@
 ##Problem - Mashup
-I denna laboration det meningen att du ska skriva en Mashup-applikation som kombinerar två stycken olika tjänster. Tjänsterna du ska jobba med är dels ett API från sveriges radio samt någon form av karttjänst open streetmap eller google maås.
+I denna laboration det meningen att du ska skriva en Mashup-applikation som kombinerar två stycken olika tjänster. Tjänsterna du ska jobba med är dels ett API från sveriges radio samt någon form av karttjänst t.ex. open streetmap eller google maps.
 
 * [Sveriges radios öppna API](http://sverigesradio.se/api/documentation/v2/index.html)
 * [Open streetmap](https://www.openstreetmap.org/)
