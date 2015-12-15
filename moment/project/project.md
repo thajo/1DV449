@@ -7,7 +7,7 @@ Vår förhoppning är att du i detta moment utvecklar en egen applikationsidé o
 Tanken är att du ska skapa en egen mashup-applikation utifrån en egen idé. Vad applikationen ska hanterar för slags data är upp till dig och din idé. Försök hitta en idé och ett område du tycker är intressant och brinner för då arbetet kommer gå betydligt lättare.
 
 Du börjar med att beskriva din idé i ett kort dokument (i md-format) som du publicerar på ditt github-repo som hör till kursen/projektet (glöm inte dela det med användaren "1dv449").
-Gör detta så fort som möjligt men senast **klockan 08:00, 15:e december**. Skulle kursledningen ha några synpunkter på ditt projekt meddelas (via issue i Github) via GitHub senast 17:e december.
+Gör detta så fort som möjligt men senast **klockan 15:00, 16:e december**. Skulle kursledningen ha några synpunkter på ditt projekt meddelas (via issue i Github) via GitHub senast 18:e december. Utgå annars från att det är ok.
 
 Slutlig deadline på projektet då allt ska vara publicerat som en tydlig release/tag på GitHub är **15:e januari klockan 13:00**
 
